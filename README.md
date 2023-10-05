@@ -645,3 +645,61 @@ Well-typed (TE)     21        3         3         27
 Ill-typed           9         0         1         10
 Ill-typed (TE)      0         0         0         0
 ```
+
+## RQ2: Test Case Characteristics (Section 4.3)
+
+For the second research question,
+we examine `database/bugs.json` file to reproduce
+Table 3, which shows the language features that appear
+in the minimized test cases of our bug reports.
+Furthermore,
+we generate Figure 9
+and stores it at `figures/venn.pdf` in your host machine.
+Run,
+the following command:
+
+```
+thalia@401c23b79be3:~$ python eval-scripts/features.py database/bugs.json --venn eval-figures/venn.pdf
+Overloading 22
+Parametric polymorphism 71
+Functional programming 35
+Type inference 24
+                                              Table 3                                              
+=============================================================================================
+Category            Feature                                              Frequency Supported
+---------------------------------------------------------------------------------------------
+Declaration         Parameterized class                                  58 / 84   Yes
+Declaration         Parameterized function                               45 / 84   Yes
+Declaration         Single Abstract Method (SAM)                         30 / 84   Yes
+Declaration         Overloading                                          22 / 84   No
+Declaration         Inheritance / Implementation of multiple interfaces  8 / 84    No
+Declaration         Variable argument                                    5 / 84    Yes
+Declaration         Inner class                                          3 / 84    No
+Declaration         Static method                                        2 / 84    No
+Declaration         Access modifier                                      2 / 84    No
+Declaration         Bridge method                                        1 / 84    No
+Declaration         Default method                                       1 / 84    No
+Declaration         Operator                                             1 / 84    No
+Type inference      Type argument inference                              23 / 84   Yes
+Type inference      Variable type inference                              2 / 84    Yes
+Type                Parameterized type                                   58 / 84   Yes
+Type                Wildcard type                                        19 / 84   Yes
+Type                Bounded type parameter                               15 / 84   Yes
+Type                Array type                                           7 / 84    Yes
+Type                Subtyping                                            7 / 84    Yes
+Type                Recursive upper bound                                3 / 84    No
+Type                Primitive type                                       3 / 84    Yes
+Type                Nullable type                                        2 / 84    No
+Expression          Function reference                                   21 / 84   Yes
+Expression          Lambda                                               10 / 84   Yes
+Expression          Conditionals                                         4 / 84    Yes
+```
+
+Beyond Table 3 and Figure 9,
+the script validates the following sentence that
+appears in the first paragraph of Section 4.3.
+
+* _"Roughly 85% (70/82) of the
+bug-triggering test cases contain at least one feature related to parametric polymorphic._".
+
+### Size of test cases
