@@ -378,6 +378,80 @@ The final outcome of this method call is assigned to a variable
 of type `boolean`.
 
 
+Now, you can exit the Docker container by running:
+
 ```
-hephaestus@e0456a9b520e:~$ exit
+thalia@e0456a9b520e:~$ exit
 ```
+
+
+# Step By Step Instructions
+
+**NOTE**: Remember to run all the subsequent `docker run` commands
+from the root directory of the artifact (i.e., `thalia-popl-eval/`).
+
+To validate the main results presented in the paper, first create a new Docker
+container by running:
+
+```
+docker run -ti --rm \
+  -v $(pwd)/database:/home/thalia/database \
+  -v $(pwd)/data:/home/thalia/data \
+  -v $(pwd)/scripts:/home/thalia/eval-scripts \
+  -v $(pwd)/figures:/home/thalia/eval-figures \
+  thalia-eval
+```
+
+Note that we mount four _local volumes_ inside the newly-created container.
+The first volume (`database/`) contains the bug database that includes the bugs
+discovered by `thlia`, while the second volume (`data/`) provides the data
+collected during our evaluation. The third volume (`eval-scripts/`) includes
+some scripts to reproduce and validate the results of the paper. Finally, the
+fourth volume (`eval-figures/`) will be used to save the figures of our paper.
+
+## Bug Database
+
+We provide an SQLite database (see the file `database/bugdb.sqlite3`) that contains
+information about the bugs discovered by `thalia` during the evaluation.
+This database is initialized based on the SQL script stored into
+`database/bug_schema.sql`. The bug database consists of three tables,
+namely `CompilerBug`, `Characteristic`, and `CompilerBugCharacteristics`.
+
+Each record of the `CompilerBug` table consists of the following columns.
+
+* `bid`: A serial number corresponding to the ID of the bug.
+* `bug_id`: The bug id as displayed in the corresponding issue tracker.
+* `language`: The name of the programming language of the test program.
+* `compiler`: The name of the compiler where the bug was found.
+* `title`: The title of the bug report.
+* `issue_tracker_link`: A URL pointing to the bug report opened by us.
+* `mode`: The synthesis mode that detected the bug.
+There are four possible values: base, erasure, ill-typed,
+and erasure/ill-typed.
+* `fix_link`: A URL pointing to the fix of the bug.
+* `severity`: The severity of the bugs given by the developers.
+* `status`: The status of the bug.
+* `resolution`: The resolution of the bug (e.g., Fixed, Duplicate).
+* `report_date`: The date that we reported the bug.
+* `resolution_date`: The date that the developers resolved the bug.
+* `symptom`: The symptom of the bug. There are four possible values:
+unexpected compile-time error (UCTE), unexpected runtime behavior (URB),
+crash, and compilation performance issue (CPI)
+Note that the URB typically corresponds to soundness bugs detected
+by ill-typed programs.
+* `resolved_in`: How long did it take to resolve this bug.
+* `test`: The test program that revealed the bug.
+* `error_msg`: The error message reported by the compiler, or the stacktrace of
+the crash, or the exception caused in the runtime.
+
+The `Characteristic` table contains the following three fields.
+
+* `cid`: A serial number corresponding to the ID of the characteristic.
+* `characteristic_name`: The name of the characteristic
+(e.g., Parameterized class).
+* `category`: The category of the characteristic
+(e.g. Parametric polymorphism).
+
+Finally, `CompilerBugCharacteristics` is a table implementing the many-to-many
+relationship between `CompilerBug` and `CompilerBugCharacteristics`,
+this table contains three fields: `bcid`, `cid`, `bid`.
