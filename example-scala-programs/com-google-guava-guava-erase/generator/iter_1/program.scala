@@ -1,0 +1,9 @@
+package src.buck
+def test[R <: java.lang.NegativeArraySizeException, H <: java.io.UTFDataFormatException, N <: Any & java.lang.Object](): Unit =
+{
+  val clips = ???.asInstanceOf[java.lang.reflect.Constructor[com.google.common.graph.ValueGraph[com.google.common.primitives.UnsignedInts, com.google.common.net.InternetDomainName]]];
+  val debuted = com.google.common.reflect.Invokable.`from`(clips).`invoke`(???.asInstanceOf[com.google.common.graph.ValueGraph[com.google.common.primitives.UnsignedInts, com.google.common.net.InternetDomainName]], ???.asInstanceOf[AnyRef]);
+  val zip = ???.asInstanceOf[com.google.common.graph.EndpointPair[com.google.common.primitives.UnsignedInts]];
+  val adapting = com.google.common.collect.ArrayTable.`create`[java.util.Formattable,java.io.ObjectOutput,com.google.common.graph.EndpointPair[com.google.common.primitives.UnsignedInts]](???.asInstanceOf[java.lang.Iterable[? <: java.util.Formattable]], ???.asInstanceOf[java.lang.Iterable[? <: java.io.ObjectOutput]]).`put`(???.asInstanceOf[java.util.Formattable], ???.asInstanceOf[java.io.ObjectOutput], zip);
+    val defines: Boolean = com.google.common.graph.Graphs.`transpose`(debuted).`edgeValueOrDefault`(adapting, com.google.common.graph.Graphs.`transpose`(???.asInstanceOf[com.google.common.graph.ValueGraph[com.google.common.util.concurrent.ClosingFuture.Combiner5.ClosingFunction5[AnyRef, AnyRef, AnyRef, AnyRef, AnyRef, AnyRef], com.google.common.net.InternetDomainName]]).`edgeValueOrDefault`(???.asInstanceOf[com.google.common.graph.EndpointPair[com.google.common.util.concurrent.ClosingFuture.Combiner5.ClosingFunction5[AnyRef, AnyRef, AnyRef, AnyRef, AnyRef, AnyRef]]], ???.asInstanceOf[com.google.common.net.InternetDomainName])).`hasRegistrySuffix`();
+  }
