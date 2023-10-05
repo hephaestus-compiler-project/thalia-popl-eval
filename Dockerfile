@@ -67,40 +67,16 @@ RUN ${HOME}/installation_scripts/install_scala.sh
 # Now cleanup helper scripts
 RUN sudo rm -rf ${HOME}/installation_scripts
 
-# # Coverage dependencies: Install JaCoCo and all compilers
-# RUN mkdir ${HOME}/coverage
-# WORKDIR ${HOME}/coverage
-# # Install Groovy
-# RUN sudo apt install -y python3-pydot python-pydot-ng graphviz
-# RUN source ${HOME}/.sdkman/bin/sdkman-init.sh && \
-#     sdk use java 11.0.2-open && \
-#     git clone https://github.com/apache/groovy.git && \
-#     cd groovy && \
-#     git checkout 538374a1799947912496bf3a9aa8590cf5e38a75 && \
-#     ./gradlew -p bootstrap && ./gradlew clean dist
-# # Install Java
-# RUN sudo apt install -yq autoconf build-essential gcc libx11-dev libxext-dev \
-#     libxrender-dev libxrandr-dev libxtst-dev libxt-dev libcups2-dev \
-#     libfontconfig1-dev libcups2-dev libasound2-dev
-# RUN source ${HOME}/.sdkman/bin/sdkman-init.sh && \
-#     git clone https://github.com/openjdk/jdk.git && \
-#     cd jdk && \
-#     git checkout c79a485f1c3f9c0c3a79b8847fdcd50a141cd529 && \
-#     sdk use java 17.0.2-open && \
-#     bash configure
-# RUN cd jdk && make jdk
-# # Download Kotlin
-# RUN source ${HOME}/.sdkman/bin/sdkman-init.sh && \
-#     sdk install java 8.0.265-open && \
-#     git clone https://github.com/JetBrains/kotlin.git && \
-#     cd kotlin && \
-#     git checkout 3ccbd25856ccfc3942a563e4833d87c7d5865c7f
-# ## Install JaCoCo
-# RUN mkdir jacoco && \
-#     cd jacoco && \
-#     wget https://search.maven.org/remotecontent\?filepath\=org/jacoco/jacoco/0.8.7/jacoco-0.8.7.zip -O jacoco-0.8.7.zip && \
-#     unzip jacoco-0.8.7.zip
-# 
+# Coverage dependencies: Install JaCoCo and all compilers
+RUN mkdir ${HOME}/coverage
+WORKDIR ${HOME}/coverage
+## Install JaCoCo
+RUN mkdir jacoco && \
+    cd jacoco && \
+    wget https://search.maven.org/remotecontent\?filepath\=org/jacoco/jacoco/0.8.7/jacoco-0.8.7.zip -O jacoco-0.8.7.zip && \
+    unzip jacoco-0.8.7.zip
+
+WORKDIR ${HOME}
 
 # Add source code of hephaestus
 ADD ./hephaestus ${HOME}/hephaestus
