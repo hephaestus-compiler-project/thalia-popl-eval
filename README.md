@@ -14,7 +14,7 @@ See TODO.
 - [Getting Started](#getting-started)
   * [Usage](#usage)
   * [Run Tests](#run-tests)
-  * [Example](#example)
+  * [Example](#example-testing-the-groovy-compiler-using-the-api-of-its-standard-library)
 - [Step by Step Instructions](#step-by-step-instructions)
   * [Bug Database](#bug-database)
   * [RQ1: Bug-Finding Results (Section 4.2)](#rq1-bug-finding-results-section-42)
@@ -311,55 +311,71 @@ into disk. They can be found in the `bugs/java-testing/generator/` directory.
 
 ###  Logging
 
-The `-L` option allows use to log the typing sequences
+The `-L` option allows you to log all the typing sequences
 synthesized by `thalia`.
-This log can be found in the `bugs/java-session/logs/api-generator` file.
+The resulting log file can be found
+at `bugs/groovy-session/logs/api-generator`.
 In our previous example,
 the contents of this file look like:
 
 ```
-Built API with the following statistics:
-	Number of nodes:13225
-	Number of edges:19736
-	Number of methods:9658
-	Number of polymorphic methods:425
-	Number of fields:1068
+Constructed API graph with the following statistics:
+	Number of nodes:14827
+	Number of edges:22303
+	Number of methods:10982
+	Number of polymorphic methods:461
+	Number of fields:1108
 	Number of constructors:1159
-	Number of types:1095
-	Number of type constructors:144
-	Avg inheritance chain size:4.20
-	Avg API signature size:2.43
+	Number of types:1282
+	Number of type constructors:164
+	Avg inheritance chain size:4.22
+	Avg API signature size:2.46
 
 Generated program 1
-	API: java.lang.module.ModuleDescriptor.Builder.version(Classifier[java.lang.module.ModuleDescriptor.Version])
+	API: java.util.GregorianCalendar.toZonedDateTime()
 	Type variable assignments:
-	receiver: java.lang.module.ModuleDescriptor.Builder
-	parameters java.lang.module.ModuleDescriptor.Version
-	return: java.lang.module.ModuleDescriptor.Builder
+	receiver: java.util.GregorianCalendar
+	parameters 0
+	return: java.time.ZonedDateTime
 Correctness: True
 Generated program 2
-	API: java.lang.module.ModuleDescriptor.Builder.version(Classifier[java.lang.module.ModuleDescriptor.Version])
+	API: java.util.AbstractCollection.retainAll(java.util.Collection<*>)
 	Type variable assignments:
-	receiver: java.lang.module.ModuleDescriptor.Builder
-	parameters java.lang.module.ModuleDescriptor.Version
-	return: Object
-Correctness: True
+		java.util.AbstractCollection.T1 -> groovy.lang.SpreadListEvaluatingException
+	receiver: java.util.HashSet<groovy.lang.SpreadListEvaluatingException>
+	parameters java.util.concurrent.CopyOnWriteArrayList<java.nio.channels.NonReadableChannelException>
+	return: boolean
 ...
 ```
 
-The first lines of the `bugs/java-session/logs/api-generator` file dumps
+The first lines of the `bugs/groovy-session/logs/api-generator` file dumps
 some statistics regarding the input API and the corresponding
-API graph (e.g., number of methods, nmber of constructors, etc.).
+API graph (e.g., number of methods, number of constructors, etc.).
 Then,
-the file shows the typing sequence of every test case.
+the file shows the typing sequence which every test case comes from.
 For example,
 the first test program invokes the
-[java.lang.module.ModuleDescriptor.Builder.version](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/module/ModuleDescriptor.Builder.html#version(java.lang.module.ModuleDescriptor.Version))
-method found in the standard library of Java
-using a parameter of type
-[java.lang.module.ModuleDescriptor.Version](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/module/ModuleDescriptor.Version.html).
+[java.util.GregorianCalendar.toZonedDateTime()](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/GregorianCalendar.html#toZonedDateTime())
+method found in the standard library of Java.
 The result of this method call is assigned to a variable of type
-[java.lang.module.ModuleDescriptor.Builder](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/module/ModuleDescriptor.Builder.html).
+[java.util.ZonedDateTime](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html).
+
+The second test case is derived from a typing sequence that
+calls a method named
+[java.util.AbstractCollection.retainAll](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/AbstractCollection.html#retainAll(java.util.Collection)).
+The method resides in the parameterized class
+[java.util.AbstractCollection](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/AbstractCollection.html)
+whose type parameter is instantiated
+with type [groovy.lang.SpreadListEvaluatingException](https://docs.groovy-lang.org/latest/html/api/groovy/lang/SpreadListEvaluatingException.html).
+The synthesized test case calls the method
+using (1) an expression of
+type `java.util.HashSet<groovy.lang.SpreadListEvaluatingException>`,
+which is a subtype of `java.util.AbstractCollection<groovy.lang.SpreadListEvaluatingException>`,
+and (2) a parameter of type
+[java.util.concurrent.CopyOnWriteArrayList](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CopyOnWriteArrayList.html),
+which is a subtype of `java.util.Collection`.
+The final outcome of this method call is assigned to a variable
+of type `boolean`.
 
 
 ```
