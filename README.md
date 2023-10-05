@@ -521,7 +521,7 @@ We provide an SQLite database (see the file `database/bugdb.sqlite3`) that conta
 information about the bugs discovered by `thalia` during the evaluation.
 This database is initialized based on the SQL script stored into
 `database/bug_schema.sql`. The bug database consists of three tables,
-namely `CompilerBug`, `Characteristic`, and `CompilerBugCharacteristics`.
+namely `CompilerBug`, `Feature`, and `CompilerBugFeatures`.
 
 Each record of the `CompilerBug` table consists of the following columns.
 
@@ -535,7 +535,6 @@ Each record of the `CompilerBug` table consists of the following columns.
 There are four possible values: base, erasure, ill-typed,
 and erasure/ill-typed.
 * `fix_link`: A URL pointing to the fix of the bug.
-* `severity`: The severity of the bugs given by the developers.
 * `status`: The status of the bug.
 * `resolution`: The resolution of the bug (e.g., Fixed, Duplicate).
 * `report_date`: The date that we reported the bug.
@@ -550,14 +549,61 @@ by ill-typed programs.
 * `error_msg`: The error message reported by the compiler, or the stacktrace of
 the crash, or the exception caused in the runtime.
 
-The `Characteristic` table contains the following three fields.
+The `Feature` table contains the following two fields.
 
-* `cid`: A serial number corresponding to the ID of the characteristic.
-* `characteristic_name`: The name of the characteristic
+* `fid`: A serial number corresponding to the ID of the feature.
+* `feature_name`: The name of the feature
 (e.g., Parameterized class).
-* `category`: The category of the characteristic
-(e.g. Parametric polymorphism).
 
-Finally, `CompilerBugCharacteristics` is a table implementing the many-to-many
-relationship between `CompilerBug` and `CompilerBugCharacteristics`,
-this table contains three fields: `bcid`, `cid`, `bid`.
+Finally, `CompilerBugFeatures` is a table implementing the many-to-many
+relationship between `CompilerBug` and `Feature`,
+this table contains three fields: `bfid`, `fid`, `bid`.
+
+### Example Queries
+
+From inside the container, we can perform some basic queries on this bug
+database.
+
+Get the total number of the discovered bugs.
+
+```
+thalia@ff9317c919b1:~$ sqlite3 database/bugdb.sqlite3 "SELECT COUNT(*) FROM CompilerBug";
+84
+```
+
+Find the number of `groovyc` bugs.
+
+```
+thalia@ff9317c919b1:~$ sqlite3 database/bugdb.sqlite3 "SELECT COUNT(*) FROM CompilerBug WHERE compiler = 'groovyc'";
+62
+```
+
+Find the number of `kotlinc` bugs that have UCTE as their symptom.
+
+```
+thalia@ff9317c919b1:~$ sqlite3 database/bugdb.sqlite3 "SELECT COUNT(*) FROM CompilerBug WHERE compiler = 'kotlinc' AND symptom = 'Unexpected Compile-Time Error'";
+7
+```
+
+For each Dotty bug revealed by the type erasure mode (`erasure`),
+dump the URLs pointing to our bug reports.
+
+```
+thalia@ff9317c919b1:~$ sqlite3 database/bugdb.sqlite3 "SELECT issue_tracker_link FROM CompilerBug WHERE compiler = 'dotty' AND mode = 'erasure'";
+https://github.com/lampepfl/dotty/issues/17348
+https://github.com/lampepfl/dotty/issues/17311
+https://github.com/lampepfl/dotty/issues/17207
+```
+
+Get the six most common features used in the test cases of the
+reported bugs.
+
+```
+thalia@ff9317c919b1:~$ sqlite3 database/bugdb.sqlite3 "SELECT f.feature_name, COUNT(*) as total FROM CompilerBugFeatures as cbf JOIN Feature as f ON f.fid = cbf.fid GROUP BY cbf.fid ORDER BY total DESC LIMIT 6";
+Parameterized type|58
+Parameterized class|58
+Parameterized function|45
+Single Abstract Method (SAM)|30
+Type argument inference|23
+Overloading|22
+```
