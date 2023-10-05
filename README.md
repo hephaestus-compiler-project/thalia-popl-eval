@@ -192,7 +192,7 @@ thalia@e0456a9b520e:~/thalia$ thalia --language groovy \
   --batch 10 -i 30 -P \
   --max-depth 2 \
   --generator api \
-  ---api-doc-path example-apis/groovy-stdlib/json-docs \
+  --api-doc-path example-apis/groovy-stdlib/json-docs \
   --api-rules example-apis/groovy-stdlib/api-rules.json \
   --keep-all \
   --name groovy-session
@@ -376,6 +376,112 @@ and (2) a parameter of type
 which is a subtype of `java.util.Collection`.
 The final outcome of this method call is assigned to a variable
 of type `boolean`.
+
+## Example: Testing the Groovy compiler using the API of a third-party library
+
+Previously,
+we tested `groovyc` using the standard library of Groovy.
+Now, we will show how to test `groovyc` using the API
+of a third party library,
+in particular the [guava]() library.
+
+
+### Step 1: Fetch API documentation of third-party package
+
+First,
+we first extract the API documentation of this library.
+To do so,
+run:
+
+```bash
+echo "com.google.guava,guava,32.1.2-jre" | fetch-package-data -i - -o outdir
+```
+
+This command essentially fetches the `pom.xml` and the javadoc
+of the guava library. The script stores these retrieved files
+inside the `outdir/` specified by the `-o` option.
+We can use the same command to retrieve an arbitrary package stored
+in the Maven's central repository.
+To do so,
+we need to specify the group ID (e.g., `com.google.guava`),
+the artifact ID (e.g., `guava`),
+and the version (e.g., 32.1.2-jre)
+of the package we want to retrieve.
+
+
+### Step 2: Convert API documentation into JSON format
+
+Next, run the following command to
+convert the API documentation written in HTML format
+into a set of JSON files,
+which are given as input to `thalia`.
+
+```bash
+doc2json.sh -d outdir -l com-google-guava-guava -L java
+```
+
+The generated JSON files can be found
+inside the `outdir/com-google-guava-guava/json-docs/`
+directory.
+
+### Step 3: Fetch the JAR files of the third-party package
+
+Since, we are going to generate test cases
+that invoke components from a third-party package,
+we need to fetch the corresponding JAR files
+so that the compiler is able to locate
+the API definitions.
+We can automatically fetch all the required
+JAR files,
+using the `mvn` command.
+Maven stores the downloaded packages
+inside your local Maven repository located
+at `~/.m2/repository/`.
+
+
+```bash
+mvn -f outdir/com-google-guava-guava/pom.xml dependency:tree 
+mvn -f outdir/com-google-guava-guava/dependency.xml dependency:tree
+```
+
+
+### Step 4: Generate test cases that invoke the guava library
+
+Now, we are ready to invoke `thalia` as follows
+
+```bash
+classpath=$(mvn -f outdir/com-google-guava-guava/pom.xml dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)
+depspath=$(mvn -f $libpath/dependency.xml dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)
+classpath="$classpath:$depspath"
+
+thalia@e0456a9b520e:~/thalia$ thalia --language groovy \
+  --transformations 0  \
+  --batch 10 -i 30 -P \
+  --max-depth 2 \
+  --generator api \
+  --api-doc-path outdir/com-google-guava-guava/json-docs \
+  --keep-all \
+  --name groovy-session-guava \
+  --library-path "$classpath"
+```
+
+Please notice two things.
+First,
+the option `--api-doc-path` points to
+the directory where the API specification of guava resides
+(see **Step 2**).
+Second,
+we use the option `--library-path` whose value
+is the classpath of the guava library.
+This classpath contains the location of all JAR files
+required to invoke guava.
+Classpath is automatically constructed via `mvn`.
+In turn,
+`thalia` passes the value of the option `--library-path`
+to the compiler.
+
+The results of the testing session can be found
+at `bugs/groovy-session-guava/`.
 
 
 Now, you can exit the Docker container by running:
