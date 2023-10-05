@@ -12,8 +12,9 @@ lang_lookup = {
 
 rows_lookup = {
     'generator': 'Well-typed',
-    'inference': 'With type erasure',
+    'inference': 'Well-typed (TE)',
     'soundness': 'Ill-typed',
+    "inference/soundness": "Ill-typed (TE)",
     'Unexpected Compile-Time Error': 'UCTE',
     'Unexpected Runtime Behavior': 'URB',
     "Compilation Performance Issue": "CPI",
@@ -25,12 +26,6 @@ def get_args():
     parser = argparse.ArgumentParser(
         description='Process bugs.json to answer RQs')
     parser.add_argument("input", help="JSON File with bugs.")
-    parser.add_argument("rq", choices=['rq1', 'rq2', 'rq3'], help="Select RQ.")
-    parser.add_argument(
-        "--combinations",
-        action='store_true',
-        help="Print characteristics combinations"
-    )
     return parser.parse_args()
 
 
@@ -166,15 +161,17 @@ def main():
                           for lang in langs}
         return r
 
-    if args.rq == 'rq1':
-        status_cat = res['total']['status'].keys()
-        status = per_attribute(status_cat, 'status', total=True)
-        print_table('Figure 7a', 'Status', status)
+    status_cat = res['total']['status'].keys()
+    status = per_attribute(status_cat, 'status', total=True)
+    print_table('Table 2a', 'Status', status)
 
-    if args.rq == 'rq3':
-        mutators_cat = res['total']['mutator'].keys()
-        mutators = per_attribute(mutators_cat, 'mutator', total=False)
-        print_table('Figure 7c', 'Component', mutators, extra_line=False)
+    symtoms_cat = res['total']['symptom'].keys()
+    symptoms = per_attribute(symtoms_cat, 'symptom', total=False)
+    print_table('Table 2b', 'Symptoms', symptoms, extra_line=False)
+
+    mode_cat = res['total']['mutator'].keys()
+    modes = per_attribute(mode_cat, 'mutator', total=False)
+    print_table('Table 2c', 'Synthesis mode', modes, extra_line=False)
 
 
 if __name__ == "__main__":

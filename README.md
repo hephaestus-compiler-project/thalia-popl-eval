@@ -607,3 +607,41 @@ Single Abstract Method (SAM)|30
 Type argument inference|23
 Overloading|22
 ```
+
+## RQ1: Bug-Finding Results (Section 4.2)
+
+For the first research question,
+we examine the `database/bugs.json` file
+to reproduce the entire Table 2.
+
+```
+thalia@a0cfd75dfbf3:~$ python eval-scripts/process_bugs.py database/bugs.json
+                          Table 2a
+============================================================
+Status              groovyc   kotlinc   dotty     Total
+------------------------------------------------------------
+Confirmed           38        9         8         55
+Fixed               20        1         1         22
+Wont fix            2         1         1         4
+Duplicate           2         0         1         3
+------------------------------------------------------------
+Total               62        11        11        84
+
+                          Table 2b
+============================================================
+Symptoms            groovyc   kotlinc   dotty     Total
+------------------------------------------------------------
+UCTE                47        7         7         61
+URB                 6         0         0         6
+Crash               8         3         4         15
+CPI                 1         1         0         2
+
+                          Table 2c
+============================================================
+Synthesis mode      groovyc   kotlinc   dotty     Total
+------------------------------------------------------------
+Well-typed          32        8         7         47
+Well-typed (TE)     21        3         3         27
+Ill-typed           9         0         1         10
+Ill-typed (TE)      0         0         0         0
+```
