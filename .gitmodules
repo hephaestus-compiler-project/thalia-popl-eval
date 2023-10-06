@@ -1,3 +1,6 @@
 [submodule "hephaestus"]
 	path = hephaestus
 	url = https://github.com/hephaestus-compiler-project/hephaestus
+[submodule "thalia"]
+	path = thalia
+	url = https://github.com/hephaestus-compiler-project/thalia
