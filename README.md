@@ -768,3 +768,89 @@ that each library produced 1937 ill-typed Groovy programs, on average.
 Beyond these statistics,
 the script generates Figure 11 and stores in `figures/files-boxplot.pdf`
 in your host machine.
+
+
+### Code coverage analysis
+
+Now we measure the impact of every library
+and synthesis mode on line code coverage:
+we reproduce Figure 10 and Table 4.
+To do so,
+we examine the
+`data/libs/results/` directory,
+which contains the code coverage results 
+(using the JaCoCo code coverage library)
+when compiling the test cases synthesized
+by `thalia`.
+The results are grouped by language, library,
+and synthesis mode.
+
+First,
+we examine the results for `groovyc`.
+The following command also generates the Figure 10a
+stored in the `figures/groovy-line-libs.pdf`
+on your host machine. 
+
+```
+thalia@1c75a71c1190:~$ python eval-scripts/analysis.py \
+  --coverage-data data/libs/results/ \
+  --whitelist data/coverage/whitelists/groovy.txt \
+  --language groovy \
+  --output-dir eval-figures/
+
+Processing coverage data per library...
+                           Table 4 (groovy data)
+===========================================================================
+Mode      Min            Max            Median         Mean           Std
+---------------------------------------------------------------------------
+Erase     +0(0.0%)       +4306(11.87%)  +165.5(0.46%)  +264(0.73%)    1.63%
+Inject    +0(0.0%)       +2952(8.14%)   +44.5(0.12%)   +118(0.33%)    1.08%
+Both      +0(0.0%)       +3087(8.51%)   +162.5(0.45%)  +194(0.54%)    0.89%
+```
+
+Next,
+we do the same for Dotty.
+The following command also generates the Figure 10b
+stored in the `figures/scala-line-libs.pdf`
+on your host machine. 
+
+```
+thalia@1c75a71c1190:~$ python eval-scripts/analysis.py \
+  --coverage-data data/libs/results/ \
+  --whitelist data/coverage/whitelists/scala.txt \
+  --language scala \
+  --output-dir eval-figures/
+
+Processing coverage data per library...
+                            Table 4 (scala data)
+===========================================================================
+Mode      Min            Max            Median         Mean           Std
+---------------------------------------------------------------------------
+Erase     +0(0.0%)       +5548(7.05%)   +934.0(1.19%)  +1086(1.38%)   1.09%
+Inject    +7(0.01%)      +3595(4.57%)   +474.5(0.6%)   +615(0.78%)    0.73%
+Both      +117(0.15%)    +4192(5.32%)   +851.5(1.08%)  +975(1.24%)    0.77%
+```
+
+Finally,
+we reproduce Figure 10c
+(found in `figures/kotlin-line-libs`),
+and the data of Table 4 associated with `kotlinc`.
+Run:
+
+```
+thalia@1c75a71c1190:~$ python eval-scripts/analysis.py \
+  --coverage-data data/libs/results/ \
+  --whitelist data/coverage/whitelists/kotlin.txt \
+  --language kotlin \
+  --output-dir eval-figures/
+
+Processing coverage data per library...
+                           Table 4 (kotlin data)
+===========================================================================
+Mode      Min            Max            Median         Mean           Std
+---------------------------------------------------------------------------
+Erase     +3(0.01%)      +2144(3.65%)   +523.0(0.89%)  +567(0.97%)    0.51%
+Inject    +1(0.0%)       +3030(5.15%)   +175.0(0.3%)   +290(0.49%)    0.72%
+Both      +45(0.08%)     +2175(3.7%)    +346.5(0.59%)  +419(0.71%)    0.6%
+
+```
