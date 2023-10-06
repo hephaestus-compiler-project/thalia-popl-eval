@@ -789,7 +789,9 @@ First,
 we examine the results for `groovyc`.
 The following command also generates the Figure 10a
 stored in the `figures/groovy-line-libs.pdf`
-on your host machine. 
+on your host machine.
+Run the following command
+(estimated running time 1--3 minutes): 
 
 ```
 thalia@1c75a71c1190:~$ python eval-scripts/analysis.py \
@@ -813,6 +815,8 @@ we do the same for Dotty.
 The following command also generates the Figure 10b
 stored in the `figures/scala-line-libs.pdf`
 on your host machine. 
+Run the following command
+(estimated running time 1--3 minutes): 
 
 ```
 thalia@1c75a71c1190:~$ python eval-scripts/analysis.py \
@@ -835,7 +839,8 @@ Finally,
 we reproduce Figure 10c
 (found in `figures/kotlin-line-libs.pdf`),
 and the data of Table 4 associated with `kotlinc`.
-Run:
+Run the following command
+(estimated running time 1--3 minutes): 
 
 ```
 thalia@1c75a71c1190:~$ python eval-scripts/analysis.py \
