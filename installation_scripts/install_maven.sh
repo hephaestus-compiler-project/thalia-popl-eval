@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
-# Install the Scala compiler
+# Install the Java compiler
 
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
-sdk install scala 3.3.0 < /dev/null
+sdk install maven < /dev/null

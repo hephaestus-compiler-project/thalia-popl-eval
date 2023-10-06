@@ -64,6 +64,10 @@ RUN ${HOME}/installation_scripts/install_groovy.sh
 ADD ./installation_scripts/install_scala.sh ${HOME}/installation_scripts/install_scala.sh
 RUN ${HOME}/installation_scripts/install_scala.sh
  
+# Install Maven
+ADD ./installation_scripts/install_maven.sh ${HOME}/installation_scripts/install_maven.sh
+RUN ${HOME}/installation_scripts/install_maven.sh
+ 
 # Now cleanup helper scripts
 RUN sudo rm -rf ${HOME}/installation_scripts
 
@@ -85,5 +89,15 @@ RUN sudo chown -R thalia:thalia ${HOME}/hephaestus
 # Install and run hephaestus
 RUN cd ${HOME}/hephaestus/ && pip install . && python -m pytest
 RUN echo "export PATH=$PATH:/home/thalia/.local/bin" >> ${HOME}/.bash_profile
+
+# Create directory for helper scripts
+RUN mkdir ${HOME}/scripts
+ADD ./scripts/compute_coverage.sh ${HOME}/scripts
+ADD ./scripts/config.sh ${HOME}/scripts
+
+# Add example files
+# Maybe we should attach that as a volume
+RUN mkdir ${HOME}/example-scala-programs
+ADD ./example-scala-programs ${HOME}/example-scala-programs
 
 WORKDIR ${HOME}
