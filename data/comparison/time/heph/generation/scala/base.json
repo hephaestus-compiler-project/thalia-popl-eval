@@ -1,0 +1,17 @@
+{
+  "Info": {
+    "stop_cond": "iterations",
+    "stop_cond_value": 36782,
+    "transformations": 0,
+    "transformation_types": "TypeErasure",
+    "bugs": "coverage_programs",
+    "name": "scala_gen",
+    "language": "scala",
+    "compiler": "Scala compiler version 3.3.0 -- Copyright 2002-2023, LAMP/EPFL"
+  },
+  "totals": {
+    "passed": 36782,
+    "failed": 0
+  },
+  "time": 28645.98382250903
+}

@@ -911,6 +911,19 @@ thalia@65536014baca:~$ python eval-scripts/analysis.py \
   --output-dir eval-figures/
 ```
 
+### Compilation and Synthesis time
+
+```
+thalia@da41d2c974e0:~$ python eval-scripts/time-comparison.py data/comparison/time/
+                                         Table 5
+==========================================================================================
+Compiler       Thalia (comp)       Hephaestus (comp)   Thalia (gen)        Hephaestus (gen)
+------------------------------------------------------------------------------------------
+groovy         3.1                 6.6                 0.3                 0.7
+scala          5.4                 7.9                 0.2                 1.0
+kotlin         6.5                 26.5                0.2                 1.3
+
+```
 
 ### Code size
 

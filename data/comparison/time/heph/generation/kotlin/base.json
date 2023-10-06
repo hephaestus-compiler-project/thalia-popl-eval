@@ -1,0 +1,17 @@
+{
+  "Info": {
+    "stop_cond": "timeout",
+    "stop_cond_value": 14400,
+    "transformations": 0,
+    "transformation_types": "TypeErasure",
+    "bugs": "coverage_programs",
+    "name": "kotlin_gen",
+    "language": "kotlin",
+    "compiler": "info: kotlinc-jvm 1.8.20 (JRE 1.8.0_265-b01)"
+  },
+  "totals": {
+    "passed": 28820,
+    "failed": 370
+  },
+  "time": 34405.962974777
+}

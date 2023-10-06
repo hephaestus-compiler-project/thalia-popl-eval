@@ -1,0 +1,17 @@
+{
+  "Info": {
+    "stop_cond": "timeout",
+    "stop_cond_value": 14400,
+    "transformations": 1,
+    "transformation_types": "TypeErasure",
+    "bugs": "coverage_programs",
+    "name": "groovy_tem",
+    "language": "groovy",
+    "compiler": "Groovy compiler version 4.0.12\nCopyright 2003-2023 The Apache Software Foundation. https://groovy-lang.org/"
+  },
+  "totals": {
+    "passed": 44318,
+    "failed": 3892
+  },
+  "time": 40042.398136089985
+}

@@ -1,0 +1,17 @@
+{
+  "Info": {
+    "stop_cond": "timeout",
+    "stop_cond_value": 14400,
+    "transformations": 1,
+    "transformation_types": "TypeErasure",
+    "bugs": "coverage_programs",
+    "name": "scala_tem",
+    "language": "scala",
+    "compiler": "Scala compiler version 3.3.0 -- Copyright 2002-2023, LAMP/EPFL"
+  },
+  "totals": {
+    "passed": 27962,
+    "failed": 2638
+  },
+  "time": 38129.43257389011
+}
