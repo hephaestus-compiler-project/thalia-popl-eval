@@ -707,9 +707,9 @@ bug-triggering test cases contain at least one feature related to parametric pol
 This command compute statistics about the size
 of the programs synthesized by `thalia`.
 The script leverages the CSV files located 
-at `data/size`.
-Every file contains the size characteristics
-of every synthesized program per language.
+at `data/size`,
+which show the size characteristics of
+every program synthesized by `thalia` in our evaluation.
 The first column of a CSV file shows
 the size of each program in kB,
 while the second column represents the size
@@ -736,3 +736,35 @@ in the _"Size of test case"_ paragraph of Section 4.3.
    while a Scala test case measures 1.6kB and consists of 11 LoC.
    Similarly, Kotlin test cases have an
    average size of 1.4kB and an average of 11 LoC."_
+
+## RQ3: Impact of Library Selection and Synthesis Modes
+
+### Number of well-typed and ill-typed programs
+
+First, we reproduce Figure 11, which shows the number of well-typed
+and ill-typed test cases synthesized by `thalia`.
+To do so,
+we use the CSV files found in the `data/libs/file-results/` directory.
+Every CSV entry shows how many files are synthesized by `thalia`
+per synthesis mode and library.
+Run:
+
+```
+thalia@6bfd90f897d7:~$ python eval-scripts/files.py  data/libs/files-results/ eval-figures/files-boxplot.pdf
+                            mean          std  min      25%     50%       75%      max
+mode       language
+Ill-typed  Groovy    1936.863158  2538.916769  2.0   251.25   819.0   2396.50  10975.0
+           Kotlin    1831.451087  2434.144133  2.0   263.50   806.0   2310.50  11742.0
+           Scala     1840.426316  2413.187385  2.0   245.50   815.5   2465.25  12904.0
+Well-typed Groovy    5940.542105  4604.434885  3.0  1584.00  6186.5   8428.00  20544.0
+           Kotlin    5949.940217  5009.431708  4.0  1266.00  5100.0   9413.50  21734.0
+           Scala     7821.115789  5986.895969  4.0  2017.00  7989.5  12022.75  30115.0
+```
+
+The script prints some statitics about the distribution.
+For example,
+by examining these statistics we can infer
+that each library produced 1937 ill-typed Groovy programs, on average.
+Beyond these statistics,
+the script generates Figure 11 and stores in `figures/files-boxplot.pdf`
+in your host machine.
