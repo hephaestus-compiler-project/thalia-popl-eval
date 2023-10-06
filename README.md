@@ -703,3 +703,36 @@ appears in the first paragraph of Section 4.3.
 bug-triggering test cases contain at least one feature related to parametric polymorphic._".
 
 ### Size of test cases
+
+This command compute statistics about the size
+of the programs synthesized by `thalia`.
+The script leverages the CSV files located 
+at `data/size`.
+Every file contains the size characteristics
+of every synthesized program per language.
+The first column of a CSV file shows
+the size of each program in kB,
+while the second column represents the size
+of each program in terms of LoC.
+Run:
+
+```
+thalia@238ed47eab80:~$ ./eval-scripts/compute-size-statistics.sh data/size/
+(groovy) Average size in kB: 1.60
+(groovy) Average size in LoC: 13
+
+(kotlin) Average size in kB: 1.40
+(kotlin) Average size in LoC: 11
+
+(scala) Average size in kB: 1.59
+(scala) Average size in LoC: 11
+```
+
+The script produces results that are included
+in the _"Size of test case"_ paragraph of Section 4.3.
+
+* _"On average, a Groovy test case measures 1.6kB
+   and contains 13 lines of code (LoC),
+   while a Scala test case measures 1.6kB and consists of 11 LoC.
+   Similarly, Kotlin test cases have an
+   average size of 1.4kB and an average of 11 LoC."_
