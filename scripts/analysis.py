@@ -25,22 +25,7 @@ plt.rcParams['legend.fontsize'] = 18
 plt.rcParams['figure.titlesize'] = 24
 plt.rcParams['figure.figsize'] = (8, 4)
 
-HEPH_PATH = os.path.join("hephaestus", "results")
-THALIA_PATH = os.path.join("thalia", "results")
-COMB_PATH = os.path.join("combination", "results")
-HEPH_SORTED_MODES = [
-    "base",
-    "erase",
-    "inject",
-    "all"
-]
-THALIA_SORTED_MODES = [
-    "base",
-    "erase",
-    "inject",
-    "both",
-    "all"
-]
+
 SORTED_MODES = [
     "base",
     "base-erase",
@@ -226,7 +211,8 @@ def heph_grouped_bar_plot(heph, thalia, comb, output="figure.pdf"):
                 label=col_name, align='edge')
 
     # Adjust x-ticks position to center
-    centered_positions = [p + (bar_width+space_between_bars)*(len(df.columns))/2 for p in positions]
+    centered_positions = [p + (bar_width + space_between_bars) * (len(df.columns)) / 2
+                          for p in positions]
 
     plt.xticks(centered_positions, df.index, rotation=0)
 
@@ -239,12 +225,16 @@ def heph_grouped_bar_plot(heph, thalia, comb, output="figure.pdf"):
     plt.savefig(output, bbox_inches='tight')
 
 
-def hephaestus(language, whitelist, increase=False, classes=False):
-    path = os.path.join(HEPH_PATH, language + "-all.csv")
+def hephaestus(coverage_data, language, whitelist, output_dir,
+               increase=False, classes=False):
+    hephaestus_data = os.path.join(coverage_data, "hephaestus", "results")
+    thalia_data = os.path.join(coverage_data, "thalia", "results")
+    comb_data = os.path.join(coverage_data, "combination", "results")
+    path = os.path.join(hephaestus_data, language + "-all.csv")
     heph_results = read_csv(path, whitelist)
-    path = os.path.join(THALIA_PATH, language + "-all.csv")
+    path = os.path.join(thalia_data, language + "-all.csv")
     thalia_results = read_csv(path, whitelist)
-    path = os.path.join(COMB_PATH, language + "-all.csv")
+    path = os.path.join(comb_data, language + "-all.csv")
     comb_results = read_csv(path, whitelist)
 
     if increase:
@@ -252,12 +242,11 @@ def hephaestus(language, whitelist, increase=False, classes=False):
         increase_view = [(
             v['branch_perc'],
             (k[0] + "," + k[1] if isinstance(k, tuple) else k,
-            v['branch_covered'],
-            v['line_covered'],
-            v['line_perc'],
-            v['function_covered'],
-            v['function_perc']))
-            for k,v in increase.items() ]
+             v['branch_covered'],
+             v['line_covered'],
+             v['line_perc'],
+             v['function_covered'],
+             v['function_perc']))for k, v in increase.items()]
         increase_view.sort(reverse=True)
         for view in increase_view:
             print("{name}: Branch -- {ba} ({bp:.2f}), Line -- {la} ({lp:.2f}), Func -- {fa} ({fp:.2f})".format(
@@ -276,29 +265,21 @@ def hephaestus(language, whitelist, increase=False, classes=False):
         for metric in METRICS:
             covered = metric + "_covered"
             missed = metric + "_missed"
-            print("Hephaestus")
             r = round((heph_results["total"][covered] / (heph_results["total"][covered]+heph_results["total"][missed])) * 100, 2)
-            print(metric, r)
             total_heph_results[metric] = r
-            print("Thalia")
             r = round((thalia_results["total"][covered]/ (thalia_results["total"][covered]+thalia_results["total"][missed])) * 100, 2)
-            print(metric, r)
             total_thalia_results[metric] = r
-            print("Combination")
             r = round((comb_results["total"][covered]/ (comb_results["total"][covered]+comb_results["total"][missed])) * 100, 2)
-            print(metric, r)
             total_comb_results[metric] = r
-        figure = os.path.join("figures",
+        figure = os.path.join(output_dir,
                               "{}-cov-comparison.pdf".format(language))
         heph_grouped_bar_plot(total_heph_results,
                               total_thalia_results, total_comb_results, figure)
 
 
-
 def plot_all_values_bar_chart(sorted_projects, stdlib_name,
                               output="figure.pdf", language=""):
     plt.style.use('default')
-    #sns.set(style="whitegrid")
     plt.rcParams['font.monospace'] = 'Inconsolata Medium'
     plt.rcParams['font.size'] = 19
     plt.rcParams['axes.labelsize'] = 22
@@ -363,20 +344,6 @@ def plot_all_values_bar_chart(sorted_projects, stdlib_name,
     plt.savefig(output, bbox_inches='tight')
 
     # Close the plot to release resources
-    plt.close()
-
-def plot_boxplots_libs(sorted_projects, output="figure.pdf"):
-    # Prepare the data
-    data = {mode: [info[mode] for info in sorted_projects.values()] for mode in ['base', 'base-erase', 'base-erase-inject', 'all']}
-    df = pd.DataFrame(data)
-
-    # Plot
-    plt.figure(figsize=(10, 6))
-    df.boxplot()
-
-    plt.ylabel('Coverage')  # Adjust as needed
-    plt.xticks(rotation=0)
-    plt.savefig(output, bbox_inches='tight')
     plt.close()
 
 
@@ -478,7 +445,9 @@ def main():
         whitelist = [line.strip() for line in f.readlines()]
 
     if args.hephaestus:
-        hephaestus(args.language, whitelist, args.increase, args.classes)
+        hephaestus(args.coverage_data, args.language, whitelist,
+                   args.output_dir,
+                   args.increase, args.classes)
     else:
         for metric in ["line"]:
             process_libs(args.coverage_data, args.language, whitelist,
