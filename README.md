@@ -857,5 +857,29 @@ Mode      Min            Max            Median         Mean           Std
 Erase     +3(0.01%)      +2144(3.65%)   +523.0(0.89%)  +567(0.97%)    0.51%
 Inject    +1(0.0%)       +3030(5.15%)   +175.0(0.3%)   +290(0.49%)    0.72%
 Both      +45(0.08%)     +2175(3.7%)    +346.5(0.59%)  +419(0.71%)    0.6%
+```
+
+### Synthesis time
+
+To reproduce Figure 12,
+we leverage the CSV files located in `data/time`.
+Each CSV file shows the average synthesis time
+per library.
+Run the following command:
 
 ```
+thalia@f2f3027c794d:~$ python eval-scripts/time-plot.py data/time/ eval-figures/
+(groovy) Average synthesis time: 256ms
+(scala) Average synthesis time: 161ms
+(kotlin) Average synthesis time: 178ms
+```
+
+Figure 12a, Figure 12b and Figure 12c
+are generated at `figures/groovy-time.pdf`,
+`figures/scala-time.pdf`,
+and `figures/kotlin-time.pdf` on your host machine respectively.
+Beyond these figures,
+the script above also produces the average synthesis time metrics
+mentioned in the **Synthesis time** paragraph of Section 4.3.
+
+* _"The average synthesis time is 256, 161, and 178 milliseconds for Groovy, Scala, and Kotlin programs respectively. "_
