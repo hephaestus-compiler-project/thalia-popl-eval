@@ -833,7 +833,7 @@ Both      +117(0.15%)    +4192(5.32%)   +851.5(1.08%)  +975(1.24%)    0.77%
 
 Finally,
 we reproduce Figure 10c
-(found in `figures/kotlin-line-libs`),
+(found in `figures/kotlin-line-libs.pdf`),
 and the data of Table 4 associated with `kotlinc`.
 Run:
 
