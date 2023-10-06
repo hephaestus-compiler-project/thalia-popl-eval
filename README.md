@@ -891,22 +891,46 @@ mentioned in the **Synthesis time** paragraph of Section 4.3.
 ```bash
 # groovy
 thalia@65536014baca:~$ python eval-scripts/analysis.py \
-  --coverage-data data/coverage/ \
+  --coverage-data data/comparison/coverage/ \
   --hephaestus --language groovy \
   --whitelist data/coverage/whitelists/groovy.txt \
   --output-dir eval-figures/
 
 # scala
 thalia@65536014baca:~$ python eval-scripts/analysis.py \
-  --coverage-data data/coverage/ \
+  --coverage-data data/comparison/coverage/ \
   --hephaestus --language scala \
   --whitelist data/coverage/whitelists/scala.txt \
   --output-dir eval-figures/
 
 # kotlin
 thalia@65536014baca:~$ python eval-scripts/analysis.py \
-  --coverage-data data/coverage/ \
+  --coverage-data data/comparison/coverage/ \
   --hephaestus --language groovy \
   --whitelist data/coverage/whitelists/groovy.txt \
   --output-dir eval-figures/
+```
+
+
+### Code size
+
+```
+thalia@af84df5871af:~$ ./eval-scripts/compute-size-statistics.sh data/comparison/code-size/thalia/
+(groovy) Average size in kB: 1.96
+(groovy) Average size in LoC: 15
+
+(kotlin) Average size in kB: 1.64
+(kotlin) Average size in LoC: 12
+
+(scala) Average size in kB: 1.65
+(scala) Average size in LoC: 11
+thalia@af84df5871af:~$ ./eval-scripts/compute-size-statistics.sh data/comparison/code-size/hephaestus/
+(groovy) Average size in kB: 8.00
+(groovy) Average size in LoC: 306
+
+(kotlin) Average size in kB: 7.66
+(kotlin) Average size in LoC: 263
+
+(scala) Average size in kB: 7.95
+(scala) Average size in LoC: 258
 ```
