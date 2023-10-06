@@ -886,7 +886,19 @@ mentioned in the **Synthesis time** paragraph of Section 4.3.
 
 ## RQ4: Comparison of Thalia vs. Hephaestus (Section 4.5)
 
+In this research question,
+we compare `thalia` and `hephaestus`
+in terms of several aspects.
+
 ### Code coverage analysis
+
+Run the following commands
+to reproduce Figure 13.
+The script examines the code coverage
+data (`data/comparison/coverage`)
+that stem from the compilation of all
+programs produced by `thalia` and `hephaestus`
+respectively.
 
 ```bash
 # groovy
@@ -911,7 +923,20 @@ thalia@65536014baca:~$ python eval-scripts/analysis.py \
   --output-dir eval-figures/
 ```
 
+The output of the above commands are three figures
+that reside in the following paths on your host machine:
+`figures/groovy-cov-comparison.pdf`,
+`figures/scala-cov-comparison.pdf`,
+and `figures/kotlin-cov-comparison.pdf`.
+These correspond to Figure 13a, Figure 13b,
+and Figure 13c respectively.
+
+
 ### Compilation and Synthesis time
+
+The following command reproduces Table 5.
+It compares the average time of compiling ("comp") and
+generating ("gen") `thalia` and `hephaestus` programs.
 
 ```
 thalia@da41d2c974e0:~$ python eval-scripts/time-comparison.py data/comparison/time/
@@ -927,6 +952,11 @@ kotlin         6.5                 26.5                0.2                 1.3
 
 ### Code size
 
+Run the following two commands
+to get the size statistics regarding
+the programs produced by `thalia` and `hephaestus`.
+
+
 ```
 thalia@af84df5871af:~$ ./eval-scripts/compute-size-statistics.sh data/comparison/code-size/thalia/
 (groovy) Average size in kB: 1.96
@@ -937,6 +967,7 @@ thalia@af84df5871af:~$ ./eval-scripts/compute-size-statistics.sh data/comparison
 
 (scala) Average size in kB: 1.65
 (scala) Average size in LoC: 11
+
 thalia@af84df5871af:~$ ./eval-scripts/compute-size-statistics.sh data/comparison/code-size/hephaestus/
 (groovy) Average size in kB: 8.00
 (groovy) Average size in LoC: 306
@@ -947,3 +978,12 @@ thalia@af84df5871af:~$ ./eval-scripts/compute-size-statistics.sh data/comparison
 (scala) Average size in kB: 7.95
 (scala) Average size in LoC: 258
 ```
+
+The above results reproduce the following statements found
+in the **Code size** paragraph of Section 4.5:
+
+* _"..the average size of thalia’s programs written in
+Groovy, Scala, and Kotlin is 15, 12, and 11 LoC, respectively."_
+* _"Hephaestus generated programs that are one order of magnitude larger,
+    with an average size of 304, 262, and 257 LoC for Groovy, Scala,
+    and Kotlin respectively."_
