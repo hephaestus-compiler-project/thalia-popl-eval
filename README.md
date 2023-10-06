@@ -737,7 +737,7 @@ in the _"Size of test case"_ paragraph of Section 4.3.
    Similarly, Kotlin test cases have an
    average size of 1.4kB and an average of 11 LoC."_
 
-## RQ3: Impact of Library Selection and Synthesis Modes
+## RQ3: Impact of Library Selection and Synthesis Modes (Section 4.4)
 
 ### Number of well-typed and ill-typed programs
 
@@ -883,3 +883,30 @@ the script above also produces the average synthesis time metrics
 mentioned in the **Synthesis time** paragraph of Section 4.3.
 
 * _"The average synthesis time is 256, 161, and 178 milliseconds for Groovy, Scala, and Kotlin programs respectively. "_
+
+## RQ4: Comparison of Thalia vs. Hephaestus (Section 4.5)
+
+### Code coverage analysis
+
+```bash
+# groovy
+thalia@65536014baca:~$ python eval-scripts/analysis.py \
+  --coverage-data data/coverage/ \
+  --hephaestus --language groovy \
+  --whitelist data/coverage/whitelists/groovy.txt \
+  --output-dir eval-figures/
+
+# scala
+thalia@65536014baca:~$ python eval-scripts/analysis.py \
+  --coverage-data data/coverage/ \
+  --hephaestus --language scala \
+  --whitelist data/coverage/whitelists/scala.txt \
+  --output-dir eval-figures/
+
+# kotlin
+thalia@65536014baca:~$ python eval-scripts/analysis.py \
+  --coverage-data data/coverage/ \
+  --hephaestus --language groovy \
+  --whitelist data/coverage/whitelists/groovy.txt \
+  --output-dir eval-figures/
+```
