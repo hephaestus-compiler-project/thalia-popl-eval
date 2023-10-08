@@ -90,6 +90,14 @@ RUN sudo chown -R thalia:thalia ${HOME}/hephaestus
 RUN cd ${HOME}/hephaestus/ && pip install . && python -m pytest
 RUN echo "export PATH=$PATH:/home/thalia/.local/bin" >> ${HOME}/.bash_profile
 
+# Add source code of hephaestus
+ADD ./thalia ${HOME}/thalia
+RUN sudo chown -R thalia:thalia ${HOME}/thalia
+
+# Install and run hephaestus
+RUN cd ${HOME}/thalia/ && pip install . && python -m pytest
+RUN echo "export PATH=$PATH:/home/thalia/.local/bin" >> ${HOME}/.bash_profile
+
 # Create directory for helper scripts
 RUN mkdir ${HOME}/scripts
 ADD ./scripts/compute_coverage.sh ${HOME}/scripts
