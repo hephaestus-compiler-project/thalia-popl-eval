@@ -1,0 +1,48 @@
+{
+  "name": "org.apache.commons.lang3.function.FailableIntToDoubleFunction",
+  "type_parameters": [
+    "E extends java.lang.Throwable"
+  ],
+  "implements": [],
+  "inherits": [],
+  "class_type": 1,
+  "methods": [
+    {
+      "name": "nop",
+      "parameters": [],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "org.apache.commons.lang3.function.FailableIntToDoubleFunction<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "applyAsDouble",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [
+    {
+      "name": "NOP",
+      "type": "org.apache.commons.lang3.function.FailableIntToDoubleFunction<java.lang.Throwable>",
+      "is_static": true,
+      "access_mod": "public"
+    }
+  ],
+  "functional_interface": true,
+  "parent": null,
+  "language": "java"
+}

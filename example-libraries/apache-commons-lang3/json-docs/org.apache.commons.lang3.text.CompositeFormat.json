@@ -1,0 +1,94 @@
+{
+  "name": "org.apache.commons.lang3.text.CompositeFormat",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.text.Format"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "getFormatter",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.text.Format",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "parseObject",
+      "parameters": [
+        "java.lang.String",
+        "java.text.ParsePosition"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Object",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "format",
+      "parameters": [
+        "java.lang.Object",
+        "java.lang.StringBuffer",
+        "java.text.FieldPosition"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.StringBuffer",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getParser",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.text.Format",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reformat",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "CompositeFormat",
+      "parameters": [
+        "java.text.Format",
+        "java.text.Format"
+      ],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

@@ -1,0 +1,87 @@
+{
+  "name": "org.apache.commons.lang3.function.FailableDoubleUnaryOperator",
+  "type_parameters": [
+    "E extends java.lang.Throwable"
+  ],
+  "implements": [],
+  "inherits": [],
+  "class_type": 1,
+  "methods": [
+    {
+      "name": "applyAsDouble",
+      "parameters": [
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "identity",
+      "parameters": [],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "org.apache.commons.lang3.function.FailableDoubleUnaryOperator<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "andThen",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableDoubleUnaryOperator<E>"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.function.FailableDoubleUnaryOperator<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": true
+    },
+    {
+      "name": "compose",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableDoubleUnaryOperator<E>"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.function.FailableDoubleUnaryOperator<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": true
+    },
+    {
+      "name": "nop",
+      "parameters": [],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "org.apache.commons.lang3.function.FailableDoubleUnaryOperator<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [
+    {
+      "name": "NOP",
+      "type": "org.apache.commons.lang3.function.FailableDoubleUnaryOperator<java.lang.Throwable>",
+      "is_static": true,
+      "access_mod": "public"
+    }
+  ],
+  "functional_interface": false,
+  "parent": null,
+  "language": "java"
+}

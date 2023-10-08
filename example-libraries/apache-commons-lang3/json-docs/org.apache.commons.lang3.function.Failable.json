@@ -1,0 +1,522 @@
+{
+  "name": "org.apache.commons.lang3.function.Failable",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "accept",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableConsumer<T,E>",
+        "T"
+      ],
+      "type_parameters": [
+        "T",
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "accept",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableIntConsumer<E>",
+        "int"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "apply",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableBiFunction<T,U,R,E>",
+        "T",
+        "U"
+      ],
+      "type_parameters": [
+        "T",
+        "U",
+        "R",
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "R",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "applyAsDouble",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableDoubleBinaryOperator<E>",
+        "double",
+        "double"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asBiFunction",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableBiFunction<T,U,R,?>"
+      ],
+      "type_parameters": [
+        "T",
+        "U",
+        "R"
+      ],
+      "return_type": "java.util.function.BiFunction<T,U,R>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asCallable",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableCallable<V,?>"
+      ],
+      "type_parameters": [
+        "V"
+      ],
+      "return_type": "java.util.concurrent.Callable<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asFunction",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableFunction<T,R,?>"
+      ],
+      "type_parameters": [
+        "T",
+        "R"
+      ],
+      "return_type": "java.util.function.Function<T,R>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asRunnable",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableRunnable<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Runnable",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "call",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableCallable<V,E>"
+      ],
+      "type_parameters": [
+        "V",
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "V",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getAsBoolean",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableBooleanSupplier<E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getAsInt",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableIntSupplier<E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getAsShort",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableShortSupplier<E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "short",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "run",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableRunnable<E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "stream",
+      "parameters": [
+        "java.util.stream.Stream<T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "org.apache.commons.lang3.stream.Streams.FailableStream<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "test",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailablePredicate<T,E>",
+        "T"
+      ],
+      "type_parameters": [
+        "T",
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tryWithResources",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableRunnable<? extends java.lang.Throwable>",
+        "org.apache.commons.lang3.function.FailableRunnable<? extends java.lang.Throwable>..."
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "accept",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableBiConsumer<T,U,E>",
+        "T",
+        "U"
+      ],
+      "type_parameters": [
+        "T",
+        "U",
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "accept",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableDoubleConsumer<E>",
+        "double"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "accept",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableLongConsumer<E>",
+        "long"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "apply",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableFunction<T,R,E>",
+        "T"
+      ],
+      "type_parameters": [
+        "T",
+        "R",
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "R",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asBiConsumer",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableBiConsumer<T,U,?>"
+      ],
+      "type_parameters": [
+        "T",
+        "U"
+      ],
+      "return_type": "java.util.function.BiConsumer<T,U>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asBiPredicate",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableBiPredicate<T,U,?>"
+      ],
+      "type_parameters": [
+        "T",
+        "U"
+      ],
+      "return_type": "java.util.function.BiPredicate<T,U>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asConsumer",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableConsumer<T,?>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "java.util.function.Consumer<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asPredicate",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailablePredicate<T,?>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "java.util.function.Predicate<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asSupplier",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableSupplier<T,?>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "java.util.function.Supplier<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "get",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableSupplier<T,E>"
+      ],
+      "type_parameters": [
+        "T",
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "T",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getAsDouble",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableDoubleSupplier<E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getAsLong",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableLongSupplier<E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "rethrow",
+      "parameters": [
+        "java.lang.Throwable"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.RuntimeException",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "stream",
+      "parameters": [
+        "java.util.Collection<E>"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "org.apache.commons.lang3.stream.Streams.FailableStream<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "test",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableBiPredicate<T,U,E>",
+        "T",
+        "U"
+      ],
+      "type_parameters": [
+        "T",
+        "U",
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tryWithResources",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableRunnable<? extends java.lang.Throwable>",
+        "org.apache.commons.lang3.function.FailableConsumer<java.lang.Throwable,? extends java.lang.Throwable>",
+        "org.apache.commons.lang3.function.FailableRunnable<? extends java.lang.Throwable>..."
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "language": "java"
+}

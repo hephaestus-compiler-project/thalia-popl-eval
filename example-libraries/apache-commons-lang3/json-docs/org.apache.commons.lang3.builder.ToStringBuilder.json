@@ -1,0 +1,874 @@
+{
+  "name": "org.apache.commons.lang3.builder.ToStringBuilder",
+  "type_parameters": [],
+  "implements": [
+    "org.apache.commons.lang3.builder.Builder<java.lang.String>"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "append",
+      "parameters": [
+        "boolean[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "byte[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "char[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "double[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "float[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "int[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "long[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.Object[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "short[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "boolean[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "byte"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "byte[]",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "char[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "double[]",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "float[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "int[]",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "long[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "java.lang.Object[]",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "short"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "short[]",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendSuper",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "build",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getObject",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.Object",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getStyle",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringStyle",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reflectionToString",
+      "parameters": [
+        "java.lang.Object",
+        "org.apache.commons.lang3.builder.ToStringStyle"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reflectionToString",
+      "parameters": [
+        "T",
+        "org.apache.commons.lang3.builder.ToStringStyle",
+        "boolean",
+        "java.lang.Class<? super T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "byte"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "short"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "boolean[]",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "byte[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "char[]",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "double[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "float[]",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "int[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "long[]",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "java.lang.Object[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "java.lang.Object",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.String",
+        "short[]"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendAsObjectToString",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendToString",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getDefaultStyle",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.builder.ToStringStyle",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getStringBuffer",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.StringBuffer",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reflectionToString",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reflectionToString",
+      "parameters": [
+        "java.lang.Object",
+        "org.apache.commons.lang3.builder.ToStringStyle",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "setDefaultStyle",
+      "parameters": [
+        "org.apache.commons.lang3.builder.ToStringStyle"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ToStringBuilder",
+      "parameters": [
+        "java.lang.Object",
+        "org.apache.commons.lang3.builder.ToStringStyle"
+      ],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ToStringBuilder",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ToStringBuilder",
+      "parameters": [
+        "java.lang.Object",
+        "org.apache.commons.lang3.builder.ToStringStyle",
+        "java.lang.StringBuffer"
+      ],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

@@ -1,0 +1,70 @@
+{
+  "name": "org.apache.commons.lang3.builder.RecursiveToStringStyle",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "org.apache.commons.lang3.builder.ToStringStyle"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "appendDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "java.util.Collection<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "accept",
+      "parameters": [
+        "java.lang.Class<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "RecursiveToStringStyle",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

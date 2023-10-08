@@ -1,0 +1,990 @@
+{
+  "name": "org.apache.commons.lang3.math.NumberUtils",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "compare",
+      "parameters": [
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "compare",
+      "parameters": [
+        "short",
+        "short"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "createBigInteger",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigInteger",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "createFloat",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Float",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "createLong",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isCreatable",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isNumber",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "byte..."
+      ],
+      "type_parameters": [],
+      "return_type": "byte",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "double..."
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "float..."
+      ],
+      "type_parameters": [],
+      "return_type": "float",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "int..."
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "long..."
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "short..."
+      ],
+      "type_parameters": [],
+      "return_type": "short",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "byte..."
+      ],
+      "type_parameters": [],
+      "return_type": "byte",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "double..."
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "float..."
+      ],
+      "type_parameters": [],
+      "return_type": "float",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "int..."
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "long..."
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "short..."
+      ],
+      "type_parameters": [],
+      "return_type": "short",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toByte",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "byte",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toDouble",
+      "parameters": [
+        "java.math.BigDecimal"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toDouble",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toFloat",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "float",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toInt",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toLong",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toScaledBigDecimal",
+      "parameters": [
+        "java.math.BigDecimal"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigDecimal",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toScaledBigDecimal",
+      "parameters": [
+        "java.lang.Double"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigDecimal",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toScaledBigDecimal",
+      "parameters": [
+        "java.lang.Float"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigDecimal",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toScaledBigDecimal",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigDecimal",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toShort",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "short",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "compare",
+      "parameters": [
+        "byte",
+        "byte"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "compare",
+      "parameters": [
+        "long",
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "createBigDecimal",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigDecimal",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "createDouble",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "createInteger",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Integer",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "createNumber",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Number",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isDigits",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isParsable",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "byte",
+        "byte",
+        "byte"
+      ],
+      "type_parameters": [],
+      "return_type": "byte",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "double",
+        "double",
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "float",
+        "float",
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "float",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "int",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "long",
+        "long",
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "short",
+        "short",
+        "short"
+      ],
+      "type_parameters": [],
+      "return_type": "short",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "byte",
+        "byte",
+        "byte"
+      ],
+      "type_parameters": [],
+      "return_type": "byte",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "double",
+        "double",
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "float",
+        "float",
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "float",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "int",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "long",
+        "long",
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "short",
+        "short",
+        "short"
+      ],
+      "type_parameters": [],
+      "return_type": "short",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toByte",
+      "parameters": [
+        "java.lang.String",
+        "byte"
+      ],
+      "type_parameters": [],
+      "return_type": "byte",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toDouble",
+      "parameters": [
+        "java.math.BigDecimal",
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toDouble",
+      "parameters": [
+        "java.lang.String",
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toFloat",
+      "parameters": [
+        "java.lang.String",
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "float",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toInt",
+      "parameters": [
+        "java.lang.String",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toLong",
+      "parameters": [
+        "java.lang.String",
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toScaledBigDecimal",
+      "parameters": [
+        "java.math.BigDecimal",
+        "int",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigDecimal",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toScaledBigDecimal",
+      "parameters": [
+        "java.lang.Double",
+        "int",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigDecimal",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toScaledBigDecimal",
+      "parameters": [
+        "java.lang.Float",
+        "int",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigDecimal",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toScaledBigDecimal",
+      "parameters": [
+        "java.lang.String",
+        "int",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigDecimal",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toShort",
+      "parameters": [
+        "java.lang.String",
+        "short"
+      ],
+      "type_parameters": [],
+      "return_type": "short",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "NumberUtils",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [
+    {
+      "name": "BYTE_ONE",
+      "type": "java.lang.Byte",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "DOUBLE_MINUS_ONE",
+      "type": "java.lang.Double",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "DOUBLE_ZERO",
+      "type": "java.lang.Double",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "FLOAT_ONE",
+      "type": "java.lang.Float",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "INTEGER_MINUS_ONE",
+      "type": "java.lang.Integer",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "INTEGER_TWO",
+      "type": "java.lang.Integer",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "LONG_INT_MAX_VALUE",
+      "type": "java.lang.Long",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "LONG_MINUS_ONE",
+      "type": "java.lang.Long",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "LONG_ZERO",
+      "type": "java.lang.Long",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "SHORT_ONE",
+      "type": "java.lang.Short",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "BYTE_MINUS_ONE",
+      "type": "java.lang.Byte",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "BYTE_ZERO",
+      "type": "java.lang.Byte",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "DOUBLE_ONE",
+      "type": "java.lang.Double",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "FLOAT_MINUS_ONE",
+      "type": "java.lang.Float",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "FLOAT_ZERO",
+      "type": "java.lang.Float",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "INTEGER_ONE",
+      "type": "java.lang.Integer",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "INTEGER_ZERO",
+      "type": "java.lang.Integer",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "LONG_INT_MIN_VALUE",
+      "type": "java.lang.Long",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "LONG_ONE",
+      "type": "java.lang.Long",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "SHORT_MINUS_ONE",
+      "type": "java.lang.Short",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "SHORT_ZERO",
+      "type": "java.lang.Short",
+      "is_static": true,
+      "access_mod": "public"
+    }
+  ],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

@@ -1,0 +1,394 @@
+{
+  "name": "org.apache.commons.lang3.Functions",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "accept",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableConsumer<O,T>",
+        "O"
+      ],
+      "type_parameters": [
+        "O",
+        "T extends java.lang.Throwable"
+      ],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "apply",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableFunction<I,O,T>",
+        "I"
+      ],
+      "type_parameters": [
+        "I",
+        "O",
+        "T extends java.lang.Throwable"
+      ],
+      "return_type": "O",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asBiFunction",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableBiFunction<O1,O2,O,?>"
+      ],
+      "type_parameters": [
+        "O1",
+        "O2",
+        "O"
+      ],
+      "return_type": "java.util.function.BiFunction<O1,O2,O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asCallable",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableCallable<O,?>"
+      ],
+      "type_parameters": [
+        "O"
+      ],
+      "return_type": "java.util.concurrent.Callable<O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asFunction",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableFunction<I,O,?>"
+      ],
+      "type_parameters": [
+        "I",
+        "O"
+      ],
+      "return_type": "java.util.function.Function<I,O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asRunnable",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableRunnable<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Runnable",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "call",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableCallable<O,T>"
+      ],
+      "type_parameters": [
+        "O",
+        "T extends java.lang.Throwable"
+      ],
+      "return_type": "O",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "rethrow",
+      "parameters": [
+        "java.lang.Throwable"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.RuntimeException",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "stream",
+      "parameters": [
+        "java.util.Collection<O>"
+      ],
+      "type_parameters": [
+        "O"
+      ],
+      "return_type": "org.apache.commons.lang3.Streams.FailableStream<O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "test",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableBiPredicate<O1,O2,T>",
+        "O1",
+        "O2"
+      ],
+      "type_parameters": [
+        "O1",
+        "O2",
+        "T extends java.lang.Throwable"
+      ],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tryWithResources",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableRunnable<? extends java.lang.Throwable>",
+        "org.apache.commons.lang3.Functions.FailableConsumer<java.lang.Throwable,? extends java.lang.Throwable>",
+        "org.apache.commons.lang3.Functions.FailableRunnable<? extends java.lang.Throwable>..."
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "accept",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableBiConsumer<O1,O2,T>",
+        "O1",
+        "O2"
+      ],
+      "type_parameters": [
+        "O1",
+        "O2",
+        "T extends java.lang.Throwable"
+      ],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "apply",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableBiFunction<O1,O2,O,T>",
+        "O1",
+        "O2"
+      ],
+      "type_parameters": [
+        "O1",
+        "O2",
+        "O",
+        "T extends java.lang.Throwable"
+      ],
+      "return_type": "O",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asBiConsumer",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableBiConsumer<O1,O2,?>"
+      ],
+      "type_parameters": [
+        "O1",
+        "O2"
+      ],
+      "return_type": "java.util.function.BiConsumer<O1,O2>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asBiPredicate",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableBiPredicate<O1,O2,?>"
+      ],
+      "type_parameters": [
+        "O1",
+        "O2"
+      ],
+      "return_type": "java.util.function.BiPredicate<O1,O2>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asConsumer",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableConsumer<I,?>"
+      ],
+      "type_parameters": [
+        "I"
+      ],
+      "return_type": "java.util.function.Consumer<I>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asPredicate",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailablePredicate<I,?>"
+      ],
+      "type_parameters": [
+        "I"
+      ],
+      "return_type": "java.util.function.Predicate<I>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asSupplier",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableSupplier<O,?>"
+      ],
+      "type_parameters": [
+        "O"
+      ],
+      "return_type": "java.util.function.Supplier<O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "get",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableSupplier<O,T>"
+      ],
+      "type_parameters": [
+        "O",
+        "T extends java.lang.Throwable"
+      ],
+      "return_type": "O",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "run",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableRunnable<T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Throwable"
+      ],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "stream",
+      "parameters": [
+        "java.util.stream.Stream<O>"
+      ],
+      "type_parameters": [
+        "O"
+      ],
+      "return_type": "org.apache.commons.lang3.Streams.FailableStream<O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "test",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailablePredicate<O,T>",
+        "O"
+      ],
+      "type_parameters": [
+        "O",
+        "T extends java.lang.Throwable"
+      ],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tryWithResources",
+      "parameters": [
+        "org.apache.commons.lang3.Functions.FailableRunnable<? extends java.lang.Throwable>",
+        "org.apache.commons.lang3.Functions.FailableRunnable<? extends java.lang.Throwable>..."
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "Functions",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

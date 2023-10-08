@@ -1,0 +1,88 @@
+{
+  "name": "org.apache.commons.lang3.Streams.ArrayCollector",
+  "type_parameters": [
+    "O"
+  ],
+  "implements": [
+    "java.util.stream.Collector<O,java.util.List<O>,O[]>"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "characteristics",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Set<java.util.stream.Collector.Characteristics>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "finisher",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.function.Function<java.util.List<O>,O[]>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "accumulator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.function.BiConsumer<java.util.List<O>,O>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "combiner",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.function.BinaryOperator<java.util.List<O>>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "supplier",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.function.Supplier<java.util.List<O>>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ArrayCollector",
+      "parameters": [
+        "java.lang.Class<O>"
+      ],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

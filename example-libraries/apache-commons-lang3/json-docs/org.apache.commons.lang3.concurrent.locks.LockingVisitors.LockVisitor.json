@@ -1,0 +1,125 @@
+{
+  "name": "org.apache.commons.lang3.concurrent.locks.LockingVisitors.LockVisitor",
+  "type_parameters": [
+    "O",
+    "L"
+  ],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "acceptWriteLocked",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableConsumer<O,?>"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "applyWriteLocked",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableFunction<O,T,?>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getObject",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "O",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lockApplyUnlock",
+      "parameters": [
+        "java.util.function.Supplier<java.util.concurrent.locks.Lock>",
+        "org.apache.commons.lang3.function.FailableFunction<O,T,?>"
+      ],
+      "type_parameters": [],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "acceptReadLocked",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableConsumer<O,?>"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "applyReadLocked",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableFunction<O,T,?>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getLock",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "L",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lockAcceptUnlock",
+      "parameters": [
+        "java.util.function.Supplier<java.util.concurrent.locks.Lock>",
+        "org.apache.commons.lang3.function.FailableConsumer<O,?>"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

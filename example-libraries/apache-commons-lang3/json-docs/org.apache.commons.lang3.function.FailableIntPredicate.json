@@ -1,0 +1,104 @@
+{
+  "name": "org.apache.commons.lang3.function.FailableIntPredicate",
+  "type_parameters": [
+    "E extends java.lang.Throwable"
+  ],
+  "implements": [],
+  "inherits": [],
+  "class_type": 1,
+  "methods": [
+    {
+      "name": "falsePredicate",
+      "parameters": [],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "org.apache.commons.lang3.function.FailableIntPredicate<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "or",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableIntPredicate<E>"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.function.FailableIntPredicate<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": true
+    },
+    {
+      "name": "truePredicate",
+      "parameters": [],
+      "type_parameters": [
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "org.apache.commons.lang3.function.FailableIntPredicate<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "and",
+      "parameters": [
+        "org.apache.commons.lang3.function.FailableIntPredicate<E>"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.function.FailableIntPredicate<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": true
+    },
+    {
+      "name": "negate",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.function.FailableIntPredicate<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": true
+    },
+    {
+      "name": "test",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [
+    {
+      "name": "TRUE",
+      "type": "org.apache.commons.lang3.function.FailableIntPredicate",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "FALSE",
+      "type": "org.apache.commons.lang3.function.FailableIntPredicate",
+      "is_static": true,
+      "access_mod": "public"
+    }
+  ],
+  "functional_interface": true,
+  "parent": null,
+  "language": "java"
+}

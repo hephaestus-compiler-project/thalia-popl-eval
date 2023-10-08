@@ -1,0 +1,17 @@
+{
+  "name": "org.apache.commons.lang3.concurrent.locks.LockingVisitors.ReadWriteLockVisitor",
+  "type_parameters": [
+    "O"
+  ],
+  "implements": [],
+  "inherits": [
+    "org.apache.commons.lang3.concurrent.locks.LockingVisitors.LockVisitor<O,java.util.concurrent.locks.ReadWriteLock>"
+  ],
+  "class_type": 0,
+  "methods": [],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

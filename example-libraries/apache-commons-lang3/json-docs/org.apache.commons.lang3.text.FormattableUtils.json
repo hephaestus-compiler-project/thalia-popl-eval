@@ -1,0 +1,112 @@
+{
+  "name": "org.apache.commons.lang3.text.FormattableUtils",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.CharSequence",
+        "java.util.Formatter",
+        "int",
+        "int",
+        "int",
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Formatter",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.CharSequence",
+        "java.util.Formatter",
+        "int",
+        "int",
+        "int",
+        "java.lang.CharSequence"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Formatter",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.CharSequence",
+        "java.util.Formatter",
+        "int",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Formatter",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "append",
+      "parameters": [
+        "java.lang.CharSequence",
+        "java.util.Formatter",
+        "int",
+        "int",
+        "int",
+        "char",
+        "java.lang.CharSequence"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Formatter",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toString",
+      "parameters": [
+        "java.util.Formattable"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "FormattableUtils",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

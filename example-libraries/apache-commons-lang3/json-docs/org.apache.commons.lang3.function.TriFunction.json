@@ -1,0 +1,48 @@
+{
+  "name": "org.apache.commons.lang3.function.TriFunction",
+  "type_parameters": [
+    "T",
+    "U",
+    "V",
+    "R"
+  ],
+  "implements": [],
+  "inherits": [],
+  "class_type": 1,
+  "methods": [
+    {
+      "name": "apply",
+      "parameters": [
+        "T",
+        "U",
+        "V"
+      ],
+      "type_parameters": [],
+      "return_type": "R",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "andThen",
+      "parameters": [
+        "java.util.function.Function<? super R,? extends W>"
+      ],
+      "type_parameters": [
+        "W"
+      ],
+      "return_type": "org.apache.commons.lang3.function.TriFunction<T,U,V,W>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": true
+    }
+  ],
+  "fields": [],
+  "functional_interface": true,
+  "parent": null,
+  "language": "java"
+}

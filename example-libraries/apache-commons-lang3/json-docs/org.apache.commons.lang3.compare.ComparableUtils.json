@@ -1,0 +1,123 @@
+{
+  "name": "org.apache.commons.lang3.compare.ComparableUtils",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "betweenExclusive",
+      "parameters": [
+        "A",
+        "A"
+      ],
+      "type_parameters": [
+        "A extends java.lang.Comparable<A>"
+      ],
+      "return_type": "java.util.function.Predicate<A>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "gt",
+      "parameters": [
+        "A"
+      ],
+      "type_parameters": [
+        "A extends java.lang.Comparable<A>"
+      ],
+      "return_type": "java.util.function.Predicate<A>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "le",
+      "parameters": [
+        "A"
+      ],
+      "type_parameters": [
+        "A extends java.lang.Comparable<A>"
+      ],
+      "return_type": "java.util.function.Predicate<A>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "between",
+      "parameters": [
+        "A",
+        "A"
+      ],
+      "type_parameters": [
+        "A extends java.lang.Comparable<A>"
+      ],
+      "return_type": "java.util.function.Predicate<A>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ge",
+      "parameters": [
+        "A"
+      ],
+      "type_parameters": [
+        "A extends java.lang.Comparable<A>"
+      ],
+      "return_type": "java.util.function.Predicate<A>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "is",
+      "parameters": [
+        "A"
+      ],
+      "type_parameters": [
+        "A extends java.lang.Comparable<A>"
+      ],
+      "return_type": "org.apache.commons.lang3.compare.ComparableUtils.ComparableCheckBuilder<A>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lt",
+      "parameters": [
+        "A"
+      ],
+      "type_parameters": [
+        "A extends java.lang.Comparable<A>"
+      ],
+      "return_type": "java.util.function.Predicate<A>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

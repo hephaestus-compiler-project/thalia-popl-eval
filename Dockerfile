@@ -102,10 +102,23 @@ RUN echo "export PATH=$PATH:/home/thalia/.local/bin" >> ${HOME}/.bash_profile
 RUN mkdir ${HOME}/scripts
 ADD ./scripts/compute_coverage.sh ${HOME}/scripts
 ADD ./scripts/config.sh ${HOME}/scripts
+RUN sudo chown -R thalia:thalia ${HOME}/scripts/compute_coverage.sh
+RUN sudo chown -R thalia:thalia ${HOME}/scripts/config.sh
+
+# Create directory for runner scripts
+RUN mkdir ${HOME}/runner_scripts
+ADD ./runner_scripts/create-api-rules.py ${HOME}/runner_scripts
+ADD ./runner_scripts/thalia_run.sh ${HOME}/runner_scripts
+RUN sudo chown -R thalia:thalia ${HOME}/runner_scripts/create-api-rules.py
+RUN sudo chown -R thalia:thalia ${HOME}/runner_scripts/thalia_run.sh
+
+# Add stdlibs 
+ADD ./stdlib/ ${HOME}/stdlib
 
 # Add example files
-# Maybe we should attach that as a volume
-RUN mkdir ${HOME}/example-scala-programs
-ADD ./example-scala-programs ${HOME}/example-scala-programs
+# TODO: we should attach that as a volume
+RUN mkdir ${HOME}/example-libraries
+ADD ./example-libraries ${HOME}/example-libraries
+RUN sudo chown -R thalia:thalia ${HOME}/example-libraries
 
 WORKDIR ${HOME}

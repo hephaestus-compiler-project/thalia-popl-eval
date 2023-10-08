@@ -1,0 +1,238 @@
+{
+  "name": "org.apache.commons.lang3.ThreadUtils",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "findThreadById",
+      "parameters": [
+        "long",
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Thread",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "findThreadGroups",
+      "parameters": [
+        "java.lang.ThreadGroup",
+        "boolean",
+        "org.apache.commons.lang3.ThreadUtils.ThreadGroupPredicate"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Collection<java.lang.ThreadGroup>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "findThreadGroupsByName",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Collection<java.lang.ThreadGroup>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "findThreads",
+      "parameters": [
+        "org.apache.commons.lang3.ThreadUtils.ThreadPredicate"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Collection<java.lang.Thread>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "findThreadsByName",
+      "parameters": [
+        "java.lang.String",
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Collection<java.lang.Thread>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getAllThreadGroups",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Collection<java.lang.ThreadGroup>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getSystemThreadGroup",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.ThreadGroup",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sleep",
+      "parameters": [
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "findThreadById",
+      "parameters": [
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Thread",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "findThreadById",
+      "parameters": [
+        "long",
+        "java.lang.ThreadGroup"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Thread",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "findThreadGroups",
+      "parameters": [
+        "org.apache.commons.lang3.ThreadUtils.ThreadGroupPredicate"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Collection<java.lang.ThreadGroup>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "findThreads",
+      "parameters": [
+        "java.lang.ThreadGroup",
+        "boolean",
+        "org.apache.commons.lang3.ThreadUtils.ThreadPredicate"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Collection<java.lang.Thread>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "findThreadsByName",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Collection<java.lang.Thread>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "findThreadsByName",
+      "parameters": [
+        "java.lang.String",
+        "java.lang.ThreadGroup"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Collection<java.lang.Thread>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getAllThreads",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Collection<java.lang.Thread>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "join",
+      "parameters": [
+        "java.lang.Thread",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ThreadUtils",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

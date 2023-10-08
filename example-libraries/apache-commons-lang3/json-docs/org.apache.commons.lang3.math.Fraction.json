@@ -1,0 +1,416 @@
+{
+  "name": "org.apache.commons.lang3.math.Fraction",
+  "type_parameters": [],
+  "implements": [
+    "java.lang.Comparable<org.apache.commons.lang3.math.Fraction>"
+  ],
+  "inherits": [
+    "java.lang.Number"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "add",
+      "parameters": [
+        "org.apache.commons.lang3.math.Fraction"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "divideBy",
+      "parameters": [
+        "org.apache.commons.lang3.math.Fraction"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "equals",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getDenominator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFraction",
+      "parameters": [
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFraction",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getProperNumerator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getReducedFraction",
+      "parameters": [
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "intValue",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "longValue",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "negate",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reduce",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toProperString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "abs",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "compareTo",
+      "parameters": [
+        "org.apache.commons.lang3.math.Fraction"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "doubleValue",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "floatValue",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "float",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFraction",
+      "parameters": [
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFraction",
+      "parameters": [
+        "int",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getNumerator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getProperWhole",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "invert",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "multiplyBy",
+      "parameters": [
+        "org.apache.commons.lang3.math.Fraction"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "pow",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "subtract",
+      "parameters": [
+        "org.apache.commons.lang3.math.Fraction"
+      ],
+      "type_parameters": [],
+      "return_type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [
+    {
+      "name": "ONE",
+      "type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "ONE_HALF",
+      "type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "ONE_THIRD",
+      "type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "THREE_QUARTERS",
+      "type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "TWO_QUARTERS",
+      "type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "ZERO",
+      "type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "FOUR_FIFTHS",
+      "type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "ONE_FIFTH",
+      "type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "ONE_QUARTER",
+      "type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "THREE_FIFTHS",
+      "type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "TWO_FIFTHS",
+      "type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "TWO_THIRDS",
+      "type": "org.apache.commons.lang3.math.Fraction",
+      "is_static": true,
+      "access_mod": "public"
+    }
+  ],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

@@ -1,0 +1,692 @@
+{
+  "name": "org.apache.commons.lang3.Conversion",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "binaryBeMsb0ToHexDigit",
+      "parameters": [
+        "boolean[]",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "char",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "binaryToHexDigit",
+      "parameters": [
+        "boolean[]"
+      ],
+      "type_parameters": [],
+      "return_type": "char",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "binaryToHexDigitMsb0_4bits",
+      "parameters": [
+        "boolean[]"
+      ],
+      "type_parameters": [],
+      "return_type": "char",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "binaryToInt",
+      "parameters": [
+        "boolean[]",
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "binaryToShort",
+      "parameters": [
+        "boolean[]",
+        "int",
+        "short",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "short",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "byteArrayToLong",
+      "parameters": [
+        "byte[]",
+        "int",
+        "long",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "byteArrayToUuid",
+      "parameters": [
+        "byte[]",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.UUID",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "byteToHex",
+      "parameters": [
+        "byte",
+        "int",
+        "java.lang.String",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hexDigitMsb0ToInt",
+      "parameters": [
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hexDigitToInt",
+      "parameters": [
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hexToInt",
+      "parameters": [
+        "java.lang.String",
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hexToShort",
+      "parameters": [
+        "java.lang.String",
+        "int",
+        "short",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "short",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "intToBinary",
+      "parameters": [
+        "int",
+        "int",
+        "boolean[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "intToHex",
+      "parameters": [
+        "int",
+        "int",
+        "java.lang.String",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "intToHexDigitMsb0",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "char",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "longToBinary",
+      "parameters": [
+        "long",
+        "int",
+        "boolean[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "longToHex",
+      "parameters": [
+        "long",
+        "int",
+        "java.lang.String",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "longToShortArray",
+      "parameters": [
+        "long",
+        "int",
+        "short[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "short[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "shortArrayToLong",
+      "parameters": [
+        "short[]",
+        "int",
+        "long",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "shortToByteArray",
+      "parameters": [
+        "short",
+        "int",
+        "byte[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "byte[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "uuidToByteArray",
+      "parameters": [
+        "java.util.UUID",
+        "byte[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "byte[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "binaryBeMsb0ToHexDigit",
+      "parameters": [
+        "boolean[]"
+      ],
+      "type_parameters": [],
+      "return_type": "char",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "binaryToByte",
+      "parameters": [
+        "boolean[]",
+        "int",
+        "byte",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "byte",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "binaryToHexDigit",
+      "parameters": [
+        "boolean[]",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "char",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "binaryToHexDigitMsb0_4bits",
+      "parameters": [
+        "boolean[]",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "char",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "binaryToLong",
+      "parameters": [
+        "boolean[]",
+        "int",
+        "long",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "byteArrayToInt",
+      "parameters": [
+        "byte[]",
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "byteArrayToShort",
+      "parameters": [
+        "byte[]",
+        "int",
+        "short",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "short",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "byteToBinary",
+      "parameters": [
+        "byte",
+        "int",
+        "boolean[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hexDigitMsb0ToBinary",
+      "parameters": [
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hexDigitToBinary",
+      "parameters": [
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hexToByte",
+      "parameters": [
+        "java.lang.String",
+        "int",
+        "byte",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "byte",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hexToLong",
+      "parameters": [
+        "java.lang.String",
+        "int",
+        "long",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "intArrayToLong",
+      "parameters": [
+        "int[]",
+        "int",
+        "long",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "intToByteArray",
+      "parameters": [
+        "int",
+        "int",
+        "byte[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "byte[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "intToHexDigit",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "char",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "intToShortArray",
+      "parameters": [
+        "int",
+        "int",
+        "short[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "short[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "longToByteArray",
+      "parameters": [
+        "long",
+        "int",
+        "byte[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "byte[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "longToIntArray",
+      "parameters": [
+        "long",
+        "int",
+        "int[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "shortArrayToInt",
+      "parameters": [
+        "short[]",
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "shortToBinary",
+      "parameters": [
+        "short",
+        "int",
+        "boolean[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "shortToHex",
+      "parameters": [
+        "short",
+        "int",
+        "java.lang.String",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "Conversion",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

@@ -1,0 +1,827 @@
+{
+  "name": "org.apache.commons.lang3.time.DateUtils",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "addHours",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addMinutes",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addSeconds",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addYears",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ceiling",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFragmentInDays",
+      "parameters": [
+        "java.util.Calendar",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFragmentInHours",
+      "parameters": [
+        "java.util.Calendar",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFragmentInMilliseconds",
+      "parameters": [
+        "java.util.Calendar",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFragmentInMinutes",
+      "parameters": [
+        "java.util.Calendar",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFragmentInSeconds",
+      "parameters": [
+        "java.util.Calendar",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isSameDay",
+      "parameters": [
+        "java.util.Calendar",
+        "java.util.Calendar"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isSameInstant",
+      "parameters": [
+        "java.util.Calendar",
+        "java.util.Calendar"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isSameLocalTime",
+      "parameters": [
+        "java.util.Calendar",
+        "java.util.Calendar"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "iterator",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Iterator<java.util.Calendar>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "parseDate",
+      "parameters": [
+        "java.lang.String",
+        "java.util.Locale",
+        "java.lang.String..."
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "parseDateStrictly",
+      "parameters": [
+        "java.lang.String",
+        "java.util.Locale",
+        "java.lang.String..."
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "round",
+      "parameters": [
+        "java.util.Calendar",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Calendar",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "round",
+      "parameters": [
+        "java.lang.Object",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "setHours",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "setMinutes",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "setSeconds",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toCalendar",
+      "parameters": [
+        "java.util.Date"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Calendar",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "truncate",
+      "parameters": [
+        "java.util.Calendar",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Calendar",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "truncate",
+      "parameters": [
+        "java.lang.Object",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "truncatedCompareTo",
+      "parameters": [
+        "java.util.Date",
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "truncatedEquals",
+      "parameters": [
+        "java.util.Date",
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addDays",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addMilliseconds",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addMonths",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addWeeks",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ceiling",
+      "parameters": [
+        "java.util.Calendar",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Calendar",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ceiling",
+      "parameters": [
+        "java.lang.Object",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFragmentInDays",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFragmentInHours",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFragmentInMilliseconds",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFragmentInMinutes",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getFragmentInSeconds",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isSameDay",
+      "parameters": [
+        "java.util.Date",
+        "java.util.Date"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isSameInstant",
+      "parameters": [
+        "java.util.Date",
+        "java.util.Date"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "iterator",
+      "parameters": [
+        "java.util.Calendar",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Iterator<java.util.Calendar>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "iterator",
+      "parameters": [
+        "java.lang.Object",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Iterator<?>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "parseDate",
+      "parameters": [
+        "java.lang.String",
+        "java.lang.String..."
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "parseDateStrictly",
+      "parameters": [
+        "java.lang.String",
+        "java.lang.String..."
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "round",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "setDays",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "setMilliseconds",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "setMonths",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "setYears",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toCalendar",
+      "parameters": [
+        "java.util.Date",
+        "java.util.TimeZone"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Calendar",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "truncate",
+      "parameters": [
+        "java.util.Date",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Date",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "truncatedCompareTo",
+      "parameters": [
+        "java.util.Calendar",
+        "java.util.Calendar",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "truncatedEquals",
+      "parameters": [
+        "java.util.Calendar",
+        "java.util.Calendar",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "DateUtils",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [
+    {
+      "name": "MILLIS_PER_HOUR",
+      "type": "long",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "MILLIS_PER_SECOND",
+      "type": "long",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "RANGE_MONTH_SUNDAY",
+      "type": "int",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "RANGE_WEEK_MONDAY",
+      "type": "int",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "RANGE_WEEK_SUNDAY",
+      "type": "int",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "MILLIS_PER_DAY",
+      "type": "long",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "MILLIS_PER_MINUTE",
+      "type": "long",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "RANGE_MONTH_MONDAY",
+      "type": "int",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "RANGE_WEEK_CENTER",
+      "type": "int",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "RANGE_WEEK_RELATIVE",
+      "type": "int",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "SEMI_MONTH",
+      "type": "int",
+      "is_static": true,
+      "access_mod": "public"
+    }
+  ],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

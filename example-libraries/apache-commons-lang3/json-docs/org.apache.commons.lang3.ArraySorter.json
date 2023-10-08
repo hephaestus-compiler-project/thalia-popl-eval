@@ -1,0 +1,149 @@
+{
+  "name": "org.apache.commons.lang3.ArraySorter",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "sort",
+      "parameters": [
+        "char[]"
+      ],
+      "type_parameters": [],
+      "return_type": "char[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sort",
+      "parameters": [
+        "float[]"
+      ],
+      "type_parameters": [],
+      "return_type": "float[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sort",
+      "parameters": [
+        "long[]"
+      ],
+      "type_parameters": [],
+      "return_type": "long[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sort",
+      "parameters": [
+        "T[]"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "T[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sort",
+      "parameters": [
+        "byte[]"
+      ],
+      "type_parameters": [],
+      "return_type": "byte[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sort",
+      "parameters": [
+        "double[]"
+      ],
+      "type_parameters": [],
+      "return_type": "double[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sort",
+      "parameters": [
+        "int[]"
+      ],
+      "type_parameters": [],
+      "return_type": "int[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sort",
+      "parameters": [
+        "short[]"
+      ],
+      "type_parameters": [],
+      "return_type": "short[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sort",
+      "parameters": [
+        "T[]",
+        "java.util.Comparator<? super T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "T[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ArraySorter",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

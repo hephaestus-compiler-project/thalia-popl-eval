@@ -1,0 +1,192 @@
+{
+  "name": "org.apache.commons.lang3.builder.MultilineRecursiveToStringStyle",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "org.apache.commons.lang3.builder.RecursiveToStringStyle"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "appendDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "byte[]"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "double[]"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "int[]"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "short[]"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "boolean[]"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "char[]"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "float[]"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "long[]"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "java.lang.Object[]"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reflectionAppendArrayDetail",
+      "parameters": [
+        "java.lang.StringBuffer",
+        "java.lang.String",
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "MultilineRecursiveToStringStyle",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": null,
+      "is_static": false,
+      "is_constructor": true,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

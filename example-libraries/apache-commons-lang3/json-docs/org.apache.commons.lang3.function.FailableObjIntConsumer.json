@@ -1,0 +1,52 @@
+{
+  "name": "org.apache.commons.lang3.function.FailableObjIntConsumer",
+  "type_parameters": [
+    "T",
+    "E extends java.lang.Throwable"
+  ],
+  "implements": [],
+  "inherits": [],
+  "class_type": 1,
+  "methods": [
+    {
+      "name": "nop",
+      "parameters": [],
+      "type_parameters": [
+        "T",
+        "E extends java.lang.Throwable"
+      ],
+      "return_type": "org.apache.commons.lang3.function.FailableObjIntConsumer<T,E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "accept",
+      "parameters": [
+        "T",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [
+    {
+      "name": "NOP",
+      "type": "org.apache.commons.lang3.function.FailableObjIntConsumer<java.lang.Object,java.lang.Throwable>",
+      "is_static": true,
+      "access_mod": "public"
+    }
+  ],
+  "functional_interface": true,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}
