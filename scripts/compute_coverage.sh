@@ -171,7 +171,7 @@ done
 # Merge all libraries into $results/combination
 echo "Proceed to merging all projects"
 modes="all base both erase inject base-both base-erase base-inject"
-mkdir $results/combination/res
+mkdir -p $results/combination/res
 for mode in $modes; do
     echo "Merge results in $results/combination/res/$mode.exec"
     $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $results/*/res/$mode.exec --destfile $results/combination/res/$mode.exec
