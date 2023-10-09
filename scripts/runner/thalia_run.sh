@@ -2,6 +2,10 @@
 # Example run:
 # ./runner_scripts/thalia_run.sh stdlib/kotlin-stdlib/json-docs/ example-libraries/ kotlin-bugs "--language kotlin" apache-commons-lang3
 # ./runner_scripts/thalia_run.sh stdlib/kotlin-stdlib/json-docs/ example-libraries/ kotlin-bugs "--language kotlin"
+# We can also specify how long to run thalia through two global variables:
+# THALIA_TIME or THALIA_ITERS
+# e.g.,
+# THALIA_TIME=10 ./runner_scripts/thalia_run.sh stdlib/kotlin-stdlib/json-docs/ example-libraries/ kotlin-bugs "--language kotlin"
 
 basedir=$(dirname "$0")
 stdlib=$1
@@ -12,12 +16,21 @@ libname=$5
 
 thalia="python /home/thalia/thalia/thalia.py"
 
+if [ ! -z "$THALIA_TIME" ]; then
+    seconds="$THALIA_TIME"
+elif [ ! -z "$THALIA_ITERS" ]; then
+    iterations="$THALIA_ITERS"
+else
+    iterations=10
+fi
+
 run_thalia()
 {
   local libpath=$1
   local libname=$(basename $libpath)
   local bugs=$2
   local args=$3
+  local secs=$4
 
   if [[ ! -d "$libpath/json-docs" || -z $(find "$libpath/json-docs" -mindepth 1 -print -quit) ]]; then
     # Create API specification from javadoc
@@ -66,6 +79,13 @@ run_thalia()
     --library-path "$classpath" --api-doc-path libs --api-rules $rulespath \
     --max-conditional-depth 3 --bugs $bugs $args"
 
+  if [ ! -z "$secs" ]; then
+      secs_per_run=$((secs / 4))
+      base_args="$base_args --seconds $secs_per_run"
+  else
+      base_args="$base_args --iterations $iterations"
+  fi
+
   if [ ! -d $bugs/$libname-base ]; then
     echo " - base mode..."
     echo "$base_args --name $libname-base" | xargs $thalia > /dev/null
@@ -100,12 +120,24 @@ fi
 
 if [ ! -z $libname ]; then
   echo "Testing library $libname"
-  run_thalia "$libpath/$libname" "$bugs" "$args"
+  run_thalia "$libpath/$libname" "$bugs" "$args" "$seconds"
   exit 0
 fi
 
+start_time=$(date +%s)
 # Explore directories and run thalia
 for lib in $libpath/*; do
+    end_time=$(date +%s)
+    if [ ! -z $seconds ]; then
+        elapsed_time=$((end_time - start_time))
+        remaining_seconds=$((seconds - elapsed_time))
+        if (( remaining_seconds < 0 )); then
+            echo "Out of time budget"
+            exit 0
+        else
+            echo "$remaining_seconds seconds remaining"
+        fi
+    fi
     echo "Testing library $(basename $lib)"
-    run_thalia "$lib" "$bugs" "$args"
+    run_thalia "$lib" "$bugs" "$args" "$remaining_seconds"
 done

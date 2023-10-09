@@ -1089,7 +1089,9 @@ we use `thalia` to generate test programs
 using the API of each library included
 in `package-data/` directory (see .
 For each API,
-`thalia` produces ten test programs (see the `--iterations 10`).
+`thalia` produces ten test programs 
+(we can change that by setting the global variable `THALIA_ITERS`, 
+e.g., `THALIA_ITERS=100`).
 Then,
 we use the JaCoCo library to compile these programs
 and measure the code coverage of the compiler.
@@ -1108,7 +1110,7 @@ thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
   stdlib/groovy-stdlib/json-docs/ \
   package-data/ \
   groovy-programs \
-  "--iterations 10 --language groovy --dry-run"
+  "--language groovy --dry-run"
 
 Testing library com-fasterxml-jackson-core-jackson-databind
  - base mode...
@@ -1159,7 +1161,7 @@ thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
   stdlib/scala-stdlib/json-docs/ \
   package-data \
   scala-programs \
-  "--iterations 10 --language scala --dry-run"
+  "--language scala --dry-run"
 
 Testing library com-fasterxml-jackson-core-jackson-databind
  - base mode...
@@ -1209,7 +1211,7 @@ thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
   stdlib/kotlin-stdlib/json-docs/ \
   package-data \
   kotlin-programs \
-  "--iterations 10 --language kotlin --dry-run"
+  "--language kotlin --dry-run"
 
 Testing library com-fasterxml-jackson-core-jackson-databind
  - base mode...
