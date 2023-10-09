@@ -25,7 +25,7 @@ RUN pip3 install --upgrade setuptools
 RUN pip3 install --upgrade setuptools
 RUN pip3 install --upgrade distlib
 RUN pip3 install --upgrade pip
-RUN pip3 install seaborn pandas matplotlib pytest
+RUN pip3 install seaborn pandas matplotlib pytest matplotlib_venn
 
 USER thalia
 
