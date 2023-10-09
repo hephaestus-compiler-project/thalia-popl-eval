@@ -81,19 +81,22 @@ ADD ./scripts/utils/fetch-package-data.sh /usr/local/bin/fetch-package-data
 ADD ./scripts/utils/doc2json.sh /usr/local/bin/doc2json-util
 RUN echo "export PATH=$PATH:/home/thalia/.local/bin" >> ${HOME}/.bash_profile
 
+# Install python deps
+RUN pip install networkx
+
 # Add source code of hephaestus
 ADD ./hephaestus ${HOME}/hephaestus
 RUN sudo chown -R thalia:thalia ${HOME}/hephaestus
 
 # Install and run hephaestus
-RUN cd ${HOME}/hephaestus/ && pip install . && python -m pytest
+RUN cd ${HOME}/hephaestus/ && python -m pytest && echo 'alias hephaestus="python /home/thalia/hephaestus/hephaestus.py"' >> ~/.bashrc
 
 # Add source code of thalia
 ADD ./thalia ${HOME}/thalia
 RUN sudo chown -R thalia:thalia ${HOME}/thalia
 
 # Install and run thalia
-RUN cd ${HOME}/thalia/ && pip install . && python -m pytest
+RUN cd ${HOME}/thalia/ && python -m pytest && echo 'alias thalia="python /home/thalia/thalia/thalia.py"' >> ~/.bashrc
 
 # Add source code of doc2json
 ADD ./doc2json ${HOME}/doc2json
@@ -111,9 +114,9 @@ RUN sudo chown -R thalia:thalia ${HOME}/scripts/config.sh
 
 # Create directory for runner scripts
 RUN mkdir ${HOME}/runner_scripts
-ADD ./runner_scripts/create-api-rules.py ${HOME}/runner_scripts
-ADD ./runner_scripts/thalia_run.sh ${HOME}/runner_scripts
-ADD ./runner_scripts/hephaestus_run.sh ${HOME}/runner_scripts
+ADD ./scripts/runner/create-api-rules.py ${HOME}/runner_scripts
+ADD ./scripts/runner/thalia_run.sh ${HOME}/runner_scripts
+ADD ./scripts/runner/hephaestus_run.sh ${HOME}/runner_scripts
 RUN sudo chown -R thalia:thalia ${HOME}/runner_scripts/create-api-rules.py
 RUN sudo chown -R thalia:thalia ${HOME}/runner_scripts/thalia_run.sh
 RUN sudo chown -R thalia:thalia ${HOME}/runner_scripts/hephaestus_run.sh
