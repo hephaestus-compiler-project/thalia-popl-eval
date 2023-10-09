@@ -59,7 +59,8 @@ which provides a rich CLI with many available options.
 Below, we explain
 the most important CLI options that are related to `thalia`.
 
-``` thalia@e0456a9b520e:~$ thalia --help
+```
+thalia@e0456a9b520e:~$ thalia --help
 usage: thalia [-h] [-g {base,api}] [--api-doc-path API_DOC_PATH] [-s SECONDS] [-i ITERATIONS] [--api-rules API_RULES] [--library-path LIBRARY_PATH]
               [--max-conditional-depth MAX_CONDITIONAL_DEPTH] [--erase-types] [--inject-type-error] [--disable-expression-cache] [--path-search-strategy {shortest,ksimple}]
               [-t TRANSFORMATIONS] [--batch BATCH] [-b BUGS] [-n NAME] [-T [{TypeErasure} [{TypeErasure} ...]]] [--transformation-schedule TRANSFORMATION_SCHEDULE] [-R REPLAY] [-e] [-k]
@@ -147,7 +148,7 @@ TODO
 
 To run `thalia` tests, execute the following commands:
 
-```
+```bash
 # Enter thalia directory
 thalia@e0456a9b520e:~$ cd thalia
 # Run tests
@@ -394,7 +395,7 @@ To do so,
 run:
 
 ```bash
-echo "com.google.guava,guava,32.1.2-jre" | fetch-package-data -i - -o outdir
+thalia@5b1ba457c8bf:~/thalia$ echo "com.google.guava,guava,32.1.2-jre" | fetch-package-data -i - -o outdir
 ```
 
 This command essentially fetches the `pom.xml` and the javadoc
@@ -414,10 +415,11 @@ of the package we want to retrieve.
 Next, run the following command to
 convert the API documentation written in HTML format
 into a set of JSON files,
-which are given as input to `thalia`.
+which are given as input to `thalia`
+(estimated running time 30--60 seconds).
 
 ```bash
-doc2json.sh -d outdir -l com-google-guava-guava -L java
+thalia@5b1ba457c8bf:~/thalia$ doc2json-util -d outdir -l com-google-guava-guava -L java
 ```
 
 The generated JSON files can be found
@@ -440,8 +442,8 @@ at `~/.m2/repository/`.
 
 
 ```bash
-mvn -f outdir/com-google-guava-guava/pom.xml dependency:tree 
-mvn -f outdir/com-google-guava-guava/dependency.xml dependency:tree
+thalia@5b1ba457c8bf:~/thalia$ mvn -f outdir/com-google-guava-guava/pom.xml dependency:tree 
+thalia@5b1ba457c8bf:~/thalia$ mvn -f outdir/com-google-guava-guava/dependency.xml dependency:tree
 ```
 
 
@@ -450,11 +452,7 @@ mvn -f outdir/com-google-guava-guava/dependency.xml dependency:tree
 Now, we are ready to invoke `thalia` as follows
 
 ```bash
-classpath=$(mvn -f outdir/com-google-guava-guava/pom.xml dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)
-depspath=$(mvn -f $libpath/dependency.xml dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)
-classpath="$classpath:$depspath"
-
-thalia@e0456a9b520e:~/thalia$ thalia --language groovy \
+thalia@5b1ba457c8bf:~/thalia$ thalia --language groovy \
   --transformations 0  \
   --batch 10 -i 30 -P \
   --max-depth 2 \
@@ -462,7 +460,7 @@ thalia@e0456a9b520e:~/thalia$ thalia --language groovy \
   --api-doc-path outdir/com-google-guava-guava/json-docs \
   --keep-all \
   --name groovy-session-guava \
-  --library-path "$classpath"
+  --library-path "$(mvn -f outdir/com-google-guava-guava/pom.xml dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q):$(mvn -f outdir/com-google-guava-guava/dependency.xml dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)"
 ```
 
 Please notice two things.
@@ -475,7 +473,8 @@ we use the option `--library-path` whose value
 is the classpath of the guava library.
 This classpath contains the location of all JAR files
 required to invoke guava.
-Classpath is automatically constructed via `mvn`.
+Classpath is automatically constructed via
+the `mvn dependency:build-classpath` command.
 In turn,
 `thalia` passes the value of the option `--library-path`
 to the compiler.

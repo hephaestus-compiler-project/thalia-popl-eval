@@ -7,11 +7,6 @@ RUN apt install -y vim software-properties-common git curl unzip zip sudo \
     sqlite3 wget unzip locales
 RUN sudo locale-gen "en_US.UTF-8"
 RUN update-locale LC_ALL="en_US.UTF-8"
-#RUN add-apt-repository ppa:deadsnakes/ppa && \
-#    apt -yqq update && \
-#    apt -yqq install python3.9 python3-pip && \
-#    update-alternatives --install /usr/bin/python python /usr/bin/python3.9 1 && \
-#    update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.9 1
 RUN update-alternatives --install /usr/bin/python python /usr/bin/python3 1
 RUN apt install -yq python3-distutils python3-pip
 
@@ -83,6 +78,7 @@ RUN mkdir jacoco && \
 WORKDIR ${HOME}
 
 ADD ./scripts/utils/fetch-package-data.sh /usr/local/bin/fetch-package-data
+ADD ./scripts/utils/doc2json.sh /usr/local/bin/doc2json-util
 RUN echo "export PATH=$PATH:/home/thalia/.local/bin" >> ${HOME}/.bash_profile
 
 # Add source code of hephaestus
