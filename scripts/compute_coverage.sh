@@ -5,32 +5,26 @@
 # First we need to load set the system variables
 # ./scripts/config.sh /home/thalia/coverage/jacoco/ /home/thalia/.sdkman/
 # The we can compute the coverage
-# ./scripts/compute_coverage.sh example-scala-programs/guava/pom.xml example-scala-programs/guava/programs results/guava scala
+# ./scripts/compute_coverage.sh example-libraries scala-bugs results/scala scala
 # This will produce the following:
 #
-# tree results/guave
+# tree results/scala
 #
 
 # Check for the correct number of arguments
-if [ "$#" -ne 5 ]; then
-    echo "Usage: $0 <pom> <dependency-pom> <programs> <results> <language>"
+if [ "$#" -ne 4 ]; then
+    echo "Usage: $0 <pom-directory> <programs> <results> <language>"
     exit 1
 fi
 
 pom="$1"
-dependency="$2"
-programs="$3"
-results="$4"
-language="$5"
+programs="$2"
+results="$3"
+language="$4"
 
-# Check if pom and dependency are files and programs is a directory
-if [ ! -f "$pom" ]; then
-    echo "Error: $pom is not a file."
-    exit 1
-fi
-
-if [ ! -f "$dependency" ]; then
-    echo "Error: $dependency is not a file."
+# Check if pom is a directory
+if [ ! -d "$pom" ]; then
+    echo "Error: $pom is not a directory."
     exit 1
 fi
 
@@ -101,22 +95,27 @@ fi
 # ${results}/all.exec
 # ${results}/all.csv
 mkdir -p $results
-    
-classpath=$(mvn -f $pom dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)
-depspath=$(mvn -f $dependency dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)
-classpath="$classpath"
+
+declare -A unique_modes
 
 # Loop over every file in the programs path
 for mode_path in "$programs"/*; do
+    project_name_mode=${mode_path#*//}
+    project_name=${project_name_mode%-*}
     if [ -d "$mode_path" ]; then
         # Extract the mode from the file name
         mode=$(basename "$mode_path" | awk -F'-' '{print $NF}')
+        # Add the mode to the associative array
+        unique_modes["$mode"]=1
+        classpath=$(mvn -f ${pom}/${project_name}/pom.xml dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)
+        depspath=$(mvn -f ${pom}/${project_name}/dependency.xml dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)
+        classpath="$classpath:$depspath"
 
         # Check if the mode is one of the specified strings
         case "$mode" in
             base|both|erase|inject)
                 echo "Processing: ${mode_path}/generator/"
-                mode_results=$results/$mode
+                mode_results=$results/$project_name_mode
                 mkdir -p $mode_results
                 # Loop through the files in $mode_path/generator
                 for iter in $(ls $mode_path/generator/); do
@@ -127,7 +126,7 @@ for mode_path in "$programs"/*; do
                     elif [ "$language" = "groovy" ]; then
                         command="$JAVA_11 -javaagent:$JACOCO/lib/jacocoagent.jar=destfile=$target -cp $GROOVY_JAR:$classpath org.codehaus.groovy.tools.FileSystemCompiler --compile-static $program_path"
                     else
-                        command="$JAVA_11 -javaagent:$JACOCO/lib/jacocoagent.jar=destfile=$target -cp $KOTLIN_JAR:$classpath org.jetbrains.kotlin.cli.jvm.K2JVMCompiler $program_path"
+                        command="$JAVA_11 -javaagent:$JACOCO/lib/jacocoagent.jar=destfile=$target -cp $KOTLIN_JAR:$classpath org.jetbrains.kotlin.cli.jvm.K2JVMCompiler -classpath $classpath -nowarn $program_path"
                     fi
                     eval "$command"
                     if [ ! -f "$program_path" ]; then
@@ -141,14 +140,26 @@ for mode_path in "$programs"/*; do
                 # If you want them in a single variable separated by spaces:
                 exec_file_paths_single=$(echo $exec_file_paths | tr '\n' ' ')
 
-                echo "Merge results in $results/$mode.exec"
-                $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $exec_file_paths_single --destfile $results/$mode.exec
-                echo "Extract results in $results/$mode.csv"
-                $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $results/$mode.exec --classfiles $SOURCES --csv $results/$mode.csv
+                echo "Merge results in $results/$project_name_mode.exec"
+                $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $exec_file_paths_single --destfile $results/$project_name_mode.exec
+                echo "Extract results in $results/$project_name_mode.csv"
+                $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $results/$project_name_mode.exec --classfiles $SOURCES --csv $results/$project_name_mode.csv
                 ;;
             *)
                 echo "Skipping: $mode_path (mode: $mode)"
                 ;;
         esac
     fi
+done
+
+# Convert the keys of the associative array to a space-separated string
+modes=$(echo "${!unique_modes[@]}")
+
+echo "Proceed to merging"
+for mode in $modes; do
+    # Merge all results
+    echo "Merge results in $results/$mode.exec"
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $results/*-$mode.exec --destfile $results/$mode.exec
+    echo "Extract results in $results/$mode.csv"
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $results/$mode.exec --classfiles $SOURCES --csv $results/$mode.csv
 done

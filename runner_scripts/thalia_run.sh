@@ -1,17 +1,22 @@
 #! /bin/bash
+# Example run:
+# ./runner_scripts/thalia_run.sh stdlib/kotlin-stdlib/json-docs/ example-libraries/ kotlin-bugs "--language kotlin" apache-commons-lang3
+# ./runner_scripts/thalia_run.sh stdlib/kotlin-stdlib/json-docs/ example-libraries/ kotlin-bugs "--language kotlin" 
 
 basedir=$(dirname "$0")
 stdlib=$1
 libpath=$2
-args=$3
-libname=$4
+bugs=$3
+args=$4
+libname=$5
 
 
 run_thalia()
 {
   local libpath=$1
   local libname=$(basename $libpath)
-  local args=$2
+  local bugs=$2
+  local args=$3
 
   if [[ ! -d "$libpath/json-docs" || -z $(find "$libpath/json-docs" -mindepth 1 -print -quit) ]]; then
     # Create API specification from javadoc
@@ -58,18 +63,18 @@ run_thalia()
   base_args="--iterations 10 --batch 30 -P -L --transformations 0 \
     --max-depth 2 --generator api -k \
     --library-path "$classpath" --api-doc-path libs --api-rules $rulespath \
-    --max-conditional-depth 3 $args"
+    --max-conditional-depth 3 --bugs $bugs $args"
 
-  if [ ! -d bugs/$libname-base ]; then
+  if [ ! -d $bugs/$libname-base ]; then
     echo "$base_args --name $libname-base" | xargs thalia
   fi
-  if [ ! -d bugs/$libname-erase ]; then
+  if [ ! -d $bugs/$libname-erase ]; then
     echo "$base_args --name $libname-erase --erase-types" | xargs thalia
   fi
-  if [ ! -d bugs/$libname-inject ]; then
+  if [ ! -d $bugs/$libname-inject ]; then
     echo "$base_args --name $libname-inject --inject-type-error" | xargs thalia
   fi
-  if [ ! -d bugs/$libname-both ]; then
+  if [ ! -d $bugs/$libname-both ]; then
     echo "$base_args --name $libname-both --erase-types --inject-type-error" | xargs thalia
   fi
 }
@@ -84,9 +89,18 @@ if [ -z $stdlib ]; then
   exit 1
 fi
 
+if [ -z $bugs ]; then
+    bugs="bugs"
+fi
 
 if [ ! -z $libname ]; then
   echo "Testing library $libname"
-  run_thalia "$libpath/$libname" "$args"
+  run_thalia "$libpath/$libname" "$bugs" "$args"
   exit 0
 fi
+
+# Explore directories and run thalia
+for lib in $libpath/*; do
+    echo "Testing library $(basename $lib)"
+    run_thalia "$lib" "$bugs" "$args"
+done
