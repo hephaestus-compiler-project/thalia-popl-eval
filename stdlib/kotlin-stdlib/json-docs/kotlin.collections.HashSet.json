@@ -4,9 +4,11 @@
     "E"
   ],
   "implements": [
+    "kotlin.collections.AbstractMutableSet<E>",
     "kotlin.collections.MutableSet<E>"
   ],
   "inherits": [
+    "kotlin.collections.AbstractMutableSet<E>",
     "kotlin.collections.MutableSet<E>"
   ],
   "class_type": 0,
@@ -70,12 +72,22 @@
       "access_mod": "public"
     },
     {
-      "name": "forEach",
+      "name": "equals",
       "parameters": [
-        "java.util.function.Consumer<in E>"
+        "kotlin.Any?"
       ],
       "type_parameters": [],
-      "return_type": "Unit",
+      "return_type": "kotlin.Boolean",
+      "receiver": null,
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public"
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "kotlin.Int",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -96,16 +108,6 @@
       "parameters": [],
       "type_parameters": [],
       "return_type": "kotlin.collections.MutableIterator<E>",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "parallelStream",
-      "parameters": [],
-      "type_parameters": [],
-      "return_type": "java.util.stream.Stream<E>",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -136,18 +138,6 @@
       "access_mod": "public"
     },
     {
-      "name": "removeIf",
-      "parameters": [
-        "java.util.function.Predicate<in E>"
-      ],
-      "type_parameters": [],
-      "return_type": "kotlin.Boolean",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
       "name": "retainAll",
       "parameters": [
         "kotlin.collections.Collection<E>"
@@ -160,20 +150,34 @@
       "access_mod": "public"
     },
     {
-      "name": "spliterator",
+      "name": "toArray",
       "parameters": [],
       "type_parameters": [],
-      "return_type": "java.util.Spliterator<E>",
+      "return_type": "kotlin.Array<kotlin.Any?>",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public"
+      "access_mod": "protected"
     },
     {
-      "name": "stream",
+      "name": "toArray",
+      "parameters": [
+        "kotlin.Array<T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "kotlin.Array<T>",
+      "receiver": null,
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected"
+    },
+    {
+      "name": "toString",
       "parameters": [],
       "type_parameters": [],
-      "return_type": "java.util.stream.Stream<E>",
+      "return_type": "kotlin.String",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,

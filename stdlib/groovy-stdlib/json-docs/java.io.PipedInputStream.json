@@ -169,7 +169,7 @@
     },
     {
       "name": "PIPE_SIZE",
-      "type": "int",
+      "type": "static int",
       "is_static": true,
       "access_mod": "protected"
     },
@@ -188,6 +188,5 @@
   ],
   "functional_interface": false,
   "parent": null,
-  "access_mod": "public",
   "language": "java"
 }

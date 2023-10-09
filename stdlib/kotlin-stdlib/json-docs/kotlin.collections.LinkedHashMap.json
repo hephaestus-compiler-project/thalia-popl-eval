@@ -5,9 +5,11 @@
     "V"
   ],
   "implements": [
+    "kotlin.collections.HashMap<K,V>",
     "kotlin.collections.MutableMap<K,V>"
   ],
   "inherits": [
+    "kotlin.collections.HashMap<K,V>",
     "kotlin.collections.MutableMap<K,V>"
   ],
   "class_type": 0,
@@ -17,45 +19,6 @@
       "parameters": [],
       "type_parameters": [],
       "return_type": "Unit",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "compute",
-      "parameters": [
-        "K",
-        "java.util.function.BiFunction<in K, in V?, out V?>"
-      ],
-      "type_parameters": [],
-      "return_type": "V?",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "computeIfAbsent",
-      "parameters": [
-        "K",
-        "java.util.function.Function<in K, out V>"
-      ],
-      "type_parameters": [],
-      "return_type": "V",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "computeIfPresent",
-      "parameters": [
-        "K",
-        "java.util.function.BiFunction<in K, in V, out V?>"
-      ],
-      "type_parameters": [],
-      "return_type": "V?",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -86,12 +49,12 @@
       "access_mod": "public"
     },
     {
-      "name": "forEach",
+      "name": "equals",
       "parameters": [
-        "java.util.function.BiConsumer<in K, in V>"
+        "kotlin.Any?"
       ],
       "type_parameters": [],
-      "return_type": "Unit",
+      "return_type": "kotlin.Boolean",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -110,13 +73,10 @@
       "access_mod": "public"
     },
     {
-      "name": "getOrDefault",
-      "parameters": [
-        "K",
-        "V"
-      ],
+      "name": "hashCode",
+      "parameters": [],
       "type_parameters": [],
-      "return_type": "V",
+      "return_type": "kotlin.Int",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -127,20 +87,6 @@
       "parameters": [],
       "type_parameters": [],
       "return_type": "kotlin.Boolean",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "merge",
-      "parameters": [
-        "K",
-        "V",
-        "java.util.function.BiFunction<in V, in V, out V?>"
-      ],
-      "type_parameters": [],
-      "return_type": "V?",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -172,19 +118,6 @@
       "access_mod": "public"
     },
     {
-      "name": "putIfAbsent",
-      "parameters": [
-        "K",
-        "V"
-      ],
-      "type_parameters": [],
-      "return_type": "V?",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
       "name": "remove",
       "parameters": [
         "K"
@@ -197,52 +130,10 @@
       "access_mod": "public"
     },
     {
-      "name": "remove",
-      "parameters": [
-        "K",
-        "V"
-      ],
+      "name": "toString",
+      "parameters": [],
       "type_parameters": [],
-      "return_type": "kotlin.Boolean",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "replace",
-      "parameters": [
-        "K",
-        "V"
-      ],
-      "type_parameters": [],
-      "return_type": "V?",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "replace",
-      "parameters": [
-        "K",
-        "V",
-        "V"
-      ],
-      "type_parameters": [],
-      "return_type": "kotlin.Boolean",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "replaceAll",
-      "parameters": [
-        "java.util.function.BiFunction<in K, in V, out V>"
-      ],
-      "type_parameters": [],
-      "return_type": "Unit",
+      "return_type": "kotlin.String",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,

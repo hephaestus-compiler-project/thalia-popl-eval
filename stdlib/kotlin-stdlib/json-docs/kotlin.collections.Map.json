@@ -18,11 +18,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "containsValue",
@@ -34,11 +30,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "get",
@@ -50,28 +42,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "getOrDefault",
-      "parameters": [
-        "K",
-        "V"
-      ],
-      "type_parameters": [],
-      "return_type": "V",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "isEmpty",
@@ -81,11 +52,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     }
   ],
   "fields": [

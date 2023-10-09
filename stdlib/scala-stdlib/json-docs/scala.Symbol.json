@@ -91,6 +91,5 @@
     }
   ],
   "is_class": true,
-  "access_mod": "public",
   "language": "scala"
 }

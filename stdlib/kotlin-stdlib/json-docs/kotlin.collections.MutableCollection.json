@@ -23,11 +23,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "addAll",
@@ -39,11 +35,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "clear",
@@ -53,11 +45,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "contains",
@@ -69,11 +57,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "containsAll",
@@ -85,11 +69,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "isEmpty",
@@ -99,11 +79,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "iterator",
@@ -113,11 +89,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "remove",
@@ -129,11 +101,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "removeAll",
@@ -145,11 +113,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "retainAll",
@@ -161,11 +125,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     }
   ],
   "fields": [

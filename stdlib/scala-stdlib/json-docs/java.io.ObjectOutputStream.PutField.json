@@ -181,7 +181,6 @@
   ],
   "fields": [],
   "functional_interface": false,
-  "parent": null,
-  "access_mod": "public",
+  "parent": "ObjectOutputStream",
   "language": "java"
 }

@@ -23,11 +23,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "hasNext",
@@ -37,11 +33,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "hasPrevious",
@@ -51,11 +43,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "next",
@@ -65,11 +53,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "nextIndex",
@@ -79,11 +63,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "previous",
@@ -93,11 +73,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "previousIndex",
@@ -107,11 +83,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "remove",
@@ -121,11 +93,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "set",
@@ -137,11 +105,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     }
   ],
   "fields": [],

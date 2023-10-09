@@ -120,6 +120,18 @@
       "access_mod": "public"
     },
     {
+      "name": "equals",
+      "parameters": [
+        "kotlin.Any?"
+      ],
+      "type_parameters": [],
+      "return_type": "kotlin.Boolean",
+      "receiver": null,
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public"
+    },
+    {
       "name": "first",
       "parameters": [],
       "type_parameters": [],
@@ -140,24 +152,22 @@
       "access_mod": "public"
     },
     {
-      "name": "forEach",
-      "parameters": [
-        "java.util.function.Consumer<in E>"
-      ],
-      "type_parameters": [],
-      "return_type": "Unit",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
       "name": "get",
       "parameters": [
         "kotlin.Int"
       ],
       "type_parameters": [],
       "return_type": "E",
+      "receiver": null,
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public"
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "kotlin.Int",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -189,7 +199,7 @@
       "name": "iterator",
       "parameters": [],
       "type_parameters": [],
-      "return_type": "kotlin.collections.Iterator<E>",
+      "return_type": "kotlin.collections.MutableIterator<E>",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -244,16 +254,6 @@
       ],
       "type_parameters": [],
       "return_type": "kotlin.collections.MutableListIterator<E>",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "parallelStream",
-      "parameters": [],
-      "type_parameters": [],
-      "return_type": "java.util.stream.Stream<E>",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -316,18 +316,6 @@
       "access_mod": "public"
     },
     {
-      "name": "removeIf",
-      "parameters": [
-        "java.util.function.Predicate<in E>"
-      ],
-      "type_parameters": [],
-      "return_type": "kotlin.Boolean",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
       "name": "removeLast",
       "parameters": [],
       "type_parameters": [],
@@ -361,18 +349,6 @@
       "access_mod": "protected"
     },
     {
-      "name": "replaceAll",
-      "parameters": [
-        "java.util.function.UnaryOperator<E>"
-      ],
-      "type_parameters": [],
-      "return_type": "Unit",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
       "name": "retainAll",
       "parameters": [
         "kotlin.collections.Collection<E>"
@@ -392,28 +368,6 @@
       ],
       "type_parameters": [],
       "return_type": "E",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "sort",
-      "parameters": [
-        "java.util.Comparator<in E>"
-      ],
-      "type_parameters": [],
-      "return_type": "Unit",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "stream",
-      "parameters": [],
-      "type_parameters": [],
-      "return_type": "java.util.stream.Stream<E>",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -440,7 +394,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public"
+      "access_mod": "protected"
     },
     {
       "name": "toArray",
@@ -454,13 +408,21 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
+      "access_mod": "protected"
+    },
+    {
+      "name": "toString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "kotlin.String",
+      "receiver": null,
+      "is_static": false,
+      "is_constructor": false,
       "access_mod": "public"
     },
     {
       "name": "ArrayDeque",
-      "parameters": [
-        "kotlin.Int"
-      ],
+      "parameters": [],
       "type_parameters": [],
       "return_type": null,
       "receiver": null,
@@ -470,7 +432,9 @@
     },
     {
       "name": "ArrayDeque",
-      "parameters": [],
+      "parameters": [
+        "kotlin.Int"
+      ],
       "type_parameters": [],
       "return_type": null,
       "receiver": null,

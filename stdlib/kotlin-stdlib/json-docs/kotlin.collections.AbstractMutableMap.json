@@ -5,11 +5,11 @@
     "V"
   ],
   "implements": [
-    "java.util.AbstractMap<K,V>",
+    "kotlin.collections.AbstractMap<K,V>",
     "kotlin.collections.MutableMap<K,V>"
   ],
   "inherits": [
-    "java.util.AbstractMap<K,V>",
+    "kotlin.collections.AbstractMap<K,V>",
     "kotlin.collections.MutableMap<K,V>"
   ],
   "class_type": 2,
@@ -22,76 +22,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "clone",
-      "parameters": [],
-      "type_parameters": [],
-      "return_type": "kotlin.Any",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "protected",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "compute",
-      "parameters": [
-        "K",
-        "java.util.function.BiFunction<in K, in V?, out V?>"
-      ],
-      "type_parameters": [],
-      "return_type": "V?",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "computeIfAbsent",
-      "parameters": [
-        "K",
-        "java.util.function.Function<in K, out V>"
-      ],
-      "type_parameters": [],
-      "return_type": "V",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "computeIfPresent",
-      "parameters": [
-        "K",
-        "java.util.function.BiFunction<in K, in V, out V?>"
-      ],
-      "type_parameters": [],
-      "return_type": "V?",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "containsKey",
@@ -103,11 +34,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "containsValue",
@@ -119,27 +46,19 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
-      "name": "forEach",
+      "name": "equals",
       "parameters": [
-        "java.util.function.BiConsumer<in K, in V>"
+        "kotlin.Any?"
       ],
       "type_parameters": [],
-      "return_type": "Unit",
+      "return_type": "kotlin.Boolean",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "get",
@@ -151,28 +70,17 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
-      "name": "getOrDefault",
-      "parameters": [
-        "K",
-        "V"
-      ],
+      "name": "hashCode",
+      "parameters": [],
       "type_parameters": [],
-      "return_type": "V",
+      "return_type": "kotlin.Int",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "isEmpty",
@@ -182,29 +90,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "merge",
-      "parameters": [
-        "K",
-        "V",
-        "java.util.function.BiFunction<in V, in V, out V?>"
-      ],
-      "type_parameters": [],
-      "return_type": "V?",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "put",
@@ -217,11 +103,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "putAll",
@@ -233,28 +115,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "putIfAbsent",
-      "parameters": [
-        "K",
-        "V"
-      ],
-      "type_parameters": [],
-      "return_type": "V?",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "remove",
@@ -266,87 +127,25 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
-      "name": "remove",
-      "parameters": [
-        "K",
-        "V"
-      ],
+      "name": "toString",
+      "parameters": [],
       "type_parameters": [],
-      "return_type": "kotlin.Boolean",
+      "return_type": "kotlin.String",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "replace",
-      "parameters": [
-        "K",
-        "V"
-      ],
-      "type_parameters": [],
-      "return_type": "V?",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "replace",
-      "parameters": [
-        "K",
-        "V",
-        "V"
-      ],
-      "type_parameters": [],
-      "return_type": "kotlin.Boolean",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "replaceAll",
-      "parameters": [
-        "java.util.function.BiFunction<in K, in V, out V>"
-      ],
-      "type_parameters": [],
-      "return_type": "Unit",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     }
   ],
   "fields": [
     {
       "name": "entries",
-      "type": "kotlin.collections.MutableSet<kotlin.collections.MutableMap.MutableEntry<K, V>>",
+      "type": "kotlin.collections.Set<kotlin.collections.Map.Entry<K, V>>",
       "is_final": true,
-      "is_override": true,
+      "is_override": false,
       "receiver": null,
       "type_parameters": [],
       "access_mod": "public",
@@ -366,7 +165,7 @@
       "name": "size",
       "type": "kotlin.Int",
       "is_final": true,
-      "is_override": false,
+      "is_override": true,
       "receiver": null,
       "type_parameters": [],
       "access_mod": "public",

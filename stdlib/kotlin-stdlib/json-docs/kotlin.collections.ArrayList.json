@@ -4,12 +4,14 @@
     "E"
   ],
   "implements": [
+    "kotlin.collections.AbstractMutableList<E>",
     "kotlin.collections.MutableList<E>",
-    "java.util.RandomAccess"
+    "kotlin.collections.RandomAccess"
   ],
   "inherits": [
+    "kotlin.collections.AbstractMutableList<E>",
     "kotlin.collections.MutableList<E>",
-    "java.util.RandomAccess"
+    "kotlin.collections.RandomAccess"
   ],
   "class_type": 0,
   "methods": [
@@ -110,12 +112,12 @@
       "access_mod": "public"
     },
     {
-      "name": "forEach",
+      "name": "equals",
       "parameters": [
-        "java.util.function.Consumer<in E>"
+        "kotlin.Any?"
       ],
       "type_parameters": [],
-      "return_type": "Unit",
+      "return_type": "kotlin.Boolean",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -128,6 +130,16 @@
       ],
       "type_parameters": [],
       "return_type": "E",
+      "receiver": null,
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public"
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "kotlin.Int",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -200,16 +212,6 @@
       "access_mod": "public"
     },
     {
-      "name": "parallelStream",
-      "parameters": [],
-      "type_parameters": [],
-      "return_type": "java.util.stream.Stream<E>",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
       "name": "remove",
       "parameters": [
         "E"
@@ -246,28 +248,17 @@
       "access_mod": "public"
     },
     {
-      "name": "removeIf",
+      "name": "removeRange",
       "parameters": [
-        "java.util.function.Predicate<in E>"
-      ],
-      "type_parameters": [],
-      "return_type": "kotlin.Boolean",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "replaceAll",
-      "parameters": [
-        "java.util.function.UnaryOperator<E>"
+        "kotlin.Int",
+        "kotlin.Int"
       ],
       "type_parameters": [],
       "return_type": "Unit",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public"
+      "access_mod": "protected"
     },
     {
       "name": "retainAll",
@@ -295,28 +286,6 @@
       "access_mod": "public"
     },
     {
-      "name": "sort",
-      "parameters": [
-        "java.util.Comparator<in E>"
-      ],
-      "type_parameters": [],
-      "return_type": "Unit",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "stream",
-      "parameters": [],
-      "type_parameters": [],
-      "return_type": "java.util.stream.Stream<E>",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
       "name": "subList",
       "parameters": [
         "kotlin.Int",
@@ -324,6 +293,40 @@
       ],
       "type_parameters": [],
       "return_type": "kotlin.collections.MutableList<E>",
+      "receiver": null,
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public"
+    },
+    {
+      "name": "toArray",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "kotlin.Array<kotlin.Any?>",
+      "receiver": null,
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected"
+    },
+    {
+      "name": "toArray",
+      "parameters": [
+        "kotlin.Array<T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "kotlin.Array<T>",
+      "receiver": null,
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected"
+    },
+    {
+      "name": "toString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "kotlin.String",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -375,6 +378,16 @@
     }
   ],
   "fields": [
+    {
+      "name": "modCount",
+      "type": "kotlin.Int",
+      "is_final": false,
+      "is_override": false,
+      "receiver": null,
+      "type_parameters": [],
+      "access_mod": "protected",
+      "is_static": false
+    },
     {
       "name": "size",
       "type": "kotlin.Int",

@@ -281,6 +281,5 @@
   ],
   "functional_interface": false,
   "parent": null,
-  "access_mod": "public",
   "language": "java"
 }

@@ -15,11 +15,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "next",
@@ -29,11 +25,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     }
   ],
   "fields": [],

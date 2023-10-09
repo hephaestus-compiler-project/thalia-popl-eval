@@ -5,11 +5,11 @@
     "To"
   ],
   "implements": [
-    "scala.<:<[scala.=:=.From, To]",
+    "scala.<:<[From, To]",
     "scala.Serializable"
   ],
   "inherits": [
-    "scala.<:<[scala.=:=.From, To]",
+    "scala.<:<[From, To]",
     "scala.Serializable"
   ],
   "class_type": 2,
@@ -17,12 +17,12 @@
     {
       "name": "substituteBoth",
       "parameters": [
-        "F[To, scala.=:=.From]"
+        "F[To, From]"
       ],
       "type_parameters": [
         "F[_, _]"
       ],
-      "return_type": "F[scala.=:=.From, To]",
+      "return_type": "F[From, To]",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -36,7 +36,7 @@
       "type_parameters": [
         "C"
       ],
-      "return_type": "scala.=:=[scala.=:=.From, C]",
+      "return_type": "scala.=:=[From, C]",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -45,7 +45,7 @@
     {
       "name": "apply",
       "parameters": [
-        "scala.=:=.From"
+        "From"
       ],
       "type_parameters": [],
       "return_type": "To",
@@ -57,7 +57,7 @@
     {
       "name": "compose",
       "parameters": [
-        "scala.=:=[C, scala.=:=.From]"
+        "scala.=:=[C, From]"
       ],
       "type_parameters": [
         "C"
@@ -71,7 +71,7 @@
     {
       "name": "substituteCo",
       "parameters": [
-        "F[scala.=:=.From]"
+        "F[From]"
       ],
       "type_parameters": [
         "F[_]"
@@ -90,7 +90,7 @@
       "type_parameters": [
         "F[_]"
       ],
-      "return_type": "F[scala.=:=.From]",
+      "return_type": "F[From]",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -100,7 +100,7 @@
   "fields": [
     {
       "name": "flip",
-      "type": "scala.=:=[To, scala.=:=.From]",
+      "type": "scala.=:=[To, From]",
       "is_final": false,
       "is_override": false,
       "receiver": null,
@@ -110,6 +110,5 @@
     }
   ],
   "is_class": true,
-  "access_mod": "private",
   "language": "scala"
 }

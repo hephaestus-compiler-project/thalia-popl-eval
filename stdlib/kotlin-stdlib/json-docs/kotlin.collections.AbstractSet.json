@@ -50,18 +50,6 @@
       "access_mod": "public"
     },
     {
-      "name": "forEach",
-      "parameters": [
-        "java.util.function.Consumer<in E>"
-      ],
-      "type_parameters": [],
-      "return_type": "Unit",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
       "name": "hashCode",
       "parameters": [],
       "type_parameters": [],
@@ -86,36 +74,6 @@
       "parameters": [],
       "type_parameters": [],
       "return_type": "kotlin.collections.Iterator<E>",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "parallelStream",
-      "parameters": [],
-      "type_parameters": [],
-      "return_type": "java.util.stream.Stream<E>",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "spliterator",
-      "parameters": [],
-      "type_parameters": [],
-      "return_type": "java.util.Spliterator<E>",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "stream",
-      "parameters": [],
-      "type_parameters": [],
-      "return_type": "java.util.stream.Stream<E>",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,

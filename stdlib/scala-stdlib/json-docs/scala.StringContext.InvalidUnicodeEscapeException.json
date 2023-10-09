@@ -47,6 +47,5 @@
     }
   ],
   "is_class": true,
-  "access_mod": "protected",
   "language": "scala"
 }

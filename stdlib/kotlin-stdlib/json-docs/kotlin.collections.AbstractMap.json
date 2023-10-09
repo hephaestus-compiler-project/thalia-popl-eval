@@ -49,37 +49,12 @@
       "access_mod": "public"
     },
     {
-      "name": "forEach",
-      "parameters": [
-        "java.util.function.BiConsumer<in K, in V>"
-      ],
-      "type_parameters": [],
-      "return_type": "Unit",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
       "name": "get",
       "parameters": [
         "K"
       ],
       "type_parameters": [],
       "return_type": "V?",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
-    },
-    {
-      "name": "getOrDefault",
-      "parameters": [
-        "K",
-        "V"
-      ],
-      "type_parameters": [],
-      "return_type": "V",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
@@ -114,31 +89,9 @@
       "is_static": false,
       "is_constructor": false,
       "access_mod": "public"
-    },
-    {
-      "name": "toString",
-      "parameters": [
-        "kotlin.collections.Map.Entry<K, V>"
-      ],
-      "type_parameters": [],
-      "return_type": "kotlin.String",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public"
     }
   ],
   "fields": [
-    {
-      "name": "_values",
-      "type": "kotlin.collections.Collection<V>?",
-      "is_final": false,
-      "is_override": false,
-      "receiver": null,
-      "type_parameters": [],
-      "access_mod": "public",
-      "is_static": false
-    },
     {
       "name": "entries",
       "type": "kotlin.collections.Set<kotlin.collections.Map.Entry<K, V>>",

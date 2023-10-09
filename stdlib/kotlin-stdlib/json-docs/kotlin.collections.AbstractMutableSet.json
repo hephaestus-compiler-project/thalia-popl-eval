@@ -4,11 +4,11 @@
     "E"
   ],
   "implements": [
-    "java.util.AbstractSet<E>",
+    "kotlin.collections.AbstractMutableCollection<E>",
     "kotlin.collections.MutableSet<E>"
   ],
   "inherits": [
-    "java.util.AbstractSet<E>",
+    "kotlin.collections.AbstractMutableCollection<E>",
     "kotlin.collections.MutableSet<E>"
   ],
   "class_type": 2,
@@ -23,11 +23,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "addAll",
@@ -39,11 +35,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "clear",
@@ -53,11 +45,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "contains",
@@ -69,11 +57,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "containsAll",
@@ -85,27 +69,29 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
-      "name": "forEach",
+      "name": "equals",
       "parameters": [
-        "java.util.function.Consumer<in E>"
+        "kotlin.Any?"
       ],
       "type_parameters": [],
-      "return_type": "Unit",
+      "return_type": "kotlin.Boolean",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "kotlin.Int",
+      "receiver": null,
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public"
     },
     {
       "name": "isEmpty",
@@ -115,39 +101,17 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "iterator",
       "parameters": [],
       "type_parameters": [],
-      "return_type": "kotlin.collections.MutableIterator<E>",
+      "return_type": "kotlin.collections.Iterator<E>",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "parallelStream",
-      "parameters": [],
-      "type_parameters": [],
-      "return_type": "java.util.stream.Stream<E>",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "remove",
@@ -159,11 +123,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "removeAll",
@@ -175,27 +135,7 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "removeIf",
-      "parameters": [
-        "java.util.function.Predicate<in E>"
-      ],
-      "type_parameters": [],
-      "return_type": "kotlin.Boolean",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "retainAll",
@@ -207,53 +147,17 @@
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "spliterator",
-      "parameters": [],
-      "type_parameters": [],
-      "return_type": "java.util.Spliterator<E>",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
-    },
-    {
-      "name": "stream",
-      "parameters": [],
-      "type_parameters": [],
-      "return_type": "java.util.stream.Stream<E>",
-      "receiver": null,
-      "is_static": false,
-      "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "public"
     },
     {
       "name": "toArray",
       "parameters": [],
       "type_parameters": [],
-      "return_type": "kotlin.Array<kotlin.Any>",
+      "return_type": "kotlin.Array<kotlin.Any?>",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "protected"
     },
     {
       "name": "toArray",
@@ -261,17 +165,23 @@
         "kotlin.Array<T>"
       ],
       "type_parameters": [
-        "T : kotlin.Any"
+        "T"
       ],
       "return_type": "kotlin.Array<T>",
       "receiver": null,
       "is_static": false,
       "is_constructor": false,
-      "access_mod": "public",
-      "other_metadata": {
-        "is_suspend": false,
-        "is_inline": false
-      }
+      "access_mod": "protected"
+    },
+    {
+      "name": "toString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "kotlin.String",
+      "receiver": null,
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public"
     }
   ],
   "fields": [

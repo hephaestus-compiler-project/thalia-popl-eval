@@ -22,6 +22,5 @@
   "fields": [],
   "functional_interface": true,
   "parent": null,
-  "access_mod": "public",
   "language": "java"
 }
