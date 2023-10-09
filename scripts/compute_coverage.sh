@@ -97,6 +97,7 @@ fi
 mkdir -p $results
 
 declare -A unique_modes
+unique_modes["all"]=1
 
 # Loop over every file in the programs path
 for mode_path in "$programs"/*; do
@@ -115,7 +116,7 @@ for mode_path in "$programs"/*; do
         case "$mode" in
             base|both|erase|inject)
                 echo "Processing: ${mode_path}/generator/"
-                mode_results=$results/$project_name_mode
+                mode_results=$results/$project_name/res/$project_name_mode
                 mkdir -p $mode_results
                 # Loop through the files in $mode_path/generator
                 for iter in $(ls $mode_path/generator/); do
@@ -140,10 +141,10 @@ for mode_path in "$programs"/*; do
                 # If you want them in a single variable separated by spaces:
                 exec_file_paths_single=$(echo $exec_file_paths | tr '\n' ' ')
 
-                echo "Merge results in $results/$project_name_mode.exec"
-                $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $exec_file_paths_single --destfile $results/$project_name_mode.exec
-                echo "Extract results in $results/$project_name_mode.csv"
-                $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $results/$project_name_mode.exec --classfiles $SOURCES --csv $results/$project_name_mode.csv
+                echo "Merge results in $results/$project_name/res/$mode.exec"
+                $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $exec_file_paths_single --destfile $results/$project_name/res/$mode.exec
+                echo "Extract results in $results/$project_name/$mode.csv"
+                $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $results/$project_name/res/$mode.exec --classfiles $SOURCES --csv $results/$project_name/$mode.csv
                 ;;
             *)
                 echo "Skipping: $mode_path (mode: $mode)"
@@ -155,11 +156,30 @@ done
 # Convert the keys of the associative array to a space-separated string
 modes=$(echo "${!unique_modes[@]}")
 
-echo "Proceed to merging"
+echo "Proceed to computing all and base-* for all projects"
+for project in $(ls $results); do
+    echo "Project: $project"
+    project_path=$results/$project
+    project_path_res=$project_path/res
+    # all
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $project_path_res/*.exec --destfile $project_path_res/all.exec
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $project_path_res/all.exec --classfiles $SOURCES --csv $project_path/all.csv
+    # base-both
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $project_path_res/{base,both}.exec --destfile $project_path_res/base-both.exec
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $project_path_res/base-both.exec --classfiles $SOURCES --csv $project_path/base-both.csv
+    # base-erase
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $project_path_res/{base,erase}.exec --destfile $project_path_res/base-erase.exec
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $project_path_res/base-erase.exec --classfiles $SOURCES --csv $project_path/base-erase.csv
+    # base-inject
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $project_path_res/{base,inject}.exec --destfile $project_path_res/base-inject.exec
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $project_path_res/base-inject.exec --classfiles $SOURCES --csv $project_path/base-inject.csv
+done
+
+echo "Proceed to merging all projects"
 for mode in $modes; do
     # Merge all results
     echo "Merge results in $results/$mode.exec"
-    $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $results/*-$mode.exec --destfile $results/$mode.exec
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $results/*/res/$mode.exec --destfile $results/$mode.exec
     echo "Extract results in $results/$mode.csv"
     $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $results/$mode.exec --classfiles $SOURCES --csv $results/$mode.csv
 done
