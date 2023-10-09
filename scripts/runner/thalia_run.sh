@@ -10,6 +10,8 @@ bugs=$3
 args=$4
 libname=$5
 
+thalia="python /home/thalia/thalia/thalia.py"
+
 run_thalia()
 {
   local libpath=$1
@@ -66,19 +68,19 @@ run_thalia()
 
   if [ ! -d $bugs/$libname-base ]; then
     echo " - base mode..."
-    echo "$base_args --name $libname-base" | xargs thalia > /dev/null
+    echo "$base_args --name $libname-base" | xargs $thalia > /dev/null
   fi
   if [ ! -d $bugs/$libname-erase ]; then
     echo " - type erasure mode (well-typed)..."
-    echo "$base_args --name $libname-erase --erase-types" | xargs thalia > /dev/null
+    echo "$base_args --name $libname-erase --erase-types" | xargs $thalia > /dev/null
   fi
   if [ ! -d $bugs/$libname-inject ]; then
     echo " - ill-typed mode..."
-    echo "$base_args --name $libname-inject --inject-type-error" | xargs thalia > /dev/null
+    echo "$base_args --name $libname-inject --inject-type-error" | xargs $thalia > /dev/null
   fi
   if [ ! -d $bugs/$libname-both ]; then
     echo " - type erasure mode (ill-typed)..."
-    echo "$base_args --name $libname-both --erase-types --inject-type-error" | xargs thalia > /dev/null
+    echo "$base_args --name $libname-both --erase-types --inject-type-error" | xargs $thalia > /dev/null
   fi
 }
 
