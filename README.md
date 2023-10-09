@@ -29,7 +29,46 @@ See TODO.
 The artifact contains the instructions and scripts to re-run the evaluation
 described in our paper. The artifact has the following structure:
 
-TODO
+* `scripts/`: This directory contains the scripts needed to re-run the
+experiments and re-produce the figures and tables presented in our paper.
+* `data/`: This is the directory that contains the pre=computed results of our
+evaluation.
+* `data/packages.csv`: A CSV file that contains the 95 Maven libraries whose
+APIs have been used in our evaluation.
+* `database/bug_schema.sql`: This is the database schema that contains the bugs
+discovered by our approach.
+* `database/bugdb.sqlite3`: This is the `sqlite3` database file corresponding to
+  our bug database.
+* `database/bugs.json`: Our bug reports in a JSON format.
+* `thalia/`: Contains the source code of our tool
+(provided as a git submodule) used for testing the compilers of
+Scala, Kotlin, and Groovy using API-driven program synthesis.
+The name of our tool is `thalia`.
+* `hephaestus/`: Contains the source code of the state-of-the-art
+tool named `hephaestus` used for finding compiler typing bugs.
+In our evaluation, we compare `thalia` with `hephaestus`.
+* `doc2json/`: This is a submodule that contains
+the source code of an auxiliary tool
+used to convert API documentation pages into JSON documents.
+More details can be found at: https://github.com/hephaestus-compiler-project/doc2json
+* `installation_scripts/`: Contains helper scripts used to install all
+dependencies (e.g., compiler versions from [SDKMAN](https://sdkman.io/)).
+* `figures/`: This directory will be used to save the figures of our paper.
+* `Dockerfile`: The Dockerfile used to create a Docker image of our artifact.
+  This image contains all data and dependencies.
+
+`thalia` is available as open-source software under the
+GNU General Public License v3.0, and can also be reached through the following
+repository: https://github.com/hephaestus-compiler-project/thalia.
+
+Inside the `thalia` directory, there are the following directories:
+
+* `src/`: The source code of `thalia` written in Python.
+* `tests/`: Contains the tests of `thalia`.
+* `example-apis/`: Example inputs of `thalia`. Our tool
+takes as input an API specification in JSON.
+* `deployment/`: Contains configuration and scripts to install and run
+`thalia` on a server.
 
 # Requirements
 
