@@ -608,6 +608,52 @@ Type argument inference|23
 Overloading|22
 ```
 
+## Extracting API specification
+
+The file `data/packages.csv` contains the 95 Maven packages whose
+APIs have been used in our evaluation.
+Our goal is extract their APIs and use
+them as inputs to `thalia`.
+This process can take several minutes.
+You can run the entire process for a limited number of packages
+(e.g., 5).
+First,
+fetch their corresponding API documentation pages (written in HTML).
+
+```bash
+thalia@3195fa0e2240:~$ head -5 data/packages.csv | fetch-package-data -i - -o package-data
+
+Processing org.slf4j slf4j-api 2.0.7
+Processing com.google.guava guava 32.0.0-jre
+Processing org.mockito mockito-core 5.3.1
+Processing com.fasterxml.jackson.core jackson-databind 2.15.1
+Processing org.apache.commons commons-lang3 3.12.0
+```
+
+The command above stores the API documentation pages of every library
+insided the `package-data/` directory.
+
+Then,
+convert the API documentation pages into JSON files,
+using the following command (estimated running time: 3--5 minutes):
+
+```bash
+thalia@3195fa0e2240:~$ doc2json-util -d package-data -L java
+Parsing docs of package-data/com-fasterxml-jackson-core-jackson-databind
+Parsing docs of package-data/com-google-guava-guava
+Parsing docs of package-data/org-apache-commons-commons-lang3
+Parsing docs of package-data/org-mockito-mockito-core
+Parsing docs of package-data/org-slf4j-slf4j-api
+```
+
+The `doc2json-util` command is a wrapper script that invokes
+our [doc2json](https://github.com/hephaestus-compiler-project/doc2json)
+tool for converting API documentation pages into JSON.
+
+In what following,
+we will use these five libraries as references
+for re-running our evaluation.
+
 ## RQ1: Bug-Finding Results (Section 4.2)
 
 For the first research question,

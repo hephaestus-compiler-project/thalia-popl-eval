@@ -82,21 +82,29 @@ RUN mkdir jacoco && \
 
 WORKDIR ${HOME}
 
+ADD ./scripts/utils/fetch-package-data.sh /usr/local/bin/fetch-package-data
+RUN echo "export PATH=$PATH:/home/thalia/.local/bin" >> ${HOME}/.bash_profile
+
 # Add source code of hephaestus
 ADD ./hephaestus ${HOME}/hephaestus
 RUN sudo chown -R thalia:thalia ${HOME}/hephaestus
 
 # Install and run hephaestus
 RUN cd ${HOME}/hephaestus/ && pip install . && python -m pytest
-RUN echo "export PATH=$PATH:/home/thalia/.local/bin" >> ${HOME}/.bash_profile
 
-# Add source code of hephaestus
+# Add source code of thalia
 ADD ./thalia ${HOME}/thalia
 RUN sudo chown -R thalia:thalia ${HOME}/thalia
 
-# Install and run hephaestus
+# Install and run thalia
 RUN cd ${HOME}/thalia/ && pip install . && python -m pytest
-RUN echo "export PATH=$PATH:/home/thalia/.local/bin" >> ${HOME}/.bash_profile
+
+# Add source code of doc2json
+ADD ./doc2json ${HOME}/doc2json
+RUN sudo chown -R thalia:thalia ${HOME}/doc2json
+
+# Install doc2json
+RUN cd ${HOME}/doc2json/ && pip install .
 
 # Create directory for helper scripts
 RUN mkdir ${HOME}/scripts
