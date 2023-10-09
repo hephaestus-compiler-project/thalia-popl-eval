@@ -97,10 +97,6 @@ docker run -ti --rm thalia-eval
 
 ## Usage
 
-`thalia` is built on top of [hephaestus](https://github.com/hephaestus-compiler-project),
-which provides a rich CLI with many available options.
-Below, we explain
-the most important CLI options that are related to `thalia`.
 
 ```
 thalia@e0456a9b520e:~$ thalia --help
@@ -185,7 +181,89 @@ optional arguments:
 
 ## CLI Options
 
-TODO
+`thalia` is built on top of [hephaestus](https://github.com/hephaestus-compiler-project),
+which provides a rich CLI with many available options.
+Below, we explain
+the most important CLI options that are related to `thalia`.
+
+#### `--generator api`
+
+This flag enables our API-driven program synthesis approach on `thalia`.
+
+#### `--api-doc-path`
+
+The directory that contains the API (in JSON format) given as input.
+
+Example: `--api-doc-path mypath/to/json-docs/`.
+The input API specification is found at `mypath/to/json-docs/`.
+
+#### `--api-rules` (optional)
+
+`thalia` employs a simple query language
+that enables users to write a set of rules
+to filter out specific API components.
+This helps `thalia` generate programs
+that invoke only the matching API entities.
+For example,
+consider the following rule.
+
+```json
+{
+  "column_names": ["class_name", "class_component_name"],
+    "func": "all",
+    "rules": [
+          ["com.google.*Map", "contains"]
+            
+    ]
+    
+}
+```
+
+Based on this rule,
+`thalia` generates programs that stem from
+the typing sequences of methods/fields
+whose name is "contains",
+and are defined in classes that
+match the regex pattern "com.google.*Map".
+Our query language supports regular expressions,
+logical operators (e.g., negation, logical AND),
+as well as functions that are
+applied to the entire set of rules.
+We currently support two such functions:
+`any` and `all`.
+The former includes all those API components
+that match with at least one rule in the rule set,
+while the latter considers only the components
+that match with all rules found in the rule set.'
+
+The option `--api-rules` specifies a JSON file that
+contains such rules. The file follows
+the format of the JSON described above.
+
+Example: `--api-rules rules.json`.
+Examine `rules.json` to filter out API components
+that do not match the rules of `rules.json`.
+
+#### `--erase-types` (optional)
+
+This flag enables type erasure.
+The generated programs contain omitted type information.
+
+#### `--inject-type-error` (optional)
+
+This flag yields type sequences that are type incorrect.
+Therefore, the programs synthesized by `thalia` are ill-typed.
+
+#### `--library-path` (optional)
+
+A path that specifies the location of third-party libraries.
+`thalia` passes the value of this option to the compiler under test
+so that the compiler is able to locate external symbols,
+when the synthesized programs stem from APIs of third-party libraries.
+
+Example: `--library-path "mypath/external.jar:mypath/external2.jar"`.
+There are two external libraries located at
+`mypath/external.jar` and `mypath/external2.jar`.
 
 ## Run Tests
 
