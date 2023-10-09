@@ -34,12 +34,12 @@ esac
 
 echo "hephaestus base and erase"
 $hephaestus --bugs $result \
-    --name ${lang}_erase --language $lang \
+    --name erase --language $lang \
     --seconds $base_erase --batch 10 --workers 2 --transformations 1 \
     --keep-all -P
 
 echo "hephaestus inject"
 $hephaestus --bugs $result \
-    --name ${lang}_inject --language $lang \
+    --name inject --language $lang \
     --seconds $time --batch 10 --workers 2 --transformations 0 \
     --keep-all 
