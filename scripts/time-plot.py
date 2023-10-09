@@ -1,6 +1,5 @@
 import argparse
 import os
-import sys
 
 import seaborn as sns
 import matplotlib.pylab as plt
@@ -62,6 +61,7 @@ def draw_regression_plot(lang, input_dir, output_dir):
     plot_file = os.path.join(output_dir, f"{lang}-time.pdf")
     plt.savefig(plot_file, format='pdf', bbox_inches='tight',
                 pad_inches=0)
+    plt.clf()
 
 
 args = get_args()

@@ -946,7 +946,7 @@ Well-typed Groovy    5940.542105  4604.434885  3.0  1584.00  6186.5   8428.00  2
 The script prints some statitics about the distribution.
 For example,
 by examining these statistics we can infer
-that each library produced 1937 ill-typed Groovy programs, on average.
+that each library produced 1,937 ill-typed Groovy programs, on average.
 Beyond these statistics,
 the script generates Figure 11 and stores in `figures/files-boxplot.pdf`
 in your host machine.
@@ -987,9 +987,9 @@ Processing coverage data per library...
 ===========================================================================
 Mode      Min            Max            Median         Mean           Std
 ---------------------------------------------------------------------------
-Erase     +0(0.0%)       +4306(11.87%)  +165.5(0.46%)  +264(0.73%)    1.63%
-Inject    +0(0.0%)       +2952(8.14%)   +44.5(0.12%)   +118(0.33%)    1.08%
-Both      +0(0.0%)       +3087(8.51%)   +162.5(0.45%)  +194(0.54%)    0.89%
+Erase     +0(0.0%)       +4306(11.9%)   +165.5(0.5%)   +265(0.7%)     1.6%
+Inject    +0(0.0%)       +2952(8.1%)    +44.5(0.1%)    +118(0.3%)     1.1%
+Both      +0(0.0%)       +3087(8.5%)    +162.5(0.4%)   +195(0.5%)     0.9%
 ```
 
 Next,
@@ -1012,9 +1012,9 @@ Processing coverage data per library...
 ===========================================================================
 Mode      Min            Max            Median         Mean           Std
 ---------------------------------------------------------------------------
-Erase     +0(0.0%)       +5548(7.05%)   +934.0(1.19%)  +1086(1.38%)   1.09%
-Inject    +7(0.01%)      +3595(4.57%)   +474.5(0.6%)   +615(0.78%)    0.73%
-Both      +117(0.15%)    +4192(5.32%)   +851.5(1.08%)  +975(1.24%)    0.77%
+Erase     +0(0.0%)       +5548(7.0%)    +934.0(1.2%)   +1087(1.4%)    1.1%
+Inject    +7(0.0%)       +3595(4.6%)    +474.5(0.6%)   +615(0.8%)     0.7%
+Both      +117(0.1%)     +4192(5.3%)    +851.5(1.1%)   +975(1.2%)     0.8%
 ```
 
 Finally,
@@ -1036,9 +1036,9 @@ Processing coverage data per library...
 ===========================================================================
 Mode      Min            Max            Median         Mean           Std
 ---------------------------------------------------------------------------
-Erase     +3(0.01%)      +2144(3.65%)   +523.0(0.89%)  +567(0.97%)    0.51%
-Inject    +1(0.0%)       +3030(5.15%)   +175.0(0.3%)   +290(0.49%)    0.72%
-Both      +45(0.08%)     +2175(3.7%)    +346.5(0.59%)  +419(0.71%)    0.6%
+Erase     +3(0.0%)       +2144(3.6%)    +523.0(0.9%)   +568(1.0%)     0.5%
+Inject    +1(0.0%)       +3030(5.2%)    +175.0(0.3%)   +291(0.5%)     0.7%
+Both      +45(0.1%)      +2175(3.7%)    +346.5(0.6%)   +420(0.7%)     0.6%
 ```
 
 ### Synthesis time
@@ -1100,8 +1100,8 @@ thalia@65536014baca:~$ python eval-scripts/analysis.py \
 # kotlin
 thalia@65536014baca:~$ python eval-scripts/analysis.py \
   --coverage-data data/comparison/coverage/ \
-  --hephaestus --language groovy \
-  --whitelist data/coverage/whitelists/groovy.txt \
+  --hephaestus --language kotlin \
+  --whitelist data/coverage/whitelists/kotlin.txt \
   --output-dir eval-figures/
 ```
 

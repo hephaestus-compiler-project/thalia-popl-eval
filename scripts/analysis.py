@@ -378,11 +378,11 @@ def plot_percentage_increase_boxplots(language, sorted_projects):
         absolute_max = absolute[arr.index(maximum)]
         minimum = np.min(arr)
         absolute_min = absolute[arr.index(minimum)]
-        mean = round(mean, 2)
-        median = round(median, 2)
-        maximum = round(maximum, 2)
-        minimum = round(minimum, 2)
-        std_dev = round(np.std(arr), 2)
+        mean = round(mean, 1)
+        median = round(median, 1)
+        maximum = round(maximum, 1)
+        minimum = round(minimum, 1)
+        std_dev = round(np.std(arr), 1)
         statistics[mode] = [(minimum, absolute_min), (maximum, absolute_max),
                             (median, absolute_med), (mean, absolute_mean),
                             std_dev]
@@ -399,7 +399,7 @@ def plot_percentage_increase_boxplots(language, sorted_projects):
             f"+{values.iloc[0][1]}({values.iloc[0][0]}%)",
             f"+{values.iloc[1][1]}({values.iloc[1][0]}%)",
             f"+{values.iloc[2][1]}({values.iloc[2][0]}%)",
-            f"+{int(round(values.iloc[3][1], 2))}({values.iloc[3][0]}%)",
+            f"+{int(round(values.iloc[3][1]))}({values.iloc[3][0]}%)",
             f"{values.iloc[4]}%",
 
         ))
