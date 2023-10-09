@@ -1,0 +1,94 @@
+{
+  "name": "com.google.common.collect.SetMultimap",
+  "type_parameters": [
+    "K extends java.lang.Object",
+    "V extends java.lang.Object"
+  ],
+  "implements": [],
+  "inherits": [
+    "com.google.common.collect.Multimap<K,V>"
+  ],
+  "class_type": 1,
+  "methods": [
+    {
+      "name": "entries",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Set<java.util.Map.Entry<K,V>>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "get",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Set<V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "replaceValues",
+      "parameters": [
+        "K",
+        "java.lang.Iterable<? extends V>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Set<V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asMap",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Map<K,java.util.Collection<V>>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "equals",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "removeAll",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Set<V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

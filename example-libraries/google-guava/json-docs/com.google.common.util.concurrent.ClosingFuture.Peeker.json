@@ -1,0 +1,31 @@
+{
+  "name": "com.google.common.util.concurrent.ClosingFuture.Peeker",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "getDone",
+      "parameters": [
+        "com.google.common.util.concurrent.ClosingFuture<D>"
+      ],
+      "type_parameters": [
+        "D extends java.lang.Object"
+      ],
+      "return_type": "D",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

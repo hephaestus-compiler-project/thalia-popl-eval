@@ -1,0 +1,74 @@
+{
+  "name": "com.google.common.util.concurrent.AbstractScheduledService.Scheduler",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "newFixedDelaySchedule",
+      "parameters": [
+        "java.time.Duration",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.AbstractScheduledService.Scheduler",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newFixedRateSchedule",
+      "parameters": [
+        "java.time.Duration",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.AbstractScheduledService.Scheduler",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newFixedDelaySchedule",
+      "parameters": [
+        "long",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.AbstractScheduledService.Scheduler",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newFixedRateSchedule",
+      "parameters": [
+        "long",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.AbstractScheduledService.Scheduler",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

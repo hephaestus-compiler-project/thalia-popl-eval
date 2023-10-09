@@ -1,0 +1,85 @@
+{
+  "name": "com.google.common.collect.TreeTraverser",
+  "type_parameters": [
+    "T"
+  ],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "children",
+      "parameters": [
+        "T"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Iterable<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "preOrderTraversal",
+      "parameters": [
+        "T"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.FluentIterable<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "breadthFirstTraversal",
+      "parameters": [
+        "T"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.FluentIterable<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "postOrderTraversal",
+      "parameters": [
+        "T"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.FluentIterable<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "using",
+      "parameters": [
+        "com.google.common.base.Function<T,? extends java.lang.Iterable<T>>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "com.google.common.collect.TreeTraverser<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

@@ -1,0 +1,250 @@
+{
+  "name": "com.google.common.base.Optional",
+  "type_parameters": [
+    "T"
+  ],
+  "implements": [
+    "java.io.Serializable"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "asSet",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Set<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "fromJavaUtil",
+      "parameters": [
+        "java.util.Optional<T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "com.google.common.base.Optional<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "get",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isPresent",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "or",
+      "parameters": [
+        "com.google.common.base.Optional<? extends T>"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Optional<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "or",
+      "parameters": [
+        "T"
+      ],
+      "type_parameters": [],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "presentInstances",
+      "parameters": [
+        "java.lang.Iterable<? extends com.google.common.base.Optional<? extends T>>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "java.lang.Iterable<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toJavaUtil",
+      "parameters": [
+        "com.google.common.base.Optional<T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "java.util.Optional<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transform",
+      "parameters": [
+        "com.google.common.base.Function<? super T,V>"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Optional<V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "absent",
+      "parameters": [],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "com.google.common.base.Optional<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "equals",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "fromNullable",
+      "parameters": [
+        "T"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "com.google.common.base.Optional<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "T"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "com.google.common.base.Optional<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "or",
+      "parameters": [
+        "com.google.common.base.Supplier<? extends T>"
+      ],
+      "type_parameters": [],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "orNull",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toJavaUtil",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Optional<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

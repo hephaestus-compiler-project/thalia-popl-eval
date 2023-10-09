@@ -1,0 +1,97 @@
+{
+  "name": "com.google.common.collect.ObjectArrays",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "concat",
+      "parameters": [
+        "T[]",
+        "T[]",
+        "java.lang.Class<T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "T[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newArray",
+      "parameters": [
+        "java.lang.Class<T>",
+        "int"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "T[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "concat",
+      "parameters": [
+        "T[]",
+        "T"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "T[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "concat",
+      "parameters": [
+        "T",
+        "T[]"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "T[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newArray",
+      "parameters": [
+        "T[]",
+        "int"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "T[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

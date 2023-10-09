@@ -1,0 +1,793 @@
+{
+  "name": "com.google.common.collect.Maps",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "asMap",
+      "parameters": [
+        "java.util.NavigableSet<K>",
+        "com.google.common.base.Function<? super K,V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.NavigableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asMap",
+      "parameters": [
+        "java.util.SortedSet<K>",
+        "com.google.common.base.Function<? super K,V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.SortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "difference",
+      "parameters": [
+        "java.util.Map<? extends K,? extends V>",
+        "java.util.Map<? extends K,? extends V>",
+        "com.google.common.base.Equivalence<? super V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.MapDifference<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filterEntries",
+      "parameters": [
+        "com.google.common.collect.BiMap<K,V>",
+        "com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.BiMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filterEntries",
+      "parameters": [
+        "java.util.NavigableMap<K,V>",
+        "com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.NavigableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filterKeys",
+      "parameters": [
+        "com.google.common.collect.BiMap<K,V>",
+        "com.google.common.base.Predicate<? super K>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.BiMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filterKeys",
+      "parameters": [
+        "java.util.NavigableMap<K,V>",
+        "com.google.common.base.Predicate<? super K>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.NavigableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filterValues",
+      "parameters": [
+        "com.google.common.collect.BiMap<K,V>",
+        "com.google.common.base.Predicate<? super V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.BiMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filterValues",
+      "parameters": [
+        "java.util.NavigableMap<K,V>",
+        "com.google.common.base.Predicate<? super V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.NavigableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "fromProperties",
+      "parameters": [
+        "java.util.Properties"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableMap<java.lang.String,java.lang.String>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newHashMap",
+      "parameters": [],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.HashMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newHashMapWithExpectedSize",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.HashMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newLinkedHashMap",
+      "parameters": [],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.LinkedHashMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newLinkedHashMapWithExpectedSize",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.LinkedHashMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newTreeMap",
+      "parameters": [
+        "java.util.Comparator<C>"
+      ],
+      "type_parameters": [
+        "C extends java.lang.Object",
+        "K extends C",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.TreeMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "subMap",
+      "parameters": [
+        "java.util.NavigableMap<K,V>",
+        "com.google.common.collect.Range<K>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<? super K>",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.NavigableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "synchronizedNavigableMap",
+      "parameters": [
+        "java.util.NavigableMap<K,V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.NavigableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toMap",
+      "parameters": [
+        "java.util.Iterator<K>",
+        "com.google.common.base.Function<? super K,V>"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transformEntries",
+      "parameters": [
+        "java.util.NavigableMap<K,V1>",
+        "com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V1 extends java.lang.Object",
+        "V2 extends java.lang.Object"
+      ],
+      "return_type": "java.util.NavigableMap<K,V2>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transformValues",
+      "parameters": [
+        "java.util.Map<K,V1>",
+        "com.google.common.base.Function<? super V1,V2>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V1 extends java.lang.Object",
+        "V2 extends java.lang.Object"
+      ],
+      "return_type": "java.util.Map<K,V2>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transformValues",
+      "parameters": [
+        "java.util.SortedMap<K,V1>",
+        "com.google.common.base.Function<? super V1,V2>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V1 extends java.lang.Object",
+        "V2 extends java.lang.Object"
+      ],
+      "return_type": "java.util.SortedMap<K,V2>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "uniqueIndex",
+      "parameters": [
+        "java.util.Iterator<V>",
+        "com.google.common.base.Function<? super V,K>"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "unmodifiableNavigableMap",
+      "parameters": [
+        "java.util.NavigableMap<K,? extends V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.NavigableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asConverter",
+      "parameters": [
+        "com.google.common.collect.BiMap<A,B>"
+      ],
+      "type_parameters": [
+        "A",
+        "B"
+      ],
+      "return_type": "com.google.common.base.Converter<A,B>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asMap",
+      "parameters": [
+        "java.util.Set<K>",
+        "com.google.common.base.Function<? super K,V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.Map<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "difference",
+      "parameters": [
+        "java.util.Map<? extends K,? extends V>",
+        "java.util.Map<? extends K,? extends V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.MapDifference<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "difference",
+      "parameters": [
+        "java.util.SortedMap<K,? extends V>",
+        "java.util.Map<? extends K,? extends V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.SortedMapDifference<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filterEntries",
+      "parameters": [
+        "java.util.Map<K,V>",
+        "com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.Map<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filterEntries",
+      "parameters": [
+        "java.util.SortedMap<K,V>",
+        "com.google.common.base.Predicate<? super java.util.Map.Entry<K,V>>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.SortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filterKeys",
+      "parameters": [
+        "java.util.Map<K,V>",
+        "com.google.common.base.Predicate<? super K>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.Map<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filterKeys",
+      "parameters": [
+        "java.util.SortedMap<K,V>",
+        "com.google.common.base.Predicate<? super K>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.SortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filterValues",
+      "parameters": [
+        "java.util.Map<K,V>",
+        "com.google.common.base.Predicate<? super V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.Map<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filterValues",
+      "parameters": [
+        "java.util.SortedMap<K,V>",
+        "com.google.common.base.Predicate<? super V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.SortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "immutableEntry",
+      "parameters": [
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.Map.Entry<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newConcurrentMap",
+      "parameters": [],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "java.util.concurrent.ConcurrentMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newHashMap",
+      "parameters": [
+        "java.util.Map<? extends K,? extends V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.HashMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newIdentityHashMap",
+      "parameters": [],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.IdentityHashMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newLinkedHashMap",
+      "parameters": [
+        "java.util.Map<? extends K,? extends V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.LinkedHashMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newTreeMap",
+      "parameters": [],
+      "type_parameters": [
+        "K extends java.lang.Comparable",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.TreeMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newTreeMap",
+      "parameters": [
+        "java.util.SortedMap<K,? extends V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "java.util.TreeMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "synchronizedBiMap",
+      "parameters": [
+        "com.google.common.collect.BiMap<K,V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.BiMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toMap",
+      "parameters": [
+        "java.lang.Iterable<K>",
+        "com.google.common.base.Function<? super K,V>"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transformEntries",
+      "parameters": [
+        "java.util.Map<K,V1>",
+        "com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V1 extends java.lang.Object",
+        "V2 extends java.lang.Object"
+      ],
+      "return_type": "java.util.Map<K,V2>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transformEntries",
+      "parameters": [
+        "java.util.SortedMap<K,V1>",
+        "com.google.common.collect.Maps.EntryTransformer<? super K,? super V1,V2>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V1 extends java.lang.Object",
+        "V2 extends java.lang.Object"
+      ],
+      "return_type": "java.util.SortedMap<K,V2>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transformValues",
+      "parameters": [
+        "java.util.NavigableMap<K,V1>",
+        "com.google.common.base.Function<? super V1,V2>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V1 extends java.lang.Object",
+        "V2 extends java.lang.Object"
+      ],
+      "return_type": "java.util.NavigableMap<K,V2>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "uniqueIndex",
+      "parameters": [
+        "java.lang.Iterable<V>",
+        "com.google.common.base.Function<? super V,K>"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "unmodifiableBiMap",
+      "parameters": [
+        "com.google.common.collect.BiMap<? extends K,? extends V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.BiMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

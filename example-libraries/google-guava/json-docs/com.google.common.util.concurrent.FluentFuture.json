@@ -1,0 +1,157 @@
+{
+  "name": "com.google.common.util.concurrent.FluentFuture",
+  "type_parameters": [
+    "V extends java.lang.Object"
+  ],
+  "implements": [],
+  "inherits": [
+    "com.google.common.util.concurrent.AbstractFuture<V>"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "catching",
+      "parameters": [
+        "java.lang.Class<X>",
+        "com.google.common.base.Function<? super X,? extends V>",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [
+        "X extends java.lang.Throwable"
+      ],
+      "return_type": "com.google.common.util.concurrent.FluentFuture<V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "from",
+      "parameters": [
+        "com.google.common.util.concurrent.FluentFuture<V>"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.FluentFuture<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transform",
+      "parameters": [
+        "com.google.common.base.Function<? super V,T>",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.FluentFuture<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "withTimeout",
+      "parameters": [
+        "long",
+        "java.util.concurrent.TimeUnit",
+        "java.util.concurrent.ScheduledExecutorService"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.FluentFuture<V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addCallback",
+      "parameters": [
+        "com.google.common.util.concurrent.FutureCallback<? super V>",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "catchingAsync",
+      "parameters": [
+        "java.lang.Class<X>",
+        "com.google.common.util.concurrent.AsyncFunction<? super X,? extends V>",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [
+        "X extends java.lang.Throwable"
+      ],
+      "return_type": "com.google.common.util.concurrent.FluentFuture<V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "from",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<V>"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.FluentFuture<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transformAsync",
+      "parameters": [
+        "com.google.common.util.concurrent.AsyncFunction<? super V,T>",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.FluentFuture<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "withTimeout",
+      "parameters": [
+        "java.time.Duration",
+        "java.util.concurrent.ScheduledExecutorService"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.FluentFuture<V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

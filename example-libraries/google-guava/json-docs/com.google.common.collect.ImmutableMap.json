@@ -1,0 +1,732 @@
+{
+  "name": "com.google.common.collect.ImmutableMap",
+  "type_parameters": [
+    "K",
+    "V"
+  ],
+  "implements": [
+    "java.util.Map<K,V>",
+    "java.io.Serializable"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "builder",
+      "parameters": [],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap.Builder<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "clear",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "computeIfAbsent",
+      "parameters": [
+        "K",
+        "java.util.function.Function<? super K,? extends V>"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "containsKey",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>>"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "entrySet",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSet<java.util.Map.Entry<K,V>>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "get",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "keySet",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSet<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "put",
+      "parameters": [
+        "K",
+        "V"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putIfAbsent",
+      "parameters": [
+        "K",
+        "V"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "remove",
+      "parameters": [
+        "java.lang.Object",
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "replace",
+      "parameters": [
+        "K",
+        "V",
+        "V"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toImmutableMap",
+      "parameters": [
+        "java.util.function.Function<? super T,? extends K>",
+        "java.util.function.Function<? super T,? extends V>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object",
+        "K",
+        "V"
+      ],
+      "return_type": "java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asMultimap",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSetMultimap<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "builderWithExpectedSize",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap.Builder<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "compute",
+      "parameters": [
+        "K",
+        "java.util.function.BiFunction<? super K,? super V,? extends V>"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "computeIfPresent",
+      "parameters": [
+        "K",
+        "java.util.function.BiFunction<? super K,? super V,? extends V>"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "containsValue",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "java.util.Map<? extends K,? extends V>"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "equals",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getOrDefault",
+      "parameters": [
+        "java.lang.Object",
+        "V"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isEmpty",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "merge",
+      "parameters": [
+        "K",
+        "V",
+        "java.util.function.BiFunction<? super V,? super V,? extends V>"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ofEntries",
+      "parameters": [
+        "java.util.Map.Entry<? extends K,? extends V>..."
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putAll",
+      "parameters": [
+        "java.util.Map<? extends K,? extends V>"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "remove",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "replace",
+      "parameters": [
+        "K",
+        "V"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "replaceAll",
+      "parameters": [
+        "java.util.function.BiFunction<? super K,? super V,? extends V>"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toImmutableMap",
+      "parameters": [
+        "java.util.function.Function<? super T,? extends K>",
+        "java.util.function.Function<? super T,? extends V>",
+        "java.util.function.BinaryOperator<V>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object",
+        "K",
+        "V"
+      ],
+      "return_type": "java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "values",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableCollection<V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

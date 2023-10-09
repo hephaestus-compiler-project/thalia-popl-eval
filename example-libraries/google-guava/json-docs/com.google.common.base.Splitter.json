@@ -1,0 +1,220 @@
+{
+  "name": "com.google.common.base.Splitter",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "limit",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "on",
+      "parameters": [
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "on",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "onPattern",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "splitToList",
+      "parameters": [
+        "java.lang.CharSequence"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.List<java.lang.String>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "trimResults",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "withKeyValueSeparator",
+      "parameters": [
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter.MapSplitter",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "withKeyValueSeparator",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter.MapSplitter",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "fixedLength",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "omitEmptyStrings",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "on",
+      "parameters": [
+        "com.google.common.base.CharMatcher"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "on",
+      "parameters": [
+        "java.util.regex.Pattern"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "split",
+      "parameters": [
+        "java.lang.CharSequence"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Iterable<java.lang.String>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "splitToStream",
+      "parameters": [
+        "java.lang.CharSequence"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.stream.Stream<java.lang.String>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "trimResults",
+      "parameters": [
+        "com.google.common.base.CharMatcher"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "withKeyValueSeparator",
+      "parameters": [
+        "com.google.common.base.Splitter"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Splitter.MapSplitter",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

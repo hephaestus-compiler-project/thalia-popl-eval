@@ -1,0 +1,219 @@
+{
+  "name": "com.google.common.graph.Graphs",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "copyOf",
+      "parameters": [
+        "com.google.common.graph.Network<N,E>"
+      ],
+      "type_parameters": [
+        "N",
+        "E"
+      ],
+      "return_type": "com.google.common.graph.MutableNetwork<N,E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hasCycle",
+      "parameters": [
+        "com.google.common.graph.Graph<N>"
+      ],
+      "type_parameters": [
+        "N"
+      ],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "inducedSubgraph",
+      "parameters": [
+        "com.google.common.graph.Graph<N>",
+        "java.lang.Iterable<? extends N>"
+      ],
+      "type_parameters": [
+        "N"
+      ],
+      "return_type": "com.google.common.graph.MutableGraph<N>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "inducedSubgraph",
+      "parameters": [
+        "com.google.common.graph.ValueGraph<N,V>",
+        "java.lang.Iterable<? extends N>"
+      ],
+      "type_parameters": [
+        "N",
+        "V"
+      ],
+      "return_type": "com.google.common.graph.MutableValueGraph<N,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transitiveClosure",
+      "parameters": [
+        "com.google.common.graph.Graph<N>"
+      ],
+      "type_parameters": [
+        "N"
+      ],
+      "return_type": "com.google.common.graph.Graph<N>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transpose",
+      "parameters": [
+        "com.google.common.graph.Network<N,E>"
+      ],
+      "type_parameters": [
+        "N",
+        "E"
+      ],
+      "return_type": "com.google.common.graph.Network<N,E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "com.google.common.graph.Graph<N>"
+      ],
+      "type_parameters": [
+        "N"
+      ],
+      "return_type": "com.google.common.graph.MutableGraph<N>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "com.google.common.graph.ValueGraph<N,V>"
+      ],
+      "type_parameters": [
+        "N",
+        "V"
+      ],
+      "return_type": "com.google.common.graph.MutableValueGraph<N,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hasCycle",
+      "parameters": [
+        "com.google.common.graph.Network<?,?>"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "inducedSubgraph",
+      "parameters": [
+        "com.google.common.graph.Network<N,E>",
+        "java.lang.Iterable<? extends N>"
+      ],
+      "type_parameters": [
+        "N",
+        "E"
+      ],
+      "return_type": "com.google.common.graph.MutableNetwork<N,E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reachableNodes",
+      "parameters": [
+        "com.google.common.graph.Graph<N>",
+        "N"
+      ],
+      "type_parameters": [
+        "N"
+      ],
+      "return_type": "java.util.Set<N>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transpose",
+      "parameters": [
+        "com.google.common.graph.Graph<N>"
+      ],
+      "type_parameters": [
+        "N"
+      ],
+      "return_type": "com.google.common.graph.Graph<N>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transpose",
+      "parameters": [
+        "com.google.common.graph.ValueGraph<N,V>"
+      ],
+      "type_parameters": [
+        "N",
+        "V"
+      ],
+      "return_type": "com.google.common.graph.ValueGraph<N,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

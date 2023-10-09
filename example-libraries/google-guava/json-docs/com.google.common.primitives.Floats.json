@@ -1,0 +1,319 @@
+{
+  "name": "com.google.common.primitives.Floats",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "compare",
+      "parameters": [
+        "float",
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "constrainToRange",
+      "parameters": [
+        "float",
+        "float",
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "float",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ensureCapacity",
+      "parameters": [
+        "float[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "float[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "indexOf",
+      "parameters": [
+        "float[]",
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isFinite",
+      "parameters": [
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lastIndexOf",
+      "parameters": [
+        "float[]",
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "float..."
+      ],
+      "type_parameters": [],
+      "return_type": "float",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reverse",
+      "parameters": [
+        "float[]"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sortDescending",
+      "parameters": [
+        "float[]"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "stringConverter",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Converter<java.lang.String,java.lang.Float>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tryParse",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Float",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asList",
+      "parameters": [
+        "float..."
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.List<java.lang.Float>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "concat",
+      "parameters": [
+        "float[]..."
+      ],
+      "type_parameters": [],
+      "return_type": "float[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "contains",
+      "parameters": [
+        "float[]",
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashCode",
+      "parameters": [
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "indexOf",
+      "parameters": [
+        "float[]",
+        "float[]"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "join",
+      "parameters": [
+        "java.lang.String",
+        "float..."
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lexicographicalComparator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Comparator<float[]>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "float..."
+      ],
+      "type_parameters": [],
+      "return_type": "float",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reverse",
+      "parameters": [
+        "float[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sortDescending",
+      "parameters": [
+        "float[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toArray",
+      "parameters": [
+        "java.util.Collection<? extends java.lang.Number>"
+      ],
+      "type_parameters": [],
+      "return_type": "float[]",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [
+    {
+      "name": "BYTES",
+      "type": "int",
+      "is_static": true,
+      "access_mod": "public"
+    }
+  ],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

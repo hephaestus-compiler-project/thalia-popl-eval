@@ -1,0 +1,159 @@
+{
+  "name": "com.google.common.collect.SortedMultiset",
+  "type_parameters": [
+    "E extends java.lang.Object"
+  ],
+  "implements": [],
+  "inherits": [],
+  "class_type": 1,
+  "methods": [
+    {
+      "name": "descendingMultiset",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.SortedMultiset<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "entrySet",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Set<com.google.common.collect.Multiset.Entry<E>>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "headMultiset",
+      "parameters": [
+        "E",
+        "com.google.common.collect.BoundType"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.SortedMultiset<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lastEntry",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.Multiset.Entry<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "pollLastEntry",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.Multiset.Entry<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tailMultiset",
+      "parameters": [
+        "E",
+        "com.google.common.collect.BoundType"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.SortedMultiset<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "comparator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Comparator<? super E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "elementSet",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.NavigableSet<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "firstEntry",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.Multiset.Entry<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "iterator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Iterator<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "pollFirstEntry",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.Multiset.Entry<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "subMultiset",
+      "parameters": [
+        "E",
+        "com.google.common.collect.BoundType",
+        "E",
+        "com.google.common.collect.BoundType"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.SortedMultiset<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

@@ -1,0 +1,142 @@
+{
+  "name": "com.google.common.primitives.SignedBytes",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "compare",
+      "parameters": [
+        "byte",
+        "byte"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lexicographicalComparator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Comparator<byte[]>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "byte..."
+      ],
+      "type_parameters": [],
+      "return_type": "byte",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sortDescending",
+      "parameters": [
+        "byte[]"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "checkedCast",
+      "parameters": [
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "byte",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "join",
+      "parameters": [
+        "java.lang.String",
+        "byte..."
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "byte..."
+      ],
+      "type_parameters": [],
+      "return_type": "byte",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "saturatedCast",
+      "parameters": [
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "byte",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sortDescending",
+      "parameters": [
+        "byte[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [
+    {
+      "name": "MAX_POWER_OF_TWO",
+      "type": "byte",
+      "is_static": true,
+      "access_mod": "public"
+    }
+  ],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

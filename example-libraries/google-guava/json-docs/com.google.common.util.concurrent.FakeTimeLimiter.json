@@ -1,0 +1,100 @@
+{
+  "name": "com.google.common.util.concurrent.FakeTimeLimiter",
+  "type_parameters": [],
+  "implements": [
+    "com.google.common.util.concurrent.TimeLimiter"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "callWithTimeout",
+      "parameters": [
+        "java.util.concurrent.Callable<T>",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "runUninterruptiblyWithTimeout",
+      "parameters": [
+        "java.lang.Runnable",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "callUninterruptiblyWithTimeout",
+      "parameters": [
+        "java.util.concurrent.Callable<T>",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newProxy",
+      "parameters": [
+        "T",
+        "java.lang.Class<T>",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "runWithTimeout",
+      "parameters": [
+        "java.lang.Runnable",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

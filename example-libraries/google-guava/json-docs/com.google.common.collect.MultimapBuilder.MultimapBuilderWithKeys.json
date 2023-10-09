@@ -1,0 +1,142 @@
+{
+  "name": "com.google.common.collect.MultimapBuilder.MultimapBuilderWithKeys",
+  "type_parameters": [
+    "K0 extends java.lang.Object"
+  ],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "arrayListValues",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.MultimapBuilder.ListMultimapBuilder<K0, java.lang.Object>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashSetValues",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.MultimapBuilder.SetMultimapBuilder<K0, java.lang.Object>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "linkedHashSetValues",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.MultimapBuilder.SetMultimapBuilder<K0, java.lang.Object>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "linkedListValues",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.MultimapBuilder.ListMultimapBuilder<K0, java.lang.Object>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "treeSetValues",
+      "parameters": [
+        "java.util.Comparator<V0>"
+      ],
+      "type_parameters": [
+        "V0 extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.MultimapBuilder.SortedSetMultimapBuilder<K0,V0>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "arrayListValues",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.MultimapBuilder.ListMultimapBuilder<K0, java.lang.Object>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "enumSetValues",
+      "parameters": [
+        "java.lang.Class<V0>"
+      ],
+      "type_parameters": [
+        "V0 extends java.lang.Enum<V0>"
+      ],
+      "return_type": "com.google.common.collect.MultimapBuilder.SetMultimapBuilder<K0,V0>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashSetValues",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.MultimapBuilder.SetMultimapBuilder<K0, java.lang.Object>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "linkedHashSetValues",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.MultimapBuilder.SetMultimapBuilder<K0, java.lang.Object>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "treeSetValues",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.MultimapBuilder.SortedSetMultimapBuilder<K0,java.lang.Comparable>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

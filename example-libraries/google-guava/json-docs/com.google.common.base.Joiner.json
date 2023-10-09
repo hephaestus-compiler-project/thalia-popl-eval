@@ -1,0 +1,270 @@
+{
+  "name": "com.google.common.base.Joiner",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "appendTo",
+      "parameters": [
+        "A",
+        "java.lang.Iterable<? extends java.lang.Object>"
+      ],
+      "type_parameters": [
+        "A extends java.lang.Appendable"
+      ],
+      "return_type": "A",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendTo",
+      "parameters": [
+        "A",
+        "java.util.Iterator<? extends java.lang.Object>"
+      ],
+      "type_parameters": [
+        "A extends java.lang.Appendable"
+      ],
+      "return_type": "A",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendTo",
+      "parameters": [
+        "java.lang.StringBuilder",
+        "java.lang.Iterable<? extends java.lang.Object>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.StringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendTo",
+      "parameters": [
+        "java.lang.StringBuilder",
+        "java.util.Iterator<? extends java.lang.Object>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.StringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "join",
+      "parameters": [
+        "java.lang.Iterable<? extends java.lang.Object>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "join",
+      "parameters": [
+        "java.util.Iterator<? extends java.lang.Object>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "on",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Joiner",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "useForNull",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Joiner",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "withKeyValueSeparator",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Joiner.MapJoiner",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendTo",
+      "parameters": [
+        "A",
+        "java.lang.Object[]"
+      ],
+      "type_parameters": [
+        "A extends java.lang.Appendable"
+      ],
+      "return_type": "A",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendTo",
+      "parameters": [
+        "A",
+        "java.lang.Object",
+        "java.lang.Object",
+        "java.lang.Object..."
+      ],
+      "type_parameters": [
+        "A extends java.lang.Appendable"
+      ],
+      "return_type": "A",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendTo",
+      "parameters": [
+        "java.lang.StringBuilder",
+        "java.lang.Object[]"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.StringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "appendTo",
+      "parameters": [
+        "java.lang.StringBuilder",
+        "java.lang.Object",
+        "java.lang.Object",
+        "java.lang.Object..."
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.StringBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "join",
+      "parameters": [
+        "java.lang.Object[]"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "join",
+      "parameters": [
+        "java.lang.Object",
+        "java.lang.Object",
+        "java.lang.Object..."
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "on",
+      "parameters": [
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Joiner",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "skipNulls",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Joiner",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "withKeyValueSeparator",
+      "parameters": [
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Joiner.MapJoiner",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

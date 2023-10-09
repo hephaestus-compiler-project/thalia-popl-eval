@@ -1,0 +1,500 @@
+{
+  "name": "com.google.common.collect.Ordering",
+  "type_parameters": [
+    "T extends java.lang.Object"
+  ],
+  "implements": [
+    "java.util.Comparator<T>"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "arbitrary",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.Ordering< java.lang.Object>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "compare",
+      "parameters": [
+        "T",
+        "T"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "compound",
+      "parameters": [
+        "java.util.Comparator<? super U>"
+      ],
+      "type_parameters": [
+        "U extends T"
+      ],
+      "return_type": "com.google.common.collect.Ordering<U>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "explicit",
+      "parameters": [
+        "T",
+        "T..."
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "com.google.common.collect.Ordering<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "from",
+      "parameters": [
+        "java.util.Comparator<T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.Ordering<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "greatestOf",
+      "parameters": [
+        "java.util.Iterator<E>",
+        "int"
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "java.util.List<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isOrdered",
+      "parameters": [
+        "java.lang.Iterable<? extends T>"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "leastOf",
+      "parameters": [
+        "java.lang.Iterable<E>",
+        "int"
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "java.util.List<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lexicographical",
+      "parameters": [],
+      "type_parameters": [
+        "S extends T"
+      ],
+      "return_type": "com.google.common.collect.Ordering<java.lang.Iterable<S>>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "E",
+        "E",
+        "E",
+        "E..."
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "java.util.Iterator<E>"
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "E",
+        "E",
+        "E",
+        "E..."
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "java.util.Iterator<E>"
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "nullsFirst",
+      "parameters": [],
+      "type_parameters": [
+        "S extends T"
+      ],
+      "return_type": "com.google.common.collect.Ordering< S>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "onResultOf",
+      "parameters": [
+        "com.google.common.base.Function<F,? extends T>"
+      ],
+      "type_parameters": [
+        "F extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.Ordering<F>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sortedCopy",
+      "parameters": [
+        "java.lang.Iterable<E>"
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "java.util.List<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "allEqual",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.Ordering< java.lang.Object>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "binarySearch",
+      "parameters": [
+        "java.util.List<? extends T>",
+        "T"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "compound",
+      "parameters": [
+        "java.lang.Iterable<? extends java.util.Comparator<? super T>>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.Ordering<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "explicit",
+      "parameters": [
+        "java.util.List<T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "com.google.common.collect.Ordering<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "from",
+      "parameters": [
+        "com.google.common.collect.Ordering<T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.Ordering<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "greatestOf",
+      "parameters": [
+        "java.lang.Iterable<E>",
+        "int"
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "java.util.List<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "immutableSortedCopy",
+      "parameters": [
+        "java.lang.Iterable<E>"
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "com.google.common.collect.ImmutableList<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isStrictlyOrdered",
+      "parameters": [
+        "java.lang.Iterable<? extends T>"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "leastOf",
+      "parameters": [
+        "java.util.Iterator<E>",
+        "int"
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "java.util.List<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "E",
+        "E"
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "java.lang.Iterable<E>"
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "E",
+        "E"
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "java.lang.Iterable<E>"
+      ],
+      "type_parameters": [
+        "E extends T"
+      ],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "natural",
+      "parameters": [],
+      "type_parameters": [
+        "C extends java.lang.Comparable"
+      ],
+      "return_type": "com.google.common.collect.Ordering<C>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "nullsLast",
+      "parameters": [],
+      "type_parameters": [
+        "S extends T"
+      ],
+      "return_type": "com.google.common.collect.Ordering< S>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reverse",
+      "parameters": [],
+      "type_parameters": [
+        "S extends T"
+      ],
+      "return_type": "com.google.common.collect.Ordering<S>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "usingToString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.Ordering<java.lang.Object>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

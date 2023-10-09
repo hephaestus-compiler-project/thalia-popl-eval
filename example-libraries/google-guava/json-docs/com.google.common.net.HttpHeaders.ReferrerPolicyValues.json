@@ -1,0 +1,64 @@
+{
+  "name": "com.google.common.net.HttpHeaders.ReferrerPolicyValues",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [],
+  "fields": [
+    {
+      "name": "NO_REFFERER_WHEN_DOWNGRADE",
+      "type": "java.lang.String",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "ORIGIN_WHEN_CROSS_ORIGIN",
+      "type": "java.lang.String",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "STRICT_ORIGIN",
+      "type": "java.lang.String",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "UNSAFE_URL",
+      "type": "java.lang.String",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "NO_REFERRER",
+      "type": "java.lang.String",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "ORIGIN",
+      "type": "java.lang.String",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "SAME_ORIGIN",
+      "type": "java.lang.String",
+      "is_static": true,
+      "access_mod": "public"
+    },
+    {
+      "name": "STRICT_ORIGIN_WHEN_CROSS_ORIGIN",
+      "type": "java.lang.String",
+      "is_static": true,
+      "access_mod": "public"
+    }
+  ],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

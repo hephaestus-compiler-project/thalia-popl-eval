@@ -1,0 +1,338 @@
+{
+  "name": "com.google.common.collect.ForwardingNavigableMap.StandardNavigableKeySet",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.util.AbstractSet<E>"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "clear",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "contains",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "descendingSet",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.NavigableSet<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "floor",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "headSet",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.SortedSet<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "higher",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "iterator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Iterator<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lower",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "pollLast",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "removeAll",
+      "parameters": [
+        "java.util.Collection<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "size",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "subSet",
+      "parameters": [
+        "K",
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.SortedSet<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tailSet",
+      "parameters": [
+        "K",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.NavigableSet<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ceiling",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "comparator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Comparator<? super K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "descendingIterator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Iterator<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "first",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "forEach",
+      "parameters": [
+        "java.util.function.Consumer<? super K>"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "headSet",
+      "parameters": [
+        "K",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.NavigableSet<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isEmpty",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "last",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "pollFirst",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "remove",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "retainAll",
+      "parameters": [
+        "java.util.Collection<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "subSet",
+      "parameters": [
+        "K",
+        "boolean",
+        "K",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.NavigableSet<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tailSet",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.SortedSet<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": "com.google.common.collect.ForwardingNavigableMap",
+  "access_mod": "protected",
+  "language": "java"
+}

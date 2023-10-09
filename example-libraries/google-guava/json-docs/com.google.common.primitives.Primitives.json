@@ -1,0 +1,81 @@
+{
+  "name": "com.google.common.primitives.Primitives",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "allWrapperTypes",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Set<java.lang.Class<?>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "unwrap",
+      "parameters": [
+        "java.lang.Class<T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "java.lang.Class<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "allPrimitiveTypes",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Set<java.lang.Class<?>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isWrapperType",
+      "parameters": [
+        "java.lang.Class<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "wrap",
+      "parameters": [
+        "java.lang.Class<T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "java.lang.Class<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

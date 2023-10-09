@@ -1,0 +1,159 @@
+{
+  "name": "com.google.common.hash.HashFunction",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [],
+  "class_type": 1,
+  "methods": [
+    {
+      "name": "hashBytes",
+      "parameters": [
+        "byte[]"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.HashCode",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashBytes",
+      "parameters": [
+        "java.nio.ByteBuffer"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.HashCode",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashLong",
+      "parameters": [
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.HashCode",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashString",
+      "parameters": [
+        "java.lang.CharSequence",
+        "java.nio.charset.Charset"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.HashCode",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newHasher",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "bits",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashBytes",
+      "parameters": [
+        "byte[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.HashCode",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashInt",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.HashCode",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashObject",
+      "parameters": [
+        "T",
+        "com.google.common.hash.Funnel<? super T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.hash.HashCode",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashUnencodedChars",
+      "parameters": [
+        "java.lang.CharSequence"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.HashCode",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newHasher",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

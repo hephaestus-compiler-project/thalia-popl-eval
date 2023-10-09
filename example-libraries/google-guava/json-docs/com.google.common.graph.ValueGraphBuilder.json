@@ -1,0 +1,141 @@
+{
+  "name": "com.google.common.graph.ValueGraphBuilder",
+  "type_parameters": [
+    "N",
+    "V"
+  ],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "build",
+      "parameters": [],
+      "type_parameters": [
+        "N1 extends N",
+        "V1 extends V"
+      ],
+      "return_type": "com.google.common.graph.MutableValueGraph<N1,V1>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "expectedNodeCount",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.ValueGraphBuilder<N,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "immutable",
+      "parameters": [],
+      "type_parameters": [
+        "N1 extends N",
+        "V1 extends V"
+      ],
+      "return_type": "com.google.common.graph.ImmutableValueGraph.Builder<N1,V1>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "nodeOrder",
+      "parameters": [
+        "com.google.common.graph.ElementOrder<N1>"
+      ],
+      "type_parameters": [
+        "N1 extends N"
+      ],
+      "return_type": "com.google.common.graph.ValueGraphBuilder<N1,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "allowsSelfLoops",
+      "parameters": [
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.ValueGraphBuilder<N,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "directed",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.ValueGraphBuilder<java.lang.Object,java.lang.Object>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "from",
+      "parameters": [
+        "com.google.common.graph.ValueGraph<N,V>"
+      ],
+      "type_parameters": [
+        "N",
+        "V"
+      ],
+      "return_type": "com.google.common.graph.ValueGraphBuilder<N,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "incidentEdgeOrder",
+      "parameters": [
+        "com.google.common.graph.ElementOrder<N1>"
+      ],
+      "type_parameters": [
+        "N1 extends N"
+      ],
+      "return_type": "com.google.common.graph.ValueGraphBuilder<N1,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "undirected",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.ValueGraphBuilder<java.lang.Object,java.lang.Object>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

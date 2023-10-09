@@ -1,0 +1,148 @@
+{
+  "name": "com.google.common.util.concurrent.Striped",
+  "type_parameters": [
+    "L"
+  ],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "get",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "L",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lazyWeakLock",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.Striped<java.util.concurrent.locks.Lock>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lazyWeakSemaphore",
+      "parameters": [
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.Striped<java.util.concurrent.Semaphore>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "readWriteLock",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.Striped<java.util.concurrent.locks.ReadWriteLock>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "size",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "bulkGet",
+      "parameters": [
+        "java.lang.Iterable<? extends java.lang.Object>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Iterable<L>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getAt",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "L",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lazyWeakReadWriteLock",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.Striped<java.util.concurrent.locks.ReadWriteLock>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lock",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.Striped<java.util.concurrent.locks.Lock>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "semaphore",
+      "parameters": [
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.Striped<java.util.concurrent.Semaphore>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

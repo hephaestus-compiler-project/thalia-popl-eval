@@ -1,0 +1,68 @@
+{
+  "name": "com.google.common.collect.Interners",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "newBuilder",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.Interners.InternerBuilder",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newWeakInterner",
+      "parameters": [],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.Interner<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asFunction",
+      "parameters": [
+        "com.google.common.collect.Interner<E>"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.base.Function<E,E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newStrongInterner",
+      "parameters": [],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.Interner<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

@@ -1,0 +1,367 @@
+{
+  "name": "com.google.common.net.InetAddresses",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "decrement",
+      "parameters": [
+        "java.net.InetAddress"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.InetAddress",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "forUriString",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.InetAddress",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "fromIPv4BigInteger",
+      "parameters": [
+        "java.math.BigInteger"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.Inet4Address",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "fromLittleEndianByteArray",
+      "parameters": [
+        "byte[]"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.InetAddress",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getCoercedIPv4Address",
+      "parameters": [
+        "java.net.InetAddress"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.Inet4Address",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getEmbeddedIPv4ClientAddress",
+      "parameters": [
+        "java.net.Inet6Address"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.Inet4Address",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getTeredoInfo",
+      "parameters": [
+        "java.net.Inet6Address"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.net.InetAddresses.TeredoInfo",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "increment",
+      "parameters": [
+        "java.net.InetAddress"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.InetAddress",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isCompatIPv4Address",
+      "parameters": [
+        "java.net.Inet6Address"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isIsatapAddress",
+      "parameters": [
+        "java.net.Inet6Address"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isMaximum",
+      "parameters": [
+        "java.net.InetAddress"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isUriInetAddress",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toBigInteger",
+      "parameters": [
+        "java.net.InetAddress"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigInteger",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "coerceToInteger",
+      "parameters": [
+        "java.net.InetAddress"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "forString",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.InetAddress",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "fromInteger",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.Inet4Address",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "fromIPv6BigInteger",
+      "parameters": [
+        "java.math.BigInteger"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.Inet6Address",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "get6to4IPv4Address",
+      "parameters": [
+        "java.net.Inet6Address"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.Inet4Address",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getCompatIPv4Address",
+      "parameters": [
+        "java.net.Inet6Address"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.Inet4Address",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getIsatapIPv4Address",
+      "parameters": [
+        "java.net.Inet6Address"
+      ],
+      "type_parameters": [],
+      "return_type": "java.net.Inet4Address",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hasEmbeddedIPv4ClientAddress",
+      "parameters": [
+        "java.net.Inet6Address"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "is6to4Address",
+      "parameters": [
+        "java.net.Inet6Address"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isInetAddress",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isMappedIPv4Address",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isTeredoAddress",
+      "parameters": [
+        "java.net.Inet6Address"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toAddrString",
+      "parameters": [
+        "java.net.InetAddress"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toUriString",
+      "parameters": [
+        "java.net.InetAddress"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

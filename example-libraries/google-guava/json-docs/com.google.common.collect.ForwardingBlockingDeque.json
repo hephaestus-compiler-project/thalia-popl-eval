@@ -1,0 +1,228 @@
+{
+  "name": "com.google.common.collect.ForwardingBlockingDeque",
+  "type_parameters": [
+    "E"
+  ],
+  "implements": [
+    "java.util.concurrent.BlockingDeque<E>"
+  ],
+  "inherits": [
+    "com.google.common.collect.ForwardingDeque<E>"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "drainTo",
+      "parameters": [
+        "java.util.Collection<? super E>"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "offer",
+      "parameters": [
+        "E",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "offerLast",
+      "parameters": [
+        "E",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "pollFirst",
+      "parameters": [
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "put",
+      "parameters": [
+        "E"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putLast",
+      "parameters": [
+        "E"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "take",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "takeLast",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "delegate",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.BlockingDeque<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "drainTo",
+      "parameters": [
+        "java.util.Collection<? super E>",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "offerFirst",
+      "parameters": [
+        "E",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "poll",
+      "parameters": [
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "pollLast",
+      "parameters": [
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putFirst",
+      "parameters": [
+        "E"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "remainingCapacity",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "takeFirst",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

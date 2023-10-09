@@ -1,0 +1,226 @@
+{
+  "name": "com.google.common.hash.Hasher",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "com.google.common.hash.PrimitiveSink"
+  ],
+  "class_type": 1,
+  "methods": [
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putByte",
+      "parameters": [
+        "byte"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putBytes",
+      "parameters": [
+        "byte[]",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putChar",
+      "parameters": [
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putFloat",
+      "parameters": [
+        "float"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putLong",
+      "parameters": [
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putShort",
+      "parameters": [
+        "short"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putUnencodedChars",
+      "parameters": [
+        "java.lang.CharSequence"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hash",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.HashCode",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putBoolean",
+      "parameters": [
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putBytes",
+      "parameters": [
+        "byte[]"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putBytes",
+      "parameters": [
+        "java.nio.ByteBuffer"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putDouble",
+      "parameters": [
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putInt",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putObject",
+      "parameters": [
+        "T",
+        "com.google.common.hash.Funnel<? super T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putString",
+      "parameters": [
+        "java.lang.CharSequence",
+        "java.nio.charset.Charset"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.hash.Hasher",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

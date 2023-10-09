@@ -1,0 +1,366 @@
+{
+  "name": "com.google.common.util.concurrent.Uninterruptibles",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "awaitTerminationUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.ExecutorService",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "awaitUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.CountDownLatch"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "awaitUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.CountDownLatch",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "awaitUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.locks.Condition",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.Future<V>",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "V",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "joinUninterruptibly",
+      "parameters": [
+        "java.lang.Thread"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "joinUninterruptibly",
+      "parameters": [
+        "java.lang.Thread",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sleepUninterruptibly",
+      "parameters": [
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "takeUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.BlockingQueue<E>"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "E",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tryAcquireUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.Semaphore",
+        "int",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tryAcquireUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.Semaphore",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tryLockUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.locks.Lock",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "awaitTerminationUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.ExecutorService"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "awaitTerminationUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.ExecutorService",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "awaitUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.CountDownLatch",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "awaitUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.locks.Condition",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.Future<V>"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "V",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.Future<V>",
+        "java.time.Duration"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "V",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "joinUninterruptibly",
+      "parameters": [
+        "java.lang.Thread",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.BlockingQueue<E>",
+        "E"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sleepUninterruptibly",
+      "parameters": [
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tryAcquireUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.Semaphore",
+        "int",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tryAcquireUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.Semaphore",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tryLockUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.locks.Lock",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

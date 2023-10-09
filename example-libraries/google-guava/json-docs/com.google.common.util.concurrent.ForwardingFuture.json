@@ -1,0 +1,91 @@
+{
+  "name": "com.google.common.util.concurrent.ForwardingFuture",
+  "type_parameters": [
+    "V extends java.lang.Object"
+  ],
+  "implements": [
+    "java.util.concurrent.Future<V>"
+  ],
+  "inherits": [
+    "com.google.common.collect.ForwardingObject"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "delegate",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.Future<? extends V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "get",
+      "parameters": [
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isDone",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "cancel",
+      "parameters": [
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "get",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isCancelled",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

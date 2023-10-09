@@ -1,0 +1,192 @@
+{
+  "name": "com.google.common.collect.Comparators",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "emptiesLast",
+      "parameters": [
+        "java.util.Comparator<? super T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "java.util.Comparator<java.util.Optional<T>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isInOrder",
+      "parameters": [
+        "java.lang.Iterable<? extends T>",
+        "java.util.Comparator<T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "least",
+      "parameters": [
+        "int",
+        "java.util.Comparator<? super T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "java.util.stream.Collector<T,?,java.util.List<T>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "T",
+        "T"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Comparable<? super T>"
+      ],
+      "return_type": "T",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "T",
+        "T"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Comparable<? super T>"
+      ],
+      "return_type": "T",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "emptiesFirst",
+      "parameters": [
+        "java.util.Comparator<? super T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "java.util.Comparator<java.util.Optional<T>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "greatest",
+      "parameters": [
+        "int",
+        "java.util.Comparator<? super T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "java.util.stream.Collector<T,?,java.util.List<T>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isInStrictOrder",
+      "parameters": [
+        "java.lang.Iterable<? extends T>",
+        "java.util.Comparator<T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lexicographical",
+      "parameters": [
+        "java.util.Comparator<T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object",
+        "S extends T"
+      ],
+      "return_type": "java.util.Comparator<java.lang.Iterable<S>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "max",
+      "parameters": [
+        "T",
+        "T",
+        "java.util.Comparator<T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "T",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "min",
+      "parameters": [
+        "T",
+        "T",
+        "java.util.Comparator<T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "T",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

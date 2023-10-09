@@ -1,0 +1,126 @@
+{
+  "name": "com.google.common.graph.Traverser",
+  "type_parameters": [
+    "N"
+  ],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "breadthFirst",
+      "parameters": [
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Iterable<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "depthFirstPostOrder",
+      "parameters": [
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Iterable<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "depthFirstPreOrder",
+      "parameters": [
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Iterable<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "forTree",
+      "parameters": [
+        "com.google.common.graph.SuccessorsFunction<N>"
+      ],
+      "type_parameters": [
+        "N"
+      ],
+      "return_type": "com.google.common.graph.Traverser<N>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "breadthFirst",
+      "parameters": [
+        "java.lang.Iterable<? extends N>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Iterable<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "depthFirstPostOrder",
+      "parameters": [
+        "java.lang.Iterable<? extends N>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Iterable<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "depthFirstPreOrder",
+      "parameters": [
+        "java.lang.Iterable<? extends N>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Iterable<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "forGraph",
+      "parameters": [
+        "com.google.common.graph.SuccessorsFunction<N>"
+      ],
+      "type_parameters": [
+        "N"
+      ],
+      "return_type": "com.google.common.graph.Traverser<N>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

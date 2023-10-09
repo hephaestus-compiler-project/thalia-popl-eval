@@ -1,0 +1,95 @@
+{
+  "name": "com.google.common.collect.Collections2",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "orderedPermutations",
+      "parameters": [
+        "java.lang.Iterable<E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Comparable<? super E>"
+      ],
+      "return_type": "java.util.Collection<java.util.List<E>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "permutations",
+      "parameters": [
+        "java.util.Collection<E>"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.Collection<java.util.List<E>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "filter",
+      "parameters": [
+        "java.util.Collection<E>",
+        "com.google.common.base.Predicate<? super E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.Collection<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "orderedPermutations",
+      "parameters": [
+        "java.lang.Iterable<E>",
+        "java.util.Comparator<? super E>"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.Collection<java.util.List<E>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transform",
+      "parameters": [
+        "java.util.Collection<F>",
+        "com.google.common.base.Function<? super F,T>"
+      ],
+      "type_parameters": [
+        "F extends java.lang.Object",
+        "T extends java.lang.Object"
+      ],
+      "return_type": "java.util.Collection<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

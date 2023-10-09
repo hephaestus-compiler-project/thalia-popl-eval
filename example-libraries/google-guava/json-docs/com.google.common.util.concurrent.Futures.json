@@ -1,0 +1,528 @@
+{
+  "name": "com.google.common.util.concurrent.Futures",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "allAsList",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<? extends V>..."
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<java.util.List<V>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "catching",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<? extends V>",
+        "java.lang.Class<X>",
+        "com.google.common.base.Function<? super X,? extends V>",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object",
+        "X extends java.lang.Throwable"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getChecked",
+      "parameters": [
+        "java.util.concurrent.Future<V>",
+        "java.lang.Class<X>"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object",
+        "X extends java.lang.Exception"
+      ],
+      "return_type": "V",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getChecked",
+      "parameters": [
+        "java.util.concurrent.Future<V>",
+        "java.lang.Class<X>",
+        "java.time.Duration"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object",
+        "X extends java.lang.Exception"
+      ],
+      "return_type": "V",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getUnchecked",
+      "parameters": [
+        "java.util.concurrent.Future<V>"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "V",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "immediateFailedFuture",
+      "parameters": [
+        "java.lang.Throwable"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "immediateVoidFuture",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture< java.lang.Void>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lazyTransform",
+      "parameters": [
+        "java.util.concurrent.Future<I>",
+        "com.google.common.base.Function<? super I,? extends O>"
+      ],
+      "type_parameters": [
+        "I extends java.lang.Object",
+        "O extends java.lang.Object"
+      ],
+      "return_type": "java.util.concurrent.Future<O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "scheduleAsync",
+      "parameters": [
+        "com.google.common.util.concurrent.AsyncCallable<O>",
+        "long",
+        "java.util.concurrent.TimeUnit",
+        "java.util.concurrent.ScheduledExecutorService"
+      ],
+      "type_parameters": [
+        "O extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "submit",
+      "parameters": [
+        "java.lang.Runnable",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture< java.lang.Void>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "submitAsync",
+      "parameters": [
+        "com.google.common.util.concurrent.AsyncCallable<O>",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [
+        "O extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "successfulAsList",
+      "parameters": [
+        "java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>>"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<java.util.List< V>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transformAsync",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<I>",
+        "com.google.common.util.concurrent.AsyncFunction<? super I,? extends O>",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [
+        "I extends java.lang.Object",
+        "O extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "whenAllComplete",
+      "parameters": [
+        "java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>>"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.Futures.FutureCombiner<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "whenAllSucceed",
+      "parameters": [
+        "java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>>"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.Futures.FutureCombiner<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "withTimeout",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<V>",
+        "java.time.Duration",
+        "java.util.concurrent.ScheduledExecutorService"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addCallback",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<V>",
+        "com.google.common.util.concurrent.FutureCallback<? super V>",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "allAsList",
+      "parameters": [
+        "java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends V>>"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<java.util.List<V>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "catchingAsync",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<? extends V>",
+        "java.lang.Class<X>",
+        "com.google.common.util.concurrent.AsyncFunction<? super X,? extends V>",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object",
+        "X extends java.lang.Throwable"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getChecked",
+      "parameters": [
+        "java.util.concurrent.Future<V>",
+        "java.lang.Class<X>",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object",
+        "X extends java.lang.Exception"
+      ],
+      "return_type": "V",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getDone",
+      "parameters": [
+        "java.util.concurrent.Future<V>"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "V",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "immediateCancelledFuture",
+      "parameters": [],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "immediateFuture",
+      "parameters": [
+        "V"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "inCompletionOrder",
+      "parameters": [
+        "java.lang.Iterable<? extends com.google.common.util.concurrent.ListenableFuture<? extends T>>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.ImmutableList<com.google.common.util.concurrent.ListenableFuture<T>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "nonCancellationPropagating",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<V>"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "scheduleAsync",
+      "parameters": [
+        "com.google.common.util.concurrent.AsyncCallable<O>",
+        "java.time.Duration",
+        "java.util.concurrent.ScheduledExecutorService"
+      ],
+      "type_parameters": [
+        "O extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "submit",
+      "parameters": [
+        "java.util.concurrent.Callable<O>",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [
+        "O extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "successfulAsList",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<? extends V>..."
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<java.util.List< V>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transform",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<I>",
+        "com.google.common.base.Function<? super I,? extends O>",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [
+        "I extends java.lang.Object",
+        "O extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<O>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "whenAllComplete",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<? extends V>..."
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.Futures.FutureCombiner<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "whenAllSucceed",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<? extends V>..."
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.Futures.FutureCombiner<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "withTimeout",
+      "parameters": [
+        "com.google.common.util.concurrent.ListenableFuture<V>",
+        "long",
+        "java.util.concurrent.TimeUnit",
+        "java.util.concurrent.ScheduledExecutorService"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

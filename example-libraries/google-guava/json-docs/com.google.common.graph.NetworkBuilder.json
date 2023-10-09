@@ -1,0 +1,167 @@
+{
+  "name": "com.google.common.graph.NetworkBuilder",
+  "type_parameters": [
+    "N",
+    "E"
+  ],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "allowsSelfLoops",
+      "parameters": [
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.NetworkBuilder<N,E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "directed",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.NetworkBuilder<java.lang.Object,java.lang.Object>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "expectedEdgeCount",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.NetworkBuilder<N,E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "from",
+      "parameters": [
+        "com.google.common.graph.Network<N,E>"
+      ],
+      "type_parameters": [
+        "N",
+        "E"
+      ],
+      "return_type": "com.google.common.graph.NetworkBuilder<N,E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "nodeOrder",
+      "parameters": [
+        "com.google.common.graph.ElementOrder<N1>"
+      ],
+      "type_parameters": [
+        "N1 extends N"
+      ],
+      "return_type": "com.google.common.graph.NetworkBuilder<N1,E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "allowsParallelEdges",
+      "parameters": [
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.NetworkBuilder<N,E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "build",
+      "parameters": [],
+      "type_parameters": [
+        "N1 extends N",
+        "E1 extends E"
+      ],
+      "return_type": "com.google.common.graph.MutableNetwork<N1,E1>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "edgeOrder",
+      "parameters": [
+        "com.google.common.graph.ElementOrder<E1>"
+      ],
+      "type_parameters": [
+        "E1 extends E"
+      ],
+      "return_type": "com.google.common.graph.NetworkBuilder<N,E1>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "expectedNodeCount",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.NetworkBuilder<N,E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "immutable",
+      "parameters": [],
+      "type_parameters": [
+        "N1 extends N",
+        "E1 extends E"
+      ],
+      "return_type": "com.google.common.graph.ImmutableNetwork.Builder<N1,E1>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "undirected",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.NetworkBuilder<java.lang.Object,java.lang.Object>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

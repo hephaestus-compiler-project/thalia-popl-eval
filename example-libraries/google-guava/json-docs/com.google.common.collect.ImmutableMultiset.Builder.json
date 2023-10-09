@@ -1,0 +1,109 @@
+{
+  "name": "com.google.common.collect.ImmutableMultiset.Builder",
+  "type_parameters": [
+    "E"
+  ],
+  "implements": [],
+  "inherits": [
+    "com.google.common.collect.ImmutableCollection.Builder<E>"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "add",
+      "parameters": [
+        "E..."
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableMultiset.Builder<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addAll",
+      "parameters": [
+        "java.util.Iterator<? extends E>"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableMultiset.Builder<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "build",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableMultiset<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "add",
+      "parameters": [
+        "E"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableMultiset.Builder<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addAll",
+      "parameters": [
+        "java.lang.Iterable<? extends E>"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableMultiset.Builder<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addCopies",
+      "parameters": [
+        "E",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableMultiset.Builder<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "setCount",
+      "parameters": [
+        "E",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableMultiset.Builder<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

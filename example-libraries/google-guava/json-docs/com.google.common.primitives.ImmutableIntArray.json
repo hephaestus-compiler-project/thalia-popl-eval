@@ -1,0 +1,392 @@
+{
+  "name": "com.google.common.primitives.ImmutableIntArray",
+  "type_parameters": [],
+  "implements": [
+    "java.io.Serializable"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "builder",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray.Builder",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "contains",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "java.lang.Iterable<java.lang.Integer>"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "java.util.stream.IntStream"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "forEach",
+      "parameters": [
+        "java.util.function.IntConsumer"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isEmpty",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "length",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "int",
+        "int..."
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "int",
+        "int",
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "subArray",
+      "parameters": [
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asList",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.List<java.lang.Integer>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "builder",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray.Builder",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "int[]"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "java.util.Collection<java.lang.Integer>"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "equals",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "get",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "indexOf",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lastIndexOf",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "int",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "int",
+        "int",
+        "int",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "stream",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.stream.IntStream",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toArray",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int[]",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "trimmed",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.primitives.ImmutableIntArray",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

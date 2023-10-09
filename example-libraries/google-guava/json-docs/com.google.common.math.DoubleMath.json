@@ -1,0 +1,219 @@
+{
+  "name": "com.google.common.math.DoubleMath",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "fuzzyCompare",
+      "parameters": [
+        "double",
+        "double",
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isMathematicalInteger",
+      "parameters": [
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "log2",
+      "parameters": [
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "mean",
+      "parameters": [
+        "double..."
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "mean",
+      "parameters": [
+        "long..."
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "mean",
+      "parameters": [
+        "java.util.Iterator<? extends java.lang.Number>"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "roundToInt",
+      "parameters": [
+        "double",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "factorial",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "fuzzyEquals",
+      "parameters": [
+        "double",
+        "double",
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isPowerOfTwo",
+      "parameters": [
+        "double"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "log2",
+      "parameters": [
+        "double",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "mean",
+      "parameters": [
+        "int..."
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "mean",
+      "parameters": [
+        "java.lang.Iterable<? extends java.lang.Number>"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "roundToBigInteger",
+      "parameters": [
+        "double",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigInteger",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "roundToLong",
+      "parameters": [
+        "double",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

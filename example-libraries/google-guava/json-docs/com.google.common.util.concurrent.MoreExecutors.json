@@ -1,0 +1,230 @@
+{
+  "name": "com.google.common.util.concurrent.MoreExecutors",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "addDelayedShutdownHook",
+      "parameters": [
+        "java.util.concurrent.ExecutorService",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getExitingExecutorService",
+      "parameters": [
+        "java.util.concurrent.ThreadPoolExecutor"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.ExecutorService",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getExitingExecutorService",
+      "parameters": [
+        "java.util.concurrent.ThreadPoolExecutor",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.ExecutorService",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getExitingScheduledExecutorService",
+      "parameters": [
+        "java.util.concurrent.ScheduledThreadPoolExecutor",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.ScheduledExecutorService",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "listeningDecorator",
+      "parameters": [
+        "java.util.concurrent.ExecutorService"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.ListeningExecutorService",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newDirectExecutorService",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.ListeningExecutorService",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "platformThreadFactory",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.ThreadFactory",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "shutdownAndAwaitTermination",
+      "parameters": [
+        "java.util.concurrent.ExecutorService",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addDelayedShutdownHook",
+      "parameters": [
+        "java.util.concurrent.ExecutorService",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "directExecutor",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.Executor",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getExitingExecutorService",
+      "parameters": [
+        "java.util.concurrent.ThreadPoolExecutor",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.ExecutorService",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getExitingScheduledExecutorService",
+      "parameters": [
+        "java.util.concurrent.ScheduledThreadPoolExecutor"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.ScheduledExecutorService",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getExitingScheduledExecutorService",
+      "parameters": [
+        "java.util.concurrent.ScheduledThreadPoolExecutor",
+        "java.time.Duration"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.ScheduledExecutorService",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "listeningDecorator",
+      "parameters": [
+        "java.util.concurrent.ScheduledExecutorService"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.ListeningScheduledExecutorService",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newSequentialExecutor",
+      "parameters": [
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.Executor",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "shutdownAndAwaitTermination",
+      "parameters": [
+        "java.util.concurrent.ExecutorService",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

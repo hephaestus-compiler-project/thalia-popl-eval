@@ -1,0 +1,185 @@
+{
+  "name": "com.google.common.collect.Tables",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "newCustomTable",
+      "parameters": [
+        "java.util.Map<R,java.util.Map<C,V>>",
+        "com.google.common.base.Supplier<? extends java.util.Map<C,V>>"
+      ],
+      "type_parameters": [
+        "R",
+        "C",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.Table<R,C,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toTable",
+      "parameters": [
+        "java.util.function.Function<? super T,? extends R>",
+        "java.util.function.Function<? super T,? extends C>",
+        "java.util.function.Function<? super T,? extends V>",
+        "java.util.function.BinaryOperator<V>",
+        "java.util.function.Supplier<I>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object",
+        "R extends java.lang.Object",
+        "C extends java.lang.Object",
+        "V extends java.lang.Object",
+        "I extends com.google.common.collect.Table<R,C,V>"
+      ],
+      "return_type": "java.util.stream.Collector<T,?,I>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transformValues",
+      "parameters": [
+        "com.google.common.collect.Table<R,C,V1>",
+        "com.google.common.base.Function<? super V1,V2>"
+      ],
+      "type_parameters": [
+        "R extends java.lang.Object",
+        "C extends java.lang.Object",
+        "V1 extends java.lang.Object",
+        "V2 extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.Table<R,C,V2>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "unmodifiableRowSortedTable",
+      "parameters": [
+        "com.google.common.collect.RowSortedTable<R,? extends C,? extends V>"
+      ],
+      "type_parameters": [
+        "R extends java.lang.Object",
+        "C extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.RowSortedTable<R,C,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "immutableCell",
+      "parameters": [
+        "R",
+        "C",
+        "V"
+      ],
+      "type_parameters": [
+        "R extends java.lang.Object",
+        "C extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.Table.Cell<R,C,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "synchronizedTable",
+      "parameters": [
+        "com.google.common.collect.Table<R,C,V>"
+      ],
+      "type_parameters": [
+        "R extends java.lang.Object",
+        "C extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.Table<R,C,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toTable",
+      "parameters": [
+        "java.util.function.Function<? super T,? extends R>",
+        "java.util.function.Function<? super T,? extends C>",
+        "java.util.function.Function<? super T,? extends V>",
+        "java.util.function.Supplier<I>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object",
+        "R extends java.lang.Object",
+        "C extends java.lang.Object",
+        "V extends java.lang.Object",
+        "I extends com.google.common.collect.Table<R,C,V>"
+      ],
+      "return_type": "java.util.stream.Collector<T,?,I>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transpose",
+      "parameters": [
+        "com.google.common.collect.Table<R,C,V>"
+      ],
+      "type_parameters": [
+        "R extends java.lang.Object",
+        "C extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.Table<C,R,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "unmodifiableTable",
+      "parameters": [
+        "com.google.common.collect.Table<? extends R,? extends C,? extends V>"
+      ],
+      "type_parameters": [
+        "R extends java.lang.Object",
+        "C extends java.lang.Object",
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.collect.Table<R,C,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

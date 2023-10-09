@@ -1,0 +1,83 @@
+{
+  "name": "com.google.common.reflect.AbstractInvocationHandler",
+  "type_parameters": [],
+  "implements": [
+    "java.lang.reflect.InvocationHandler"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "handleInvocation",
+      "parameters": [
+        "java.lang.Object",
+        "java.lang.reflect.Method",
+        "java.lang.Object[]"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Object",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "invoke",
+      "parameters": [
+        "java.lang.Object",
+        "java.lang.reflect.Method",
+        "java.lang.Object[]"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Object",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "equals",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

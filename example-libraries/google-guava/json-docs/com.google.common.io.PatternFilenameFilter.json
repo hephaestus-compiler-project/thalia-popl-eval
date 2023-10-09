@@ -1,0 +1,32 @@
+{
+  "name": "com.google.common.io.PatternFilenameFilter",
+  "type_parameters": [],
+  "implements": [
+    "java.io.FilenameFilter"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "accept",
+      "parameters": [
+        "java.io.File",
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

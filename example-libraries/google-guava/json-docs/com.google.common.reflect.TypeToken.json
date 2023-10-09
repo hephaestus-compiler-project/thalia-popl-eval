@@ -1,0 +1,331 @@
+{
+  "name": "com.google.common.reflect.TypeToken",
+  "type_parameters": [
+    "T"
+  ],
+  "implements": [
+    "java.io.Serializable"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "equals",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getRawType",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.Class<? super T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getSupertype",
+      "parameters": [
+        "java.lang.Class<? super T>"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.TypeToken<? super T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getTypes",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.TypeToken<T>.TypeSet",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isArray",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isSubtypeOf",
+      "parameters": [
+        "com.google.common.reflect.TypeToken<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isSupertypeOf",
+      "parameters": [
+        "com.google.common.reflect.TypeToken<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "method",
+      "parameters": [
+        "java.lang.reflect.Method"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.Invokable<T,java.lang.Object>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "java.lang.reflect.Type"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.TypeToken<?>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "where",
+      "parameters": [
+        "com.google.common.reflect.TypeParameter<X>",
+        "com.google.common.reflect.TypeToken<X>"
+      ],
+      "type_parameters": [
+        "X"
+      ],
+      "return_type": "com.google.common.reflect.TypeToken<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "wrap",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.TypeToken<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "constructor",
+      "parameters": [
+        "java.lang.reflect.Constructor<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.Invokable<T,T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getComponentType",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.TypeToken<?>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getSubtype",
+      "parameters": [
+        "java.lang.Class<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.TypeToken<? extends T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getType",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.reflect.Type",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isPrimitive",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isSubtypeOf",
+      "parameters": [
+        "java.lang.reflect.Type"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isSupertypeOf",
+      "parameters": [
+        "java.lang.reflect.Type"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "java.lang.Class<T>"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "com.google.common.reflect.TypeToken<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "resolveType",
+      "parameters": [
+        "java.lang.reflect.Type"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.TypeToken<?>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "unwrap",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.TypeToken<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "where",
+      "parameters": [
+        "com.google.common.reflect.TypeParameter<X>",
+        "java.lang.Class<X>"
+      ],
+      "type_parameters": [
+        "X"
+      ],
+      "return_type": "com.google.common.reflect.TypeToken<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "writeReplace",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.Object",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

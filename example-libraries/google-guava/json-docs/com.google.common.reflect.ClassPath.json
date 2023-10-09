@@ -1,0 +1,88 @@
+{
+  "name": "com.google.common.reflect.ClassPath",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "getAllClasses",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ClassInfo>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getTopLevelClasses",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ClassInfo>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getTopLevelClassesRecursive",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ClassInfo>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "from",
+      "parameters": [
+        "java.lang.ClassLoader"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.ClassPath",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getResources",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ResourceInfo>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getTopLevelClasses",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSet<com.google.common.reflect.ClassPath.ClassInfo>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

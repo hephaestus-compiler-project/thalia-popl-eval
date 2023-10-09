@@ -1,0 +1,153 @@
+{
+  "name": "com.google.common.math.BigIntegerMath",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "ceilingPowerOfTwo",
+      "parameters": [
+        "java.math.BigInteger"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigInteger",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "factorial",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigInteger",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isPowerOfTwo",
+      "parameters": [
+        "java.math.BigInteger"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "log2",
+      "parameters": [
+        "java.math.BigInteger",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "sqrt",
+      "parameters": [
+        "java.math.BigInteger",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigInteger",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "binomial",
+      "parameters": [
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigInteger",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "divide",
+      "parameters": [
+        "java.math.BigInteger",
+        "java.math.BigInteger",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigInteger",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "floorPowerOfTwo",
+      "parameters": [
+        "java.math.BigInteger"
+      ],
+      "type_parameters": [],
+      "return_type": "java.math.BigInteger",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "log10",
+      "parameters": [
+        "java.math.BigInteger",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "roundToDouble",
+      "parameters": [
+        "java.math.BigInteger",
+        "java.math.RoundingMode"
+      ],
+      "type_parameters": [],
+      "return_type": "double",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

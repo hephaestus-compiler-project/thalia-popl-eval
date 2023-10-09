@@ -1,0 +1,64 @@
+{
+  "name": "com.google.common.collect.Interners.InternerBuilder",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "concurrencyLevel",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.Interners.InternerBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "weak",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.Interners.InternerBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "build",
+      "parameters": [],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.Interner<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "strong",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.Interners.InternerBuilder",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

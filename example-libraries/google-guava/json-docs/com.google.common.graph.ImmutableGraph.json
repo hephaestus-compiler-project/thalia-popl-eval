@@ -1,0 +1,269 @@
+{
+  "name": "com.google.common.graph.ImmutableGraph",
+  "type_parameters": [
+    "N"
+  ],
+  "implements": [],
+  "inherits": [
+    "com.google.common.graph.AbstractGraph<N>"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "allowsSelfLoops",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "com.google.common.graph.ImmutableGraph<N>"
+      ],
+      "type_parameters": [
+        "N"
+      ],
+      "return_type": "com.google.common.graph.ImmutableGraph<N>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "edgeCount",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hasEdgeConnecting",
+      "parameters": [
+        "com.google.common.graph.EndpointPair<N>"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "incidentEdgeOrder",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.ElementOrder<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "inDegree",
+      "parameters": [
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isOrderingCompatible",
+      "parameters": [
+        "com.google.common.graph.EndpointPair<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "nodes",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Set<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "predecessors",
+      "parameters": [
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Set<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "validateEndpoints",
+      "parameters": [
+        "com.google.common.graph.EndpointPair<?>"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "adjacentNodes",
+      "parameters": [
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Set<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "com.google.common.graph.Graph<N>"
+      ],
+      "type_parameters": [
+        "N"
+      ],
+      "return_type": "com.google.common.graph.ImmutableGraph<N>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "degree",
+      "parameters": [
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "edges",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Set<com.google.common.graph.EndpointPair<N>>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hasEdgeConnecting",
+      "parameters": [
+        "N",
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "incidentEdges",
+      "parameters": [
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Set<com.google.common.graph.EndpointPair<N>>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isDirected",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "nodeOrder",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.ElementOrder<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "outDegree",
+      "parameters": [
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "successors",
+      "parameters": [
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Set<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

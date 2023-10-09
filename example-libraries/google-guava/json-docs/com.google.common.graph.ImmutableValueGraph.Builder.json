@@ -1,0 +1,72 @@
+{
+  "name": "com.google.common.graph.ImmutableValueGraph.Builder",
+  "type_parameters": [
+    "N",
+    "V"
+  ],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "build",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.ImmutableValueGraph<N,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putEdgeValue",
+      "parameters": [
+        "N",
+        "N",
+        "V"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.ImmutableValueGraph.Builder<N,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addNode",
+      "parameters": [
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.ImmutableValueGraph.Builder<N,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putEdgeValue",
+      "parameters": [
+        "com.google.common.graph.EndpointPair<N>",
+        "V"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.graph.ImmutableValueGraph.Builder<N,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

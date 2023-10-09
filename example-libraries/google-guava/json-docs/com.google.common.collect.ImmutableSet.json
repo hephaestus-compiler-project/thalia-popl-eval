@@ -1,0 +1,275 @@
+{
+  "name": "com.google.common.collect.ImmutableSet",
+  "type_parameters": [
+    "E"
+  ],
+  "implements": [
+    "java.util.Set<E>"
+  ],
+  "inherits": [
+    "com.google.common.collect.ImmutableCollection<E>"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "builderWithExpectedSize",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet.Builder<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "java.lang.Iterable<? extends E>"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "java.util.Iterator<? extends E>"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "E",
+        "E"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "E",
+        "E",
+        "E",
+        "E"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "E",
+        "E",
+        "E",
+        "E",
+        "E",
+        "E",
+        "E..."
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "builder",
+      "parameters": [],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet.Builder<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "E[]"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "java.util.Collection<? extends E>"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "equals",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "iterator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.UnmodifiableIterator<E>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "E"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "E",
+        "E",
+        "E"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "E",
+        "E",
+        "E",
+        "E",
+        "E"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSet<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toImmutableSet",
+      "parameters": [],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.stream.Collector<E,?,com.google.common.collect.ImmutableSet<E>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

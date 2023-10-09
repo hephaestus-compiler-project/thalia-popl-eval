@@ -1,0 +1,15 @@
+{
+  "name": "com.google.common.base.VerifyException",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.RuntimeException"
+  ],
+  "class_type": 0,
+  "methods": [],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

@@ -1,0 +1,89 @@
+{
+  "name": "com.google.common.util.concurrent.AbstractListeningExecutorService",
+  "type_parameters": [],
+  "implements": [
+    "com.google.common.util.concurrent.ListeningExecutorService"
+  ],
+  "inherits": [
+    "java.util.concurrent.AbstractExecutorService"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "newTaskFor",
+      "parameters": [
+        "java.util.concurrent.Callable<T>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.RunnableFuture<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "submit",
+      "parameters": [
+        "java.lang.Runnable",
+        "T"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newTaskFor",
+      "parameters": [
+        "java.lang.Runnable",
+        "T"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.concurrent.RunnableFuture<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "submit",
+      "parameters": [
+        "java.lang.Runnable"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<?>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "submit",
+      "parameters": [
+        "java.util.concurrent.Callable<T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFuture<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

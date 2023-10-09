@@ -1,0 +1,113 @@
+{
+  "name": "com.google.common.collect.DiscreteDomain",
+  "type_parameters": [
+    "C extends java.lang.Comparable"
+  ],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "distance",
+      "parameters": [
+        "C",
+        "C"
+      ],
+      "type_parameters": [],
+      "return_type": "long",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "longs",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.DiscreteDomain<java.lang.Long>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "minValue",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "C",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "previous",
+      "parameters": [
+        "C"
+      ],
+      "type_parameters": [],
+      "return_type": "C",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "bigIntegers",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.DiscreteDomain<java.math.BigInteger>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "integers",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.DiscreteDomain<java.lang.Integer>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "maxValue",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "C",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "next",
+      "parameters": [
+        "C"
+      ],
+      "type_parameters": [],
+      "return_type": "C",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

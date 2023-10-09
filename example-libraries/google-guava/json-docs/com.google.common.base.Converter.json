@@ -1,0 +1,155 @@
+{
+  "name": "com.google.common.base.Converter",
+  "type_parameters": [
+    "A",
+    "B"
+  ],
+  "implements": [
+    "com.google.common.base.Function<A,B>"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "apply",
+      "parameters": [
+        "A"
+      ],
+      "type_parameters": [],
+      "return_type": "B",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "convertAll",
+      "parameters": [
+        "java.lang.Iterable<? extends A>"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.Iterable<B>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "doForward",
+      "parameters": [
+        "A"
+      ],
+      "type_parameters": [],
+      "return_type": "B",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "from",
+      "parameters": [
+        "com.google.common.base.Function<? super A,? extends B>",
+        "com.google.common.base.Function<? super B,? extends A>"
+      ],
+      "type_parameters": [
+        "A",
+        "B"
+      ],
+      "return_type": "com.google.common.base.Converter<A,B>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reverse",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.base.Converter<B,A>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "andThen",
+      "parameters": [
+        "com.google.common.base.Converter<B,C>"
+      ],
+      "type_parameters": [
+        "C"
+      ],
+      "return_type": "com.google.common.base.Converter<A,C>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "convert",
+      "parameters": [
+        "A"
+      ],
+      "type_parameters": [],
+      "return_type": "B",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "doBackward",
+      "parameters": [
+        "B"
+      ],
+      "type_parameters": [],
+      "return_type": "A",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "equals",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "identity",
+      "parameters": [],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "com.google.common.base.Converter<T,T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

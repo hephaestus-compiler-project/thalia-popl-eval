@@ -1,0 +1,346 @@
+{
+  "name": "com.google.common.collect.Queues",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "drain",
+      "parameters": [
+        "java.util.concurrent.BlockingQueue<E>",
+        "java.util.Collection<? super E>",
+        "int",
+        "java.time.Duration"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "drainUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.BlockingQueue<E>",
+        "java.util.Collection<? super E>",
+        "int",
+        "java.time.Duration"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newArrayDeque",
+      "parameters": [],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.ArrayDeque<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newConcurrentLinkedQueue",
+      "parameters": [],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.concurrent.ConcurrentLinkedQueue<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newLinkedBlockingDeque",
+      "parameters": [],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.concurrent.LinkedBlockingDeque<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newLinkedBlockingDeque",
+      "parameters": [
+        "java.lang.Iterable<? extends E>"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.concurrent.LinkedBlockingDeque<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newLinkedBlockingQueue",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.concurrent.LinkedBlockingQueue<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newPriorityBlockingQueue",
+      "parameters": [],
+      "type_parameters": [
+        "E extends java.lang.Comparable"
+      ],
+      "return_type": "java.util.concurrent.PriorityBlockingQueue<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newPriorityQueue",
+      "parameters": [],
+      "type_parameters": [
+        "E extends java.lang.Comparable"
+      ],
+      "return_type": "java.util.PriorityQueue<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newSynchronousQueue",
+      "parameters": [],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.concurrent.SynchronousQueue<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "synchronizedQueue",
+      "parameters": [
+        "java.util.Queue<E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.Queue<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "drain",
+      "parameters": [
+        "java.util.concurrent.BlockingQueue<E>",
+        "java.util.Collection<? super E>",
+        "int",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "drainUninterruptibly",
+      "parameters": [
+        "java.util.concurrent.BlockingQueue<E>",
+        "java.util.Collection<? super E>",
+        "int",
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "int",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newArrayBlockingQueue",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.concurrent.ArrayBlockingQueue<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newArrayDeque",
+      "parameters": [
+        "java.lang.Iterable<? extends E>"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.ArrayDeque<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newConcurrentLinkedQueue",
+      "parameters": [
+        "java.lang.Iterable<? extends E>"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.concurrent.ConcurrentLinkedQueue<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newLinkedBlockingDeque",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.concurrent.LinkedBlockingDeque<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newLinkedBlockingQueue",
+      "parameters": [],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.concurrent.LinkedBlockingQueue<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newLinkedBlockingQueue",
+      "parameters": [
+        "java.lang.Iterable<? extends E>"
+      ],
+      "type_parameters": [
+        "E"
+      ],
+      "return_type": "java.util.concurrent.LinkedBlockingQueue<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newPriorityBlockingQueue",
+      "parameters": [
+        "java.lang.Iterable<? extends E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Comparable"
+      ],
+      "return_type": "java.util.concurrent.PriorityBlockingQueue<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newPriorityQueue",
+      "parameters": [
+        "java.lang.Iterable<? extends E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Comparable"
+      ],
+      "return_type": "java.util.PriorityQueue<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "synchronizedDeque",
+      "parameters": [
+        "java.util.Deque<E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.Deque<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

@@ -1,0 +1,72 @@
+{
+  "name": "com.google.common.collect.MinMaxPriorityQueue.Builder",
+  "type_parameters": [
+    "B"
+  ],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "create",
+      "parameters": [
+        "java.lang.Iterable<? extends T>"
+      ],
+      "type_parameters": [
+        "T extends B"
+      ],
+      "return_type": "com.google.common.collect.MinMaxPriorityQueue<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "maximumSize",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.MinMaxPriorityQueue.Builder<B>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "create",
+      "parameters": [],
+      "type_parameters": [
+        "T extends B"
+      ],
+      "return_type": "com.google.common.collect.MinMaxPriorityQueue<T>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "expectedSize",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.MinMaxPriorityQueue.Builder<B>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

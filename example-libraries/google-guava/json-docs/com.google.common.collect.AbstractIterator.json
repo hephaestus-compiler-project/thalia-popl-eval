@@ -1,0 +1,73 @@
+{
+  "name": "com.google.common.collect.AbstractIterator",
+  "type_parameters": [
+    "T extends java.lang.Object"
+  ],
+  "implements": [],
+  "inherits": [
+    "com.google.common.collect.UnmodifiableIterator<T>"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "endOfData",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "next",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "computeNext",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hasNext",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "peek",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "T",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

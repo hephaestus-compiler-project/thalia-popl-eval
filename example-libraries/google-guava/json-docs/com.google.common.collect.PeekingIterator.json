@@ -1,0 +1,51 @@
+{
+  "name": "com.google.common.collect.PeekingIterator",
+  "type_parameters": [
+    "E extends java.lang.Object"
+  ],
+  "implements": [],
+  "inherits": [
+    "java.util.Iterator<E>"
+  ],
+  "class_type": 1,
+  "methods": [
+    {
+      "name": "peek",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "next",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "E",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "remove",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

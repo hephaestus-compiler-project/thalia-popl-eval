@@ -1,0 +1,19 @@
+{
+  "name": "com.google.common.base.FinalizablePhantomReference",
+  "type_parameters": [
+    "T"
+  ],
+  "implements": [
+    "com.google.common.base.FinalizableReference"
+  ],
+  "inherits": [
+    "java.lang.ref.PhantomReference<T>"
+  ],
+  "class_type": 2,
+  "methods": [],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

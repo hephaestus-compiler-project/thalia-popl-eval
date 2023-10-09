@@ -1,0 +1,35 @@
+{
+  "name": "com.google.common.util.concurrent.ClosingFuture.Combiner3.ClosingFunction3",
+  "type_parameters": [
+    "V1 extends java.lang.Object",
+    "V2 extends java.lang.Object",
+    "V3 extends java.lang.Object",
+    "U extends java.lang.Object"
+  ],
+  "implements": [],
+  "inherits": [],
+  "class_type": 1,
+  "methods": [
+    {
+      "name": "apply",
+      "parameters": [
+        "com.google.common.util.concurrent.ClosingFuture.DeferredCloser",
+        "V1",
+        "V2",
+        "V3"
+      ],
+      "type_parameters": [],
+      "return_type": "U",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": true,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

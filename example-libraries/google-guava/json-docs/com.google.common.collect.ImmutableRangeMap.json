@@ -1,0 +1,288 @@
+{
+  "name": "com.google.common.collect.ImmutableRangeMap",
+  "type_parameters": [
+    "K extends java.lang.Comparable<?>",
+    "V"
+  ],
+  "implements": [
+    "com.google.common.collect.RangeMap<K,V>",
+    "java.io.Serializable"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "asMapOfRanges",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableMap<com.google.common.collect.Range<K>,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "clear",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "equals",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getEntry",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Map.Entry<com.google.common.collect.Range<K>,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "merge",
+      "parameters": [
+        "com.google.common.collect.Range<K>",
+        "V",
+        "java.util.function.BiFunction<? super V,? super V,? extends V>"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "com.google.common.collect.Range<K>",
+        "V"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<?>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableRangeMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putAll",
+      "parameters": [
+        "com.google.common.collect.RangeMap<K,V>"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "remove",
+      "parameters": [
+        "com.google.common.collect.Range<K>"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "subRangeMap",
+      "parameters": [
+        "com.google.common.collect.Range<K>"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableRangeMap<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asDescendingMapOfRanges",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableMap<com.google.common.collect.Range<K>,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "builder",
+      "parameters": [],
+      "type_parameters": [
+        "K extends java.lang.Comparable<?>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableRangeMap.Builder<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "com.google.common.collect.RangeMap<K,? extends V>"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<?>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableRangeMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "get",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [],
+      "type_parameters": [
+        "K extends java.lang.Comparable<?>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableRangeMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "put",
+      "parameters": [
+        "com.google.common.collect.Range<K>",
+        "V"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "putCoalescing",
+      "parameters": [
+        "com.google.common.collect.Range<K>",
+        "V"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "span",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.Range<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toImmutableRangeMap",
+      "parameters": [
+        "java.util.function.Function<? super T,com.google.common.collect.Range<K>>",
+        "java.util.function.Function<? super T,? extends V>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object",
+        "K extends java.lang.Comparable<? super K>",
+        "V"
+      ],
+      "return_type": "java.util.stream.Collector<T,?,com.google.common.collect.ImmutableRangeMap<K,V>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

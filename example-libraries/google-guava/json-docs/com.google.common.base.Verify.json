@@ -1,0 +1,427 @@
+{
+  "name": "com.google.common.base.Verify",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "char",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "char",
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "int",
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "int",
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "long",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "long",
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "java.lang.Object",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "java.lang.Object",
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "java.lang.Object",
+        "java.lang.Object",
+        "java.lang.Object",
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verifyNotNull",
+      "parameters": [
+        "T",
+        "java.lang.String",
+        "java.lang.Object..."
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "T",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "char",
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "char",
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "int",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "int",
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "long",
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "long",
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "java.lang.Object..."
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "java.lang.Object",
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "java.lang.Object",
+        "long"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verify",
+      "parameters": [
+        "boolean",
+        "java.lang.String",
+        "java.lang.Object",
+        "java.lang.Object",
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "verifyNotNull",
+      "parameters": [
+        "T"
+      ],
+      "type_parameters": [
+        "T"
+      ],
+      "return_type": "T",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

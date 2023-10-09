@@ -1,0 +1,1171 @@
+{
+  "name": "com.google.common.collect.ImmutableSortedMap",
+  "type_parameters": [
+    "K",
+    "V"
+  ],
+  "implements": [
+    "java.util.NavigableMap<K,V>"
+  ],
+  "inherits": [
+    "com.google.common.collect.ImmutableMap<K,V>"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "builderWithExpectedSize",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap.Builder<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ceilingKey",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>>"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "java.util.Map<? extends K,? extends V>"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOfSorted",
+      "parameters": [
+        "java.util.SortedMap<K,? extends V>"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "descendingMap",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "firstEntry",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Map.Entry<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "floorEntry",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Map.Entry<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "forEach",
+      "parameters": [
+        "java.util.function.BiConsumer<? super K,? super V>"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "headMap",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "higherEntry",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Map.Entry<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "keySet",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSortedSet<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lastKey",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lowerKey",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "navigableKeySet",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSortedSet<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<? super K>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<? super K>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<? super K>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<? super K>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<? super K>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<? super K>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<? super K>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<? super K>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<? super K>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K extends java.lang.Comparable<? super K>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ofEntries",
+      "parameters": [
+        "java.util.Map.Entry<? extends K,? extends V>..."
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "pollFirstEntry",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Map.Entry<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reverseOrder",
+      "parameters": [],
+      "type_parameters": [
+        "K extends java.lang.Comparable<?>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap.Builder<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "subMap",
+      "parameters": [
+        "K",
+        "boolean",
+        "K",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tailMap",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toImmutableMap",
+      "parameters": [
+        "java.util.function.Function<? super T,? extends K>",
+        "java.util.function.Function<? super T,? extends V>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object",
+        "K",
+        "V"
+      ],
+      "return_type": "java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toImmutableSortedMap",
+      "parameters": [
+        "java.util.Comparator<? super K>",
+        "java.util.function.Function<? super T,? extends K>",
+        "java.util.function.Function<? super T,? extends V>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object",
+        "K",
+        "V"
+      ],
+      "return_type": "java.util.stream.Collector<T,?,com.google.common.collect.ImmutableSortedMap<K,V>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "values",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableCollection<V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "builder",
+      "parameters": [],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap.Builder<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ceilingEntry",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Map.Entry<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "comparator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Comparator<? super K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "java.lang.Iterable<? extends java.util.Map.Entry<? extends K,? extends V>>",
+        "java.util.Comparator<? super K>"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "copyOf",
+      "parameters": [
+        "java.util.Map<? extends K,? extends V>",
+        "java.util.Comparator<? super K>"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "descendingKeySet",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSortedSet<K>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "entrySet",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSet<java.util.Map.Entry<K,V>>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "firstKey",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "floorKey",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "get",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "headMap",
+      "parameters": [
+        "K",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "higherKey",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "K",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lastEntry",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Map.Entry<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "lowerEntry",
+      "parameters": [
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.Map.Entry<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "naturalOrder",
+      "parameters": [],
+      "type_parameters": [
+        "K extends java.lang.Comparable<?>",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap.Builder<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "of",
+      "parameters": [
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V",
+        "K",
+        "V"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "orderedBy",
+      "parameters": [
+        "java.util.Comparator<K>"
+      ],
+      "type_parameters": [
+        "K",
+        "V"
+      ],
+      "return_type": "com.google.common.collect.ImmutableSortedMap.Builder<K,V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "pollLastEntry",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.util.Map.Entry<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "size",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "subMap",
+      "parameters": [
+        "K",
+        "K"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "tailMap",
+      "parameters": [
+        "K",
+        "boolean"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableSortedMap<K,V>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toImmutableMap",
+      "parameters": [
+        "java.util.function.Function<? super T,? extends K>",
+        "java.util.function.Function<? super T,? extends V>",
+        "java.util.function.BinaryOperator<V>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object",
+        "K",
+        "V"
+      ],
+      "return_type": "java.util.stream.Collector<T,?,com.google.common.collect.ImmutableMap<K,V>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toImmutableSortedMap",
+      "parameters": [
+        "java.util.Comparator<? super K>",
+        "java.util.function.Function<? super T,? extends K>",
+        "java.util.function.Function<? super T,? extends V>",
+        "java.util.function.BinaryOperator<V>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object",
+        "K",
+        "V"
+      ],
+      "return_type": "java.util.stream.Collector<T,?,com.google.common.collect.ImmutableSortedMap<K,V>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

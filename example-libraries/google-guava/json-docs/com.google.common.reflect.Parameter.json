@@ -1,0 +1,181 @@
+{
+  "name": "com.google.common.reflect.Parameter",
+  "type_parameters": [],
+  "implements": [
+    "java.lang.reflect.AnnotatedElement"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "getAnnotatedType",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.reflect.AnnotatedType",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getAnnotations",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.annotation.Annotation[]",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getDeclaredAnnotation",
+      "parameters": [
+        "java.lang.Class<A>"
+      ],
+      "type_parameters": [
+        "A extends java.lang.annotation.Annotation"
+      ],
+      "return_type": "A",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getDeclaredAnnotationsByType",
+      "parameters": [
+        "java.lang.Class<A>"
+      ],
+      "type_parameters": [
+        "A extends java.lang.annotation.Annotation"
+      ],
+      "return_type": "A[]",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getType",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.TypeToken<?>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isAnnotationPresent",
+      "parameters": [
+        "java.lang.Class<? extends java.lang.annotation.Annotation>"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "equals",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getAnnotation",
+      "parameters": [
+        "java.lang.Class<A>"
+      ],
+      "type_parameters": [
+        "A extends java.lang.annotation.Annotation"
+      ],
+      "return_type": "A",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getAnnotationsByType",
+      "parameters": [
+        "java.lang.Class<A>"
+      ],
+      "type_parameters": [
+        "A extends java.lang.annotation.Annotation"
+      ],
+      "return_type": "A[]",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getDeclaredAnnotations",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.annotation.Annotation[]",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "getDeclaringInvokable",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.reflect.Invokable<?,?>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "toString",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

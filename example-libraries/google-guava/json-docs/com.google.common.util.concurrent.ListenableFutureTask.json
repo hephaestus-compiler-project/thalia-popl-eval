@@ -1,0 +1,90 @@
+{
+  "name": "com.google.common.util.concurrent.ListenableFutureTask",
+  "type_parameters": [
+    "V extends java.lang.Object"
+  ],
+  "implements": [
+    "com.google.common.util.concurrent.ListenableFuture<V>"
+  ],
+  "inherits": [
+    "java.util.concurrent.FutureTask<V>"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "create",
+      "parameters": [
+        "java.lang.Runnable",
+        "V"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFutureTask<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "done",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "protected",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "addListener",
+      "parameters": [
+        "java.lang.Runnable",
+        "java.util.concurrent.Executor"
+      ],
+      "type_parameters": [],
+      "return_type": "void",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "create",
+      "parameters": [
+        "java.util.concurrent.Callable<V>"
+      ],
+      "type_parameters": [
+        "V extends java.lang.Object"
+      ],
+      "return_type": "com.google.common.util.concurrent.ListenableFutureTask<V>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "get",
+      "parameters": [
+        "long",
+        "java.util.concurrent.TimeUnit"
+      ],
+      "type_parameters": [],
+      "return_type": "V",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

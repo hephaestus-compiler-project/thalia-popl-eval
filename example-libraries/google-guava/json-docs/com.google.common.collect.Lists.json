@@ -1,0 +1,297 @@
+{
+  "name": "com.google.common.collect.Lists",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "asList",
+      "parameters": [
+        "E",
+        "E",
+        "E[]"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.List<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "cartesianProduct",
+      "parameters": [
+        "java.util.List<? extends java.util.List<? extends B>>"
+      ],
+      "type_parameters": [
+        "B"
+      ],
+      "return_type": "java.util.List<java.util.List<B>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "charactersOf",
+      "parameters": [
+        "java.lang.String"
+      ],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.ImmutableList<java.lang.Character>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newArrayList",
+      "parameters": [
+        "E..."
+      ],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.ArrayList<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newArrayList",
+      "parameters": [
+        "java.util.Iterator<? extends E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.ArrayList<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newArrayListWithExpectedSize",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.ArrayList<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newCopyOnWriteArrayList",
+      "parameters": [
+        "java.lang.Iterable<? extends E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.concurrent.CopyOnWriteArrayList<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newLinkedList",
+      "parameters": [
+        "java.lang.Iterable<? extends E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.LinkedList<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "reverse",
+      "parameters": [
+        "java.util.List<T>"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "java.util.List<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "asList",
+      "parameters": [
+        "E",
+        "E[]"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.List<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "cartesianProduct",
+      "parameters": [
+        "java.util.List<? extends B>..."
+      ],
+      "type_parameters": [
+        "B"
+      ],
+      "return_type": "java.util.List<java.util.List<B>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "charactersOf",
+      "parameters": [
+        "java.lang.CharSequence"
+      ],
+      "type_parameters": [],
+      "return_type": "java.util.List<java.lang.Character>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newArrayList",
+      "parameters": [],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.ArrayList<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newArrayList",
+      "parameters": [
+        "java.lang.Iterable<? extends E>"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.ArrayList<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newArrayListWithCapacity",
+      "parameters": [
+        "int"
+      ],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.ArrayList<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newCopyOnWriteArrayList",
+      "parameters": [],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.concurrent.CopyOnWriteArrayList<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "newLinkedList",
+      "parameters": [],
+      "type_parameters": [
+        "E extends java.lang.Object"
+      ],
+      "return_type": "java.util.LinkedList<E>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "partition",
+      "parameters": [
+        "java.util.List<T>",
+        "int"
+      ],
+      "type_parameters": [
+        "T extends java.lang.Object"
+      ],
+      "return_type": "java.util.List<java.util.List<T>>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "transform",
+      "parameters": [
+        "java.util.List<F>",
+        "com.google.common.base.Function<? super F,? extends T>"
+      ],
+      "type_parameters": [
+        "F extends java.lang.Object",
+        "T extends java.lang.Object"
+      ],
+      "return_type": "java.util.List<T>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

@@ -1,0 +1,155 @@
+{
+  "name": "com.google.common.graph.EndpointPair",
+  "type_parameters": [
+    "N"
+  ],
+  "implements": [
+    "java.lang.Iterable<N>"
+  ],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 2,
+  "methods": [
+    {
+      "name": "equals",
+      "parameters": [
+        "java.lang.Object"
+      ],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "isOrdered",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "boolean",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "nodeU",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "N",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "ordered",
+      "parameters": [
+        "N",
+        "N"
+      ],
+      "type_parameters": [
+        "N"
+      ],
+      "return_type": "com.google.common.graph.EndpointPair<N>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "target",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "N",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "adjacentNode",
+      "parameters": [
+        "N"
+      ],
+      "type_parameters": [],
+      "return_type": "N",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "hashCode",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "int",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "iterator",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.collect.UnmodifiableIterator<N>",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "nodeV",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "N",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "source",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "N",
+      "is_static": false,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "unordered",
+      "parameters": [
+        "N",
+        "N"
+      ],
+      "type_parameters": [
+        "N"
+      ],
+      "return_type": "com.google.common.graph.EndpointPair<N>",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}

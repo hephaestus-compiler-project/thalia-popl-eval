@@ -1,0 +1,66 @@
+{
+  "name": "com.google.common.escape.Escapers",
+  "type_parameters": [],
+  "implements": [],
+  "inherits": [
+    "java.lang.Object"
+  ],
+  "class_type": 0,
+  "methods": [
+    {
+      "name": "computeReplacement",
+      "parameters": [
+        "com.google.common.escape.CharEscaper",
+        "char"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "nullEscaper",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.escape.Escaper",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "builder",
+      "parameters": [],
+      "type_parameters": [],
+      "return_type": "com.google.common.escape.Escapers.Builder",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    },
+    {
+      "name": "computeReplacement",
+      "parameters": [
+        "com.google.common.escape.UnicodeEscaper",
+        "int"
+      ],
+      "type_parameters": [],
+      "return_type": "java.lang.String",
+      "is_static": true,
+      "is_constructor": false,
+      "access_mod": "public",
+      "throws": [],
+      "is_default": false
+    }
+  ],
+  "fields": [],
+  "functional_interface": false,
+  "parent": null,
+  "access_mod": "public",
+  "language": "java"
+}
