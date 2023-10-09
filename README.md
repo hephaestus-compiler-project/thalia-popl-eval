@@ -836,7 +836,7 @@ Table 3, which shows the language features that appear
 in the minimized test cases of our bug reports.
 Furthermore,
 we generate Figure 9
-and stores it at `figures/venn.pdf` in your host machine.
+and store it at `figures/venn.pdf` in your host machine.
 Run,
 the following command:
 
