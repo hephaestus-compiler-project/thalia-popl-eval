@@ -651,7 +651,7 @@ our [doc2json](https://github.com/hephaestus-compiler-project/doc2json)
 tool for converting API documentation pages into JSON.
 
 In what following,
-we will use these five libraries as references
+we will use these five libraries as a reference
 for re-running our evaluation.
 
 ## RQ1: Bug-Finding Results (Section 4.2)
