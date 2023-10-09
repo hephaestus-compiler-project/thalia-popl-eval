@@ -14,11 +14,15 @@ See TODO.
 - [Getting Started](#getting-started)
   * [Usage](#usage)
   * [Run Tests](#run-tests)
-  * [Example](#example-testing-the-groovy-compiler-using-the-api-of-its-standard-library)
+  * [Example: Testing the Groovy compiler using the API of its standard library](#example-testing-the-groovy-compiler-using-the-api-of-its-standard-library)
+  * [Example: Testing the Groovy compiler using the API of a third-party library](#example-testing-the-groovy-compiler-using-the-api-of-a-third-party-library)
 - [Step by Step Instructions](#step-by-step-instructions)
   * [Bug Database](#bug-database)
+  * [Extracting Library APIs in JSON](#extracting-library-apis-in-json)
   * [RQ1: Bug-Finding Results (Section 4.2)](#rq1-bug-finding-results-section-42)
-  * [RQ2: Bug and Test Case Characteristics (Section 4.3)](#rq2-bug-and-test-case-characteristics-section-43)
+  * [RQ2: Test Case Characteristics (Section 4.3)](#rq2-test-case-characteristics-section-43)
+  * [RQ3: Impact of Library Selection and Synthesis Modes](#rq3-impact-of-library-selection-and-synthesis-modes-section-44)
+  * [RQ4: Comparison of Thalia vs. Hephaestus](#rq4-comparison-of-thalia-vs-hephaestus-section-45)
 
 # Overview
 
@@ -607,7 +611,7 @@ Type argument inference|23
 Overloading|22
 ```
 
-## Extracting API specification
+## Extracting Library APIs in JSON
 
 The file `data/packages.csv` contains the 95 Maven packages whose
 APIs have been used in our evaluation.
