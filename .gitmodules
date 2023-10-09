@@ -4,3 +4,6 @@
 [submodule "thalia"]
 	path = thalia
 	url = https://github.com/hephaestus-compiler-project/thalia
+[submodule "doc2json"]
+	path = doc2json
+	url = https://github.com/hephaestus-compiler-project/doc2json
