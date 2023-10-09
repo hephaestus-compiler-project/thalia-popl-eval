@@ -1067,7 +1067,7 @@ mentioned in the **Synthesis time** paragraph of Section 4.3.
 
 * _"The average synthesis time is 256, 161, and 178 milliseconds for Groovy, Scala, and Kotlin programs respectively. "_
 
-### Re-running RQ3 experiment (optional)
+## Re-running RQ3 experiment (optional)
 
 **NOTE**: Before proceeding with this step,
 please make sure that you have extracted the API
@@ -1078,7 +1078,7 @@ i.e., see [Extracting Library APIs in JSON](#extracting-library-apis-in-json).
 all the 95 packages requires approximately two weeks per compiler.
 Therefore,
 we suggest you consult the
-["Extracting Library APIs in JSON"](#extracting-library-apis-in-json))
+["Extracting Library APIs in JSON"](#extracting-library-apis-in-json)
 guide on how to fetch a limited number of libraries.
 
 
@@ -1107,7 +1107,7 @@ for properly configuring a third-party library via `mvn`.
 thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
   stdlib/groovy-stdlib/json-docs/ \
   package-data/ \
-  groovy-bugs \
+  groovy-programs \
   "--iterations 10 --language groovy --dry-run"
 
 Testing library com-fasterxml-jackson-core-jackson-databind
@@ -1144,7 +1144,7 @@ thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
   /home/thalia/coverage/jacoco /home/thalia/.sdkman
 # Compute code coverage
 thalia@ee62e29b4f90:~$ ./eval-scripts/compute_coverage.sh \
-  package-data/ groovy-bugs/ results/groovy groovy
+  package-data groovy-programs results/groovy groovy
 ```
 
 The code coverage analysis results are stored inside the `results/groovy`
@@ -1157,8 +1157,8 @@ directory.
 # Generate programs
 thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
   stdlib/scala-stdlib/json-docs/ \
-  package-data/ \
-  scala-bugs \
+  package-data \
+  scala-programs \
   "--iterations 10 --language scala --dry-run"
 
 Testing library com-fasterxml-jackson-core-jackson-databind
@@ -1195,7 +1195,7 @@ thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
   /home/thalia/coverage/jacoco /home/thalia/.sdkman
 # Compute code coverage
 thalia@ee62e29b4f90:~$ ./eval-scripts/compute_coverage.sh \
-  package-data/ scala-bugs/ results/scala scala
+  package-data scala-programs results/scala scala
 ```
 
 The code coverage analysis results are stored inside the `results/scala`
@@ -1207,8 +1207,8 @@ directory.
 # Generate programs
 thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
   stdlib/kotlin-stdlib/json-docs/ \
-  package-data/ \
-  kotlin-bugs \
+  package-data \
+  kotlin-programs \
   "--iterations 10 --language kotlin --dry-run"
 
 Testing library com-fasterxml-jackson-core-jackson-databind
@@ -1245,12 +1245,38 @@ thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
   /home/thalia/coverage/jacoco /home/thalia/.sdkman
 # Compute code coverage
 thalia@ee62e29b4f90:~$ ./eval-scripts/compute_coverage.sh \
-  package-data/ kotlin-bugs/ results/kotlin kotlin
+  package-data kotlin-programs results/kotlin kotlin
 ```
 
 The code coverage analysis results are stored inside the `results/kotlin`
 directory.
 
+Using the newly-generated code coverage results,
+we are now ready to produce Figure 12 and Table 5.
+Run the following commands:
+
+```bash
+# groovyc results
+thalia@ee62e29b4f90:~$ python eval-scripts/analysis.py \
+  --coverage-data results/ \
+  --whitelist data/coverage/whitelists/groovy.txt \
+  --language groovy \
+  --output-dir eval-figures/
+
+# scalac results
+thalia@ee62e29b4f90:~$ python eval-scripts/analysis.py \
+  --coverage-data results/ \
+  --whitelist data/coverage/whitelists/scala.txt \
+  --language scala \
+  --output-dir eval-figures/
+
+# kotlinc results
+thalia@ee62e29b4f90:~$ python eval-scripts/analysis.py \
+  --coverage-data results/ \
+  --whitelist data/coverage/whitelists/kotlin.txt \
+  --language kotlin \
+  --output-dir eval-figures/
+```
 
 ### Step2: Measure the number of the generated programs
 
@@ -1258,9 +1284,9 @@ The commands below measure how many programs were synthesized
 per library and mode.
 
 ```
-thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh groovy-bugs/ file-results/groovy.csv
-thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh scala-bugs/ file-results/scala.csv
-thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh kotlin-bugs/ file-results/kotlin.csv
+thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh groovy-programs/ file-results/groovy.csv
+thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh scala-programs/ file-results/scala.csv
+thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh kotlin-programs/ file-results/kotlin.csv
 ```
 
 The results above can be used to generate a figure that is similar to Figure 11
@@ -1272,7 +1298,78 @@ thalia@6bfd90f897d7:~$ python eval-scripts/files.py  files-results/ eval-figures
 
 ### Step3: Compute the code size characteristics of the synthesized programs
 
+Now,
+for the programs previously synthesized by `thalia`,
+we compute their size characteristics.
+To do so,
+we use an auxiliary script that produces a CSV file per compiler.
+This CSV file contains the size distribution similar to
+those files included [here](https://github.com/hephaestus-compiler-project/thalia-popl-eval/tree/main/data/size).
+
+```bash
+thalia@65536014baca:~$ mkdir code-size
+thalia@65536014baca:~$ python eval-scripts/measure-code-size-dist.py \
+  --input groovy-programs --output code-size/groovy-size.csv \
+  --suffix groovy
+thalia@65536014baca:~$ python eval-scripts/measure-code-size-dist.py \
+  --input scala-programs --output code-size/scala-size.csv \
+  --suffix scala
+thalia@65536014baca:~$ python eval-scripts/measure-code-size-dist.py \
+  --input kotlin-programs --output code-size/kotlin-size.csv \
+  --suffix kt
+```
+
+Now, we run:
+
+```
+thalia@65536014baca:~$ ./eval-scripts/compute-size-statistics.sh code-size
+(groovy) Average size in kB: 1.60
+(groovy) Average size in LoC: 13
+
+(kotlin) Average size in kB: 1.40
+(kotlin) Average size in LoC: 11
+
+(scala) Average size in kB: 1.59
+(scala) Average size in LoC: 11
+```
+
 ### Step4: Measure synthesis time
+
+Now,
+we measure the average synthesis time per library.
+To do so,
+we use the following commands that examines the `stats.json`
+of every `thalia`'s run.
+
+
+```bash
+mkdir synthesis-time
+thalia@65536014baca:~$ ./eval-scripts/measure-synthesis-time-dist.py \ 
+  --input groovy_programs --output code-size/groovy-time.csv 
+thalia@65536014baca:~$ ./eval-scripts/measure-synthesis-time-dist.py \
+  --input scala_programs --output code-size/scala-time.csv 
+thalia@65536014baca:~$ ./eval-scripts/measure-synthesis-time-dist.py \
+  --input kotlin_programs --output code-size/kotlin-time.csv 
+```
+
+The output is a set of CSV files that are similar to
+our pre-baked results,
+see [here](https://github.com/hephaestus-compiler-project/thalia-popl-eval/tree/main/data/time).
+
+Now, we ready to produce a figure similar to Figure 12 by running:
+
+```
+thalia@65536014baca:~$ python eval-scripts/time-plot.py synthesis-time eval-figures/
+(groovy) Average synthesis time: 256ms
+(scala) Average synthesis time: 161ms
+(kotlin) Average synthesis time: 178ms
+```
+
+The resulting figures can be found at
+(1) `figures/groovy-time.pdf`,
+(2) `figures/scala-time.pdf`,
+and (3) `figures/kotlin-time.pdf`
+on your host machine.
 
 
 ## RQ4: Comparison of Thalia vs. Hephaestus (Section 4.5)
