@@ -96,9 +96,6 @@ fi
 # ${results}/all.csv
 mkdir -p $results
 
-declare -A unique_modes
-unique_modes["all"]=1
-
 # Loop over every file in the programs path
 for mode_path in "$programs"/*; do
     project_name_mode=${mode_path#*//}
@@ -107,7 +104,6 @@ for mode_path in "$programs"/*; do
         # Extract the mode from the file name
         mode=$(basename "$mode_path" | awk -F'-' '{print $NF}')
         # Add the mode to the associative array
-        unique_modes["$mode"]=1
         classpath=$(mvn -f ${pom}/${project_name}/pom.xml dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)
         depspath=$(mvn -f ${pom}/${project_name}/dependency.xml dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)
         classpath="$classpath:$depspath"
@@ -153,9 +149,6 @@ for mode_path in "$programs"/*; do
     fi
 done
 
-# Convert the keys of the associative array to a space-separated string
-modes=$(echo "${!unique_modes[@]}")
-
 echo "Proceed to computing all and base-* for all projects"
 for project in $(ls $results); do
     echo "Project: $project"
@@ -175,11 +168,13 @@ for project in $(ls $results); do
     $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $project_path_res/base-inject.exec --classfiles $SOURCES --csv $project_path/base-inject.csv
 done
 
+# Merge all libraries into $results/combination
 echo "Proceed to merging all projects"
+modes="all base both erase inject base-both base-erase base-inject"
+mkdir $results/combination/res
 for mode in $modes; do
-    # Merge all results
-    echo "Merge results in $results/$mode.exec"
-    $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $results/*/res/$mode.exec --destfile $results/$mode.exec
-    echo "Extract results in $results/$mode.csv"
-    $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $results/$mode.exec --classfiles $SOURCES --csv $results/$mode.csv
+    echo "Merge results in $results/combination/res/$mode.exec"
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $results/*/res/$mode.exec --destfile $results/combination/res/$mode.exec
+    echo "Extract results in $results/combination/$mode.csv"
+    $JAVA_11 -jar $JACOCO/lib/jacococli.jar report $results/combination/res/$mode.exec --classfiles $SOURCES --csv $results/combination/$mode.csv
 done
