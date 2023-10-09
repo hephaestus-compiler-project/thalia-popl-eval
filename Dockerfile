@@ -113,8 +113,10 @@ RUN sudo chown -R thalia:thalia ${HOME}/scripts/config.sh
 RUN mkdir ${HOME}/runner_scripts
 ADD ./runner_scripts/create-api-rules.py ${HOME}/runner_scripts
 ADD ./runner_scripts/thalia_run.sh ${HOME}/runner_scripts
+ADD ./runner_scripts/hephaestus_run.sh ${HOME}/runner_scripts
 RUN sudo chown -R thalia:thalia ${HOME}/runner_scripts/create-api-rules.py
 RUN sudo chown -R thalia:thalia ${HOME}/runner_scripts/thalia_run.sh
+RUN sudo chown -R thalia:thalia ${HOME}/runner_scripts/hephaestus_run.sh
 
 # Add stdlibs 
 ADD ./stdlib/ ${HOME}/stdlib
