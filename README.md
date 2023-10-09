@@ -625,6 +625,7 @@ docker run -ti --rm \
   -v $(pwd)/data:/home/thalia/data \
   -v $(pwd)/scripts:/home/thalia/eval-scripts \
   -v $(pwd)/figures:/home/thalia/eval-figures \
+  -v $(pwd)/stdlib:/home/thalia/stdlib \
   thalia-eval
 ```
 
@@ -1065,6 +1066,214 @@ the script above also produces the average synthesis time metrics
 mentioned in the **Synthesis time** paragraph of Section 4.3.
 
 * _"The average synthesis time is 256, 161, and 178 milliseconds for Groovy, Scala, and Kotlin programs respectively. "_
+
+### Re-running RQ3 experiment (optional)
+
+**NOTE**: Before proceeding with this step,
+please make sure that you have extracted the API
+specification of some libraries,
+i.e., see [Extracting Library APIs in JSON](#extracting-library-apis-in-json).
+
+**NOTE 2:** To re-run the entire experiment that uses
+all the 95 packages requires approximately two weeks per compiler.
+Therefore,
+we suggest you consult the
+["Extracting Library APIs in JSON"](#extracting-library-apis-in-json))
+guide on how to fetch a limited number of libraries.
+
+
+### Step1: Synthesize program using Thalia and measure the code coverage of compilers
+
+In this step,
+we use `thalia` to generate test programs
+using the API of each library included
+in `package-data/` directory (see .
+For each API,
+`thalia` produces ten test programs (see the `--iterations 10`).
+Then,
+we use the JaCoCo library to compile these programs
+and measure the code coverage of the compiler.
+
+Note that we use the wrapper script named
+`thalia-run.sh` that follows the steps
+mentioned in 
+[Example: Testing the Groovy compiler using the API of a third-party library](#example-testing-the-groovy-compiler-using-the-api-of-a-third-party-library)
+for properly configuring a third-party library via `mvn`.
+
+#### groovyc
+
+```bash
+# Generate programs
+thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
+  stdlib/groovy-stdlib/json-docs/ \
+  package-data/ \
+  groovy-bugs \
+  "--iterations 10 --language groovy --dry-run"
+
+Testing library com-fasterxml-jackson-core-jackson-databind
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+Testing library com-google-guava-guava
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+Testing library org-apache-commons-commons-lang3
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+Testing library org-mockito-mockito-core
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+Testing library org-slf4j-slf4j-api
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+```
+
+Then, compute coverage (estimated running time 10--15 minutes):
+
+```bash
+thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
+  /home/thalia/coverage/jacoco /home/thalia/.sdkman
+# Compute code coverage
+thalia@ee62e29b4f90:~$ ./eval-scripts/compute_coverage.sh \
+  package-data/ groovy-bugs/ results/groovy groovy
+```
+
+The code coverage analysis results are stored inside the `results/groovy`
+directory.
+
+
+#### scalac
+
+```bash
+# Generate programs
+thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
+  stdlib/scala-stdlib/json-docs/ \
+  package-data/ \
+  scala-bugs \
+  "--iterations 10 --language scala --dry-run"
+
+Testing library com-fasterxml-jackson-core-jackson-databind
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+Testing library com-google-guava-guava
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+Testing library org-apache-commons-commons-lang3
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+Testing library org-mockito-mockito-core
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+Testing library org-slf4j-slf4j-api
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+```
+
+Then, compute coverage (estimated running time 10--15 minutes):
+
+```bash
+thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
+  /home/thalia/coverage/jacoco /home/thalia/.sdkman
+# Compute code coverage
+thalia@ee62e29b4f90:~$ ./eval-scripts/compute_coverage.sh \
+  package-data/ scala-bugs/ results/scala scala
+```
+
+The code coverage analysis results are stored inside the `results/scala`
+directory.
+
+#### kotlinc
+
+```bash
+# Generate programs
+thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
+  stdlib/kotlin-stdlib/json-docs/ \
+  package-data/ \
+  kotlin-bugs \
+  "--iterations 10 --language kotlin --dry-run"
+
+Testing library com-fasterxml-jackson-core-jackson-databind
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+Testing library com-google-guava-guava
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+Testing library org-apache-commons-commons-lang3
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+Testing library org-mockito-mockito-core
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+Testing library org-slf4j-slf4j-api
+ - base mode...
+ - type erasure mode (well-typed)...
+ - ill-typed mode...
+ - type erasure mode (ill-typed)...
+```
+
+Then, compute coverage (estimated running times 10--15 minutes):
+
+```bash
+thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
+  /home/thalia/coverage/jacoco /home/thalia/.sdkman
+# Compute code coverage
+thalia@ee62e29b4f90:~$ ./eval-scripts/compute_coverage.sh \
+  package-data/ kotlin-bugs/ results/kotlin kotlin
+```
+
+The code coverage analysis results are stored inside the `results/kotlin`
+directory.
+
+
+### Step2: Measure the number of the generated programs
+
+The commands below measure how many programs were synthesized
+per library and mode.
+
+```
+thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh groovy-bugs/ file-results/groovy.csv
+thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh scala-bugs/ file-results/scala.csv
+thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh kotlin-bugs/ file-results/kotlin.csv
+```
+
+The results above can be used to generate a figure that is similar to Figure 11
+by running:
+
+```
+thalia@6bfd90f897d7:~$ python eval-scripts/files.py  files-results/ eval-figures/files-boxplot.pdf
+```
+
+### Step3: Compute the code size characteristics of the synthesized programs
+
+### Step4: Measure synthesis time
+
 
 ## RQ4: Comparison of Thalia vs. Hephaestus (Section 4.5)
 

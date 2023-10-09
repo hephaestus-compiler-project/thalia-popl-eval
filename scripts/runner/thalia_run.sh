@@ -1,7 +1,7 @@
 #! /bin/bash
 # Example run:
 # ./runner_scripts/thalia_run.sh stdlib/kotlin-stdlib/json-docs/ example-libraries/ kotlin-bugs "--language kotlin" apache-commons-lang3
-# ./runner_scripts/thalia_run.sh stdlib/kotlin-stdlib/json-docs/ example-libraries/ kotlin-bugs "--language kotlin" 
+# ./runner_scripts/thalia_run.sh stdlib/kotlin-stdlib/json-docs/ example-libraries/ kotlin-bugs "--language kotlin"
 
 basedir=$(dirname "$0")
 stdlib=$1
@@ -9,7 +9,6 @@ libpath=$2
 bugs=$3
 args=$4
 libname=$5
-
 
 run_thalia()
 {
@@ -44,8 +43,8 @@ run_thalia()
 
   if [ -f $libpath/pom.xml ]; then
     rm -rf ~/.m2
-    mvn -f $libpath/pom.xml dependency:tree
-    mvn -f $libpath/dependency.xml dependency:tree
+    mvn -f  $libpath/pom.xml dependency:tree -q
+    mvn -f $libpath/dependency.xml dependency:tree -q
 
     classpath=$(mvn -f $libpath/pom.xml dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)
     depspath=$(mvn -f $libpath/dependency.xml dependency:build-classpath -Dmdep.outputFile=/dev/stdout -q)
@@ -60,22 +59,26 @@ run_thalia()
     ls $libpath/json-docs | $basedir/create-api-rules.py > $rulespath
   fi
 
-  base_args="--iterations 10 --batch 30 -P -L --transformations 0 \
+  base_args="--batch 30 -P -L --transformations 0 \
     --max-depth 2 --generator api -k \
     --library-path "$classpath" --api-doc-path libs --api-rules $rulespath \
     --max-conditional-depth 3 --bugs $bugs $args"
 
   if [ ! -d $bugs/$libname-base ]; then
-    echo "$base_args --name $libname-base" | xargs thalia
+    echo " - base mode..."
+    echo "$base_args --name $libname-base" | xargs thalia > /dev/null
   fi
   if [ ! -d $bugs/$libname-erase ]; then
-    echo "$base_args --name $libname-erase --erase-types" | xargs thalia
+    echo " - type erasure mode (well-typed)..."
+    echo "$base_args --name $libname-erase --erase-types" | xargs thalia > /dev/null
   fi
   if [ ! -d $bugs/$libname-inject ]; then
-    echo "$base_args --name $libname-inject --inject-type-error" | xargs thalia
+    echo " - ill-typed mode..."
+    echo "$base_args --name $libname-inject --inject-type-error" | xargs thalia > /dev/null
   fi
   if [ ! -d $bugs/$libname-both ]; then
-    echo "$base_args --name $libname-both --erase-types --inject-type-error" | xargs thalia
+    echo " - type erasure mode (ill-typed)..."
+    echo "$base_args --name $libname-both --erase-types --inject-type-error" | xargs thalia > /dev/null
   fi
 }
 
