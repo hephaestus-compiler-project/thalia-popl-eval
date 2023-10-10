@@ -119,13 +119,13 @@ for mode_path in "$programs"/*; do
                     program_path="$mode_path/generator/$iter/$program_template"
                     target=${mode_results}/${iter}.exec
                     if [ "$language" = "scala" ]; then
-                        command="$JAVA_11 -Xmx768m -Xms768m -javaagent:$JACOCO/lib/jacocoagent.jar=destfile=$target -classpath $SCALA_CP:$classpath -Dscala.usejavacp=true -Dscala.home=$SCALA_JAR dotty.tools.MainGenericCompiler $program_path"
+                        command="$JAVA_11 -Xmx768m -Xms768m -javaagent:$JACOCO/lib/jacocoagent.jar=destfile=$target -classpath $SCALA_CP:$classpath -Dscala.usejavacp=true -Dscala.home=$SCALA_JAR dotty.tools.MainGenericCompiler $program_path" 
                     elif [ "$language" = "groovy" ]; then
-                        command="$JAVA_11 -javaagent:$JACOCO/lib/jacocoagent.jar=destfile=$target -cp $GROOVY_JAR:$classpath org.codehaus.groovy.tools.FileSystemCompiler --compile-static $program_path"
+                        command="$JAVA_11 -javaagent:$JACOCO/lib/jacocoagent.jar=destfile=$target -cp $GROOVY_JAR:$classpath org.codehaus.groovy.tools.FileSystemCompiler --compile-static $program_path" 
                     else
-                        command="$JAVA_11 -javaagent:$JACOCO/lib/jacocoagent.jar=destfile=$target -cp $KOTLIN_JAR:$classpath org.jetbrains.kotlin.cli.jvm.K2JVMCompiler -classpath $classpath -nowarn $program_path"
+                        command="$JAVA_11 -javaagent:$JACOCO/lib/jacocoagent.jar=destfile=$target -cp $KOTLIN_JAR:$classpath org.jetbrains.kotlin.cli.jvm.K2JVMCompiler -classpath $classpath -nowarn $program_path" 
                     fi
-                    eval "$command"
+                    eval "$command" 2> /dev/null
                     if [ ! -f "$program_path" ]; then
                         echo "Skipping: $program_path (Does not exist)"
                         continue

@@ -118,9 +118,9 @@ process_files() {
         elif [ "$language" = "groovy" ]; then
             command="$JAVA_11 -javaagent:$JACOCO/lib/jacocoagent.jar=destfile=$target -cp $GROOVY_JAR org.codehaus.groovy.tools.FileSystemCompiler --compile-static $program_path"
         else
-            command="$JAVA_11 -javaagent:$JACOCO/lib/jacocoagent.jar=destfile=$target -cp $KOTLIN_JAR org.jetbrains.kotlin.cli.jvm.K2JVMCompiler -nowarn $program_path"
+            command="$JAVA_11 -javaagent:$JACOCO/lib/jacocoagent.jar=destfile=$target -cp $KOTLIN_JAR org.jetbrains.kotlin.cli.jvm.K2JVMCompiler -nowarn $program_path" 
         fi
-        eval "$command"
+        eval "$command" 2> /dev/null
     done
     echo "Done Processing: $programs/$mode/generator/"
     
