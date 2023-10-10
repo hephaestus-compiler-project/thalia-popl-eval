@@ -337,7 +337,7 @@ Total faults: 3
 ```
 
 Among other things,
-the `bugs/java-session/` directory contains two files:
+the `bugs/groovy-session/` directory contains two files:
 `stats.json` and `faults.json`.
 
 `stats.json` contains the following details about the testing session.
