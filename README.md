@@ -631,7 +631,7 @@ docker run -ti --rm \
   -v $(pwd)/scripts:/home/thalia/eval-scripts \
   -v $(pwd)/figures:/home/thalia/eval-figures \
   -v $(pwd)/stdlib:/home/thalia/stdlib \
-  -v $(pwd)/example-results:/home/thalia/new-results \
+  -v $(pwd)/new-results:/home/thalia/new-results \
   thalia-eval
 ```
 
@@ -641,10 +641,10 @@ discovered by `thlia`, while the second volume (`data/`) provides the data
 collected during our evaluation. The third volume (`eval-scripts/`) includes
 some scripts to reproduce and validate the results of the paper. The
 fourth volume (`eval-figures/`) will be used to save the figures of our paper.
-The fifth volume contaisn the specification of common API components
+The fifth volume (`stdlib/`) contains the specification of common API components
 stemming from the standard library of the language under test.
 Finally,
-the last volume mounts an empty directory where
+the last volume (`new-results/`) mounts an empty directory where
 you can store the results if you decide to re-run our experiments.
 
 ## Extracting Library APIs in JSON
