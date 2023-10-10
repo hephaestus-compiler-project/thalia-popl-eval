@@ -32,7 +32,7 @@ described in our paper. The artifact has the following structure:
 
 * `scripts/`: This directory contains the scripts needed to re-run the
 experiments and re-produce the figures and tables presented in our paper.
-* `data/`: This is the directory that contains the pre=computed results of our
+* `data/`: This is the directory that contains the pre-computed results of our
 evaluation.
 * `data/packages.csv`: A CSV file that contains the 95 Maven libraries whose
 APIs have been used in our evaluation.
@@ -334,7 +334,7 @@ transformation_types  TypeErasure
 bugs                  /home/thalia/thalia/bugs
 name                  groovy-session
 language              groovy
-compiler              Groovy compiler version 5.0.0-alpha-1
+compiler              Groovy compiler version 4.0.12
 Copyright 2003-2023 The Apache Software Foundation. https://groovy-lang.org/
 ===============================================================================================================================================================================================
 Test Programs Passed 27 / 30 ✔          Test Programs Failed 3 / 30 ✘
@@ -342,7 +342,7 @@ Total faults: 3
 ```
 
 Among other things,
-the `bugs/java-session/` directory contains two files:
+the `bugs/groovy-session/` directory contains two files:
 `stats.json` and `faults.json`.
 
 `stats.json` contains the following details about the testing session.
@@ -372,7 +372,7 @@ the `bugs/java-session/` directory contains two files:
 }
 ```
 
-If there were some bugs detected,
+If we detect some bugs,
 `faults.json` would look like the following JSON file.
 
 ```json
@@ -412,7 +412,7 @@ Finally, the third one is an internal error of
 `groovyc` ([GROOVY-11026](https://issues.apache.org/jira/browse/GROOVY-11026)).
 
 In the above scenario,
-the structure of testing session directory
+the structure of the testing session directory
 (i.e., `bugs/groovy-session/`)
 would be like the following
 
@@ -434,7 +434,7 @@ would be like the following
 ```
 
 Note that the option `--keep-all` allows you to store all the synthesized programs
-into disk. They can be found in the `bugs/java-testing/generator/` directory.
+on disk. They can be found in the `bugs/groovy-testing/generator/` directory.
 
 ###  Logging
 
@@ -475,7 +475,7 @@ Generated program 2
 ...
 ```
 
-The first lines of the `bugs/groovy-session/logs/api-generator` file dumps
+The first lines of the `bugs/groovy-session/logs/api-generator` file dump
 some statistics regarding the input API and the corresponding
 API graph (e.g., number of methods, number of constructors, etc.).
 Then,
@@ -509,14 +509,14 @@ of type `boolean`.
 Previously,
 we tested `groovyc` using the standard library of Groovy.
 Now, we will show how to test `groovyc` using the API
-of a third party library,
-in particular the [guava]() library.
+of a third-party library,
+in particular the [guava](https://github.com/google/guava) library.
 
 
 ### Step 1: Fetch API documentation of third-party package
 
 First,
-we first extract the API documentation of this library.
+we extract the API documentation of this library.
 To do so,
 run:
 
@@ -524,7 +524,7 @@ run:
 thalia@5b1ba457c8bf:~/thalia$ echo "com.google.guava,guava,32.1.2-jre" | fetch-package-data -i - -o outdir
 ```
 
-This command essentially fetches the `pom.xml` and the javadoc
+This command essentially fetches the `pom.xml` and the Javadoc
 of the guava library. The script stores these retrieved files
 inside the `outdir/` specified by the `-o` option.
 We can use the same command to retrieve an arbitrary package stored
@@ -563,8 +563,8 @@ We can automatically fetch all the required
 JAR files,
 using the `mvn` command.
 Maven stores the downloaded packages
-inside your local Maven repository located
-at `~/.m2/repository/`.
+inside your local Maven repository,
+located at `~/.m2/repository/`.
 
 
 ```bash
@@ -575,7 +575,7 @@ thalia@5b1ba457c8bf:~/thalia$ mvn -f outdir/com-google-guava-guava/dependency.xm
 
 ### Step 4: Generate test cases that invoke the guava library
 
-Now, we are ready to invoke `thalia` as follows
+Now, we are ready to invoke `thalia` as follows.
 
 ```bash
 thalia@5b1ba457c8bf:~/thalia$ thalia --language groovy \
@@ -595,7 +595,8 @@ the option `--api-doc-path` points to
 the directory where the API specification of guava resides
 (see **Step 2**).
 Second,
-we use the option `--library-path` whose value
+we use the option `--library-path`,
+whose value
 is the classpath of the guava library.
 This classpath contains the location of all JAR files
 required to invoke guava.
@@ -635,9 +636,9 @@ docker run -ti --rm \
   thalia-eval
 ```
 
-Note that we mount six _local volumes_ inside the newly-created container.
+Note that we mount six _local volumes_ inside the newly created container.
 The first volume (`database/`) contains the bug database that includes the bugs
-discovered by `thlia`, while the second volume (`data/`) provides the data
+discovered by `thalia`, while the second volume (`data/`) provides the data
 collected during our evaluation. The third volume (`eval-scripts/`) includes
 some scripts to reproduce and validate the results of the paper. The
 fourth volume (`eval-figures/`) will be used to save the figures of our paper.
@@ -670,7 +671,7 @@ Processing com.google.guava guava 32.0.0-jre
 
 The command above stores the API documentation pages of every library
 (e.g., `org.slf4j:slf4j-api`)
-insided the `package-data/` directory.
+inside the `package-data/` directory.
 If you want to download the API documentation pages
 of the _entire_ set of Maven libraries,
 run (this is **optional**):
@@ -698,19 +699,23 @@ For example,
 the JSON files corresponding to `com.google.guava:guava` library
 are found in `package-data/com-google-guava-guava/json-docs/`.
 
-In what following,
+In what follows,
 we will use the above two libraries as a reference
 for re-running our evaluation.
 You can use an arbitrary number of libraries,
 but bear in mind that more libraries translates to
 higher evaluation times.
 
+**NOTE:** To fully re-compute the results of our paper,
+we could use all `95` packages, but then the total
+time we will require to run everything will exceed 6 weeks in a single
+powerful machine.
 
 ## Bug Database
 
 We provide an SQLite database (see the file `database/bugdb.sqlite3`) that contains
 information about the bugs discovered by `thalia` during the evaluation.
-This database is initialized based on the SQL script stored into
+This database is initialized based on the SQL script stored in
 `database/bug_schema.sql`. The bug database consists of three tables,
 namely `CompilerBug`, `Feature`, and `CompilerBugFeatures`.
 
@@ -895,7 +900,7 @@ bug-triggering test cases contain at least one feature related to parametric pol
 
 ### Size of test cases
 
-This command compute statistics about the size
+This command computes statistics about the size
 of the programs synthesized by `thalia`.
 The script leverages the CSV files located 
 at `data/size`,
@@ -952,19 +957,20 @@ Well-typed Groovy    5940.542105  4604.434885  3.0  1584.00  6186.5   8428.00  2
            Scala     7821.115789  5986.895969  4.0  2017.00  7989.5  12022.75  30115.0
 ```
 
-The script prints some statitics about the distribution.
+The script prints some statistics about the distribution.
 For example,
 by examining these statistics we can infer
 that each library produced 1,937 ill-typed Groovy programs, on average.
 Beyond these statistics,
-the script generates Figure 11 and stores in `figures/files-boxplot.pdf`
+the script generates Figure 11 and stores it in `figures/files-boxplot.pdf`
 in your host machine.
 
 
 ### Code coverage analysis
 
 Now we measure the impact of every library
-and synthesis mode on line code coverage:
+and synthesis mode on testing the compilers
+using code coverage (line code coverage):
 we reproduce Figure 10 and Table 4.
 To do so,
 we examine the
@@ -1082,8 +1088,9 @@ please make sure that you have extracted the API
 specification of some libraries,
 i.e., see [Extracting Library APIs in JSON](#extracting-library-apis-in-json).
 
-**NOTE 2:** To re-run the entire experiment that uses
-all the 95 packages requires approximately two weeks per compiler.
+**NOTE 2:** To re-run the entire experiment,
+which uses all the 95 packages,
+requires approximately two weeks per compiler.
 Therefore,
 we suggest you consult the
 ["Extracting Library APIs in JSON"](#extracting-library-apis-in-json)
@@ -1093,7 +1100,7 @@ If you don't want to proceed with this section,
 please go to
 [RQ4: Comparison of Thalia vs. Hephaestus](#rq4-comparison-of-thalia-vs-hephaestus-section-45).
 
-### Step1: Synthesize program using Thalia and measure the code coverage of compilers
+### Step1: Synthesize programs using Thalia and measure the code coverage of compilers
 
 In this step,
 we use `thalia` to generate test programs
@@ -1127,7 +1134,7 @@ thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
   "--language groovy --dry-run"
 ```
 
-Then, compute code coverage (estimated running time 10--15 minutes):
+Then, we compute code coverage (estimated running time 10--15 minutes):
 
 ```bash
 thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
@@ -1154,7 +1161,7 @@ thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
   "--language scala --dry-run"
 ```
 
-Then, compute code coverage (estimated running time 10--15 minutes):
+Then, we compute code coverage (estimated running time 10--15 minutes):
 
 ```bash
 thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
@@ -1179,7 +1186,7 @@ thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
   "--language kotlin --dry-run"
 ```
 
-Then, compute code coverage (estimated running times 10--15 minutes):
+Then, we compute code coverage (estimated running times 10--15 minutes):
 
 ```bash
 thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
@@ -1192,7 +1199,7 @@ thalia@ee62e29b4f90:~$ ./eval-scripts/compute_coverage.sh \
 The code coverage analysis results are stored inside the `new-results/kotlin`
 directory.
 
-Using the newly-generated code coverage results,
+Using the newly generated code coverage results,
 we are now ready to produce Figure 12 and Table 5.
 Run the following commands:
 
@@ -1245,7 +1252,7 @@ we compute their size characteristics.
 To do so,
 we use an auxiliary script that produces a CSV file per compiler.
 This CSV file contains the size distribution similar to
-those files included [here](https://github.com/hephaestus-compiler-project/thalia-popl-eval/tree/main/data/size).
+the files included [here](https://github.com/hephaestus-compiler-project/thalia-popl-eval/tree/main/data/size).
 
 ```bash
 thalia@65536014baca:~$ python eval-scripts/measure-code-size-dist.py \
@@ -1278,7 +1285,7 @@ thalia@65536014baca:~$ ./eval-scripts/compute-size-statistics.sh new-results/cod
 Now,
 we measure the average synthesis time per library.
 To do so,
-we use the following commands that examines the `stats.json`
+we use the following commands that examine the `stats.json`
 of every `thalia`'s run.
 
 
@@ -1295,7 +1302,7 @@ The output is a set of CSV files that are similar to
 our pre-baked results,
 see [here](https://github.com/hephaestus-compiler-project/thalia-popl-eval/tree/main/data/time).
 
-Now, we ready to produce a figure similar to Figure 12 by running:
+Now, we can produce a figure similar to Figure 12 by running:
 
 ```
 thalia@65536014baca:~$ python eval-scripts/time-plot.py new-results/time eval-figures/
@@ -1350,7 +1357,7 @@ thalia@65536014baca:~$ python eval-scripts/analysis.py \
   --output-dir eval-figures/
 ```
 
-The output of the above commands are three figures
+The output of the above commands is three figures
 that reside in the following paths on your host machine:
 `figures/groovy-cov-comparison.pdf`,
 `figures/scala-cov-comparison.pdf`,
