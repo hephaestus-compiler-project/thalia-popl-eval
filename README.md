@@ -31,7 +31,7 @@ described in our paper. The artifact has the following structure:
 
 * `scripts/`: This directory contains the scripts needed to re-run the
 experiments and re-produce the figures and tables presented in our paper.
-* `data/`: This is the directory that contains the pre=computed results of our
+* `data/`: This is the directory that contains the pre-computed results of our
 evaluation.
 * `data/packages.csv`: A CSV file that contains the 95 Maven libraries whose
 APIs have been used in our evaluation.
