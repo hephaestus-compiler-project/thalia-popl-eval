@@ -699,7 +699,7 @@ for re-running our evaluation.
 
 __NOTE:__ To fully re-compute the results of our paper,
 we could use all `95` packages, but then the total
-time we will require to run everything will exceed 2 weeks in a single
+time we will require to run everything will exceed 6 weeks in a single
 powerful machine.
 
 
@@ -892,7 +892,7 @@ bug-triggering test cases contain at least one feature related to parametric pol
 
 ### Size of test cases
 
-This command compute statistics about the size
+This command computes statistics about the size
 of the programs synthesized by `thalia`.
 The script leverages the CSV files located 
 at `data/size`,
@@ -949,19 +949,20 @@ Well-typed Groovy    5940.542105  4604.434885  3.0  1584.00  6186.5   8428.00  2
            Scala     7821.115789  5986.895969  4.0  2017.00  7989.5  12022.75  30115.0
 ```
 
-The script prints some statitics about the distribution.
+The script prints some statistics about the distribution.
 For example,
 by examining these statistics we can infer
 that each library produced 1,937 ill-typed Groovy programs, on average.
 Beyond these statistics,
-the script generates Figure 11 and stores in `figures/files-boxplot.pdf`
+the script generates Figure 11 and stores it in `figures/files-boxplot.pdf`
 in your host machine.
 
 
 ### Code coverage analysis
 
 Now we measure the impact of every library
-and synthesis mode on line code coverage:
+and synthesis mode testing the compilers
+using code coverage (i.e., line coverage):
 we reproduce Figure 10 and Table 4.
 To do so,
 we examine the
@@ -1080,7 +1081,7 @@ specification of some libraries,
 i.e., see [Extracting Library APIs in JSON](#extracting-library-apis-in-json).
 
 **NOTE 2:** To re-run the entire experiment that uses
-all the 95 packages requires approximately two weeks per compiler.
+all the 95 packages require approximately two weeks per compiler.
 Therefore,
 we suggest you consult the
 ["Extracting Library APIs in JSON"](#extracting-library-apis-in-json)
@@ -1090,12 +1091,12 @@ If you don't want to proceed with this section,
 please go to
 [RQ4: Comparison of Thalia vs. Hephaestus](#rq4-comparison-of-thalia-vs-hephaestus-section-45).
 
-### Step1: Synthesize program using Thalia and measure the code coverage of compilers
+### Step1: Synthesize programs using Thalia and measure the code coverage of compilers
 
 In this step,
 we use `thalia` to generate test programs
 using the API of each library included
-in `package-data/` directory (see .
+in `package-data/` directory.
 For each API,
 `thalia` produces ten test programs 
 (we can change that by setting the global variable `THALIA_ITERS`, 
@@ -1147,7 +1148,7 @@ Testing library org-slf4j-slf4j-api
  - type erasure mode (ill-typed)...
 ```
 
-Then, compute coverage (estimated running time 10--15 minutes):
+Then, we compute compilers' coverage (estimated running time 10--15 minutes):
 
 ```bash
 thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
@@ -1261,7 +1262,7 @@ thalia@ee62e29b4f90:~$ ./eval-scripts/compute_coverage.sh \
 The code coverage analysis results are stored inside the `results/kotlin`
 directory.
 
-Using the newly-generated code coverage results,
+Using the newly generated code coverage results,
 we are now ready to produce Figure 12 and Table 5.
 Run the following commands:
 
@@ -1313,8 +1314,8 @@ for the programs previously synthesized by `thalia`,
 we compute their size characteristics.
 To do so,
 we use an auxiliary script that produces a CSV file per compiler.
-This CSV file contains the size distribution similar to
-those files included [here](https://github.com/hephaestus-compiler-project/thalia-popl-eval/tree/main/data/size).
+This CSV file contains the file size distribution similar to
+the files included [here](https://github.com/hephaestus-compiler-project/thalia-popl-eval/tree/main/data/size).
 
 ```bash
 thalia@65536014baca:~$ mkdir code-size
@@ -1348,7 +1349,7 @@ thalia@65536014baca:~$ ./eval-scripts/compute-size-statistics.sh code-size
 Now,
 we measure the average synthesis time per library.
 To do so,
-we use the following commands that examines the `stats.json`
+we use the following commands that examine the `stats.json`
 of every `thalia`'s run.
 
 
@@ -1366,7 +1367,7 @@ The output is a set of CSV files that are similar to
 our pre-baked results,
 see [here](https://github.com/hephaestus-compiler-project/thalia-popl-eval/tree/main/data/time).
 
-Now, we ready to produce a figure similar to Figure 12 by running:
+Now, we are ready to produce a figure similar to Figure 12 by running:
 
 ```
 thalia@65536014baca:~$ python eval-scripts/time-plot.py synthesis-time eval-figures/
@@ -1421,7 +1422,7 @@ thalia@65536014baca:~$ python eval-scripts/analysis.py \
   --output-dir eval-figures/
 ```
 
-The output of the above commands are three figures
+The output of the above commands is three figures
 that reside in the following paths on your host machine:
 `figures/groovy-cov-comparison.pdf`,
 `figures/scala-cov-comparison.pdf`,
