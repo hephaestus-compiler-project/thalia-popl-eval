@@ -356,7 +356,7 @@ the `bugs/groovy-session/` directory contains two files:
     "library_path": null,
     "erase_types": false,
     "inject_type_error": false,
-    "compiler": "Groovy compiler version 5.0.0-alpha-1\nCopyright 2003-2023 The Apache Software Foundation. https://groovy-lang.org/"
+    "compiler": "Groovy compiler version 4.0.12\nCopyright 2003-2023 The Apache Software Foundation. https://groovy-lang.org/"
   },
   "totals": {
     "passed": 27,
@@ -367,7 +367,7 @@ the `bugs/groovy-session/` directory contains two files:
 }
 ```
 
-If there were some bugs detected,
+If we detect some bugs,
 `faults.json` would look like the following JSON file.
 
 ```json
@@ -407,7 +407,7 @@ Finally, the third one is an internal error of
 `groovyc` ([GROOVY-11026](https://issues.apache.org/jira/browse/GROOVY-11026)).
 
 In the above scenario,
-the structure of testing session directory
+the structure of the testing session directory
 (i.e., `bugs/groovy-session/`)
 would be like the following
 
@@ -429,7 +429,7 @@ would be like the following
 ```
 
 Note that the option `--keep-all` allows you to store all the synthesized programs
-into disk. They can be found in the `bugs/java-testing/generator/` directory.
+on disk. They can be found in the `bugs/java-testing/generator/` directory.
 
 ###  Logging
 
@@ -470,7 +470,7 @@ Generated program 2
 ...
 ```
 
-The first lines of the `bugs/groovy-session/logs/api-generator` file dumps
+The first lines of the `bugs/groovy-session/logs/api-generator` file dump
 some statistics regarding the input API and the corresponding
 API graph (e.g., number of methods, number of constructors, etc.).
 Then,
@@ -504,14 +504,14 @@ of type `boolean`.
 Previously,
 we tested `groovyc` using the standard library of Groovy.
 Now, we will show how to test `groovyc` using the API
-of a third party library,
-in particular the [guava]() library.
+of a third-party library,
+in particular the [guava](https://github.com/google/guava) library.
 
 
-### Step 1: Fetch API documentation of third-party package
+### Step 1: Fetch API documentation of a third-party package
 
 First,
-we first extract the API documentation of this library.
+we extract the API documentation of this library.
 To do so,
 run:
 
@@ -519,7 +519,7 @@ run:
 thalia@5b1ba457c8bf:~/thalia$ echo "com.google.guava,guava,32.1.2-jre" | fetch-package-data -i - -o outdir
 ```
 
-This command essentially fetches the `pom.xml` and the javadoc
+This command essentially fetches the `pom.xml` and the Javadoc
 of the guava library. The script stores these retrieved files
 inside the `outdir/` specified by the `-o` option.
 We can use the same command to retrieve an arbitrary package stored
@@ -549,7 +549,7 @@ directory.
 
 ### Step 3: Fetch the JAR files of the third-party package
 
-Since, we are going to generate test cases
+Since we are going to generate test cases
 that invoke components from a third-party package,
 we need to fetch the corresponding JAR files
 so that the compiler is able to locate
@@ -558,7 +558,7 @@ We can automatically fetch all the required
 JAR files,
 using the `mvn` command.
 Maven stores the downloaded packages
-inside your local Maven repository located
+inside your local Maven repository, located
 at `~/.m2/repository/`.
 
 
@@ -570,7 +570,7 @@ thalia@5b1ba457c8bf:~/thalia$ mvn -f outdir/com-google-guava-guava/dependency.xm
 
 ### Step 4: Generate test cases that invoke the guava library
 
-Now, we are ready to invoke `thalia` as follows
+Now, we are ready to invoke `thalia` as follows.
 
 ```bash
 thalia@5b1ba457c8bf:~/thalia$ thalia --language groovy \
@@ -590,7 +590,7 @@ the option `--api-doc-path` points to
 the directory where the API specification of guava resides
 (see **Step 2**).
 Second,
-we use the option `--library-path` whose value
+we use the option `--library-path`, whose value
 is the classpath of the guava library.
 This classpath contains the location of all JAR files
 required to invoke guava.
@@ -629,9 +629,9 @@ docker run -ti --rm \
   thalia-eval
 ```
 
-Note that we mount four _local volumes_ inside the newly-created container.
+Note that we mount four _local volumes_ inside the newly created container.
 The first volume (`database/`) contains the bug database that includes the bugs
-discovered by `thlia`, while the second volume (`data/`) provides the data
+discovered by `thalia`, while the second volume (`data/`) provides the data
 collected during our evaluation. The third volume (`eval-scripts/`) includes
 some scripts to reproduce and validate the results of the paper. Finally, the
 fourth volume (`eval-figures/`) will be used to save the figures of our paper.
@@ -662,7 +662,7 @@ Processing org.apache.commons commons-lang3 3.12.0
 
 The command above stores the API documentation pages of every library
 (e.g., `org.slf4j:slf4j-api`)
-insided the `package-data/` directory.
+inside the `package-data/` directory.
 If you want to download the API documentation pages
 of the entire set of Maven libraries,
 run:
@@ -691,18 +691,23 @@ The generated JSON files can be found inside
 `package-data/<lib-name>/json-docs/` directory.
 For example,
 the JSON files corresponding to `com.google.guava:guava` library
-are found in `package-data/com-google-guava-guava/json-docs/`.
+is found in `package-data/com-google-guava-guava/json-docs/`.
 
-In what following,
+In what follows,
 we will use the above five libraries as a reference
 for re-running our evaluation.
+
+__NOTE:__ To fully re-compute the results of our paper,
+we could use all `95` packages, but then the total
+time we will require to run everything will exceed 2 weeks in a single
+powerful machine.
 
 
 ## Bug Database
 
 We provide an SQLite database (see the file `database/bugdb.sqlite3`) that contains
 information about the bugs discovered by `thalia` during the evaluation.
-This database is initialized based on the SQL script stored into
+This database is initialized based on the SQL script stored in
 `database/bug_schema.sql`. The bug database consists of three tables,
 namely `CompilerBug`, `Feature`, and `CompilerBugFeatures`.
 
