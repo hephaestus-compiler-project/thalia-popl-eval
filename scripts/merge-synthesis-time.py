@@ -59,7 +59,7 @@ for project in os.listdir(input_dir):
         data = json.load(file)
         totals[mode]['totals']['passed'] += data['totals']['passed']
         totals[mode]['totals']['failed'] += data['totals']['failed']
-        totals[mode]['time'] += data.get('synthesis_time', data["time"])
+        totals[mode]['time'] += data.get('synthesis_time', data.get("time", 0))
 
 
 for mode, data in totals.items():
