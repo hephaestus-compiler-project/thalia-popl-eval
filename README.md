@@ -434,7 +434,7 @@ would be like the following
 ```
 
 Note that the option `--keep-all` allows you to store all the synthesized programs
-on disk. They can be found in the `bugs/groovy-testing/generator/` directory.
+on disk. They can be found in the `bugs/groovy-session/generator/` directory.
 
 ###  Logging
 
