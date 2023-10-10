@@ -23,6 +23,7 @@ See https://doi.org/10.5281/zenodo.8425071.
   * [RQ2: Test Case Characteristics (Section 4.3)](#rq2-test-case-characteristics-section-43)
   * [RQ3: Impact of Library Selection and Synthesis Modes](#rq3-impact-of-library-selection-and-synthesis-modes-section-44)
   * [RQ4: Comparison of Thalia vs. Hephaestus](#rq4-comparison-of-thalia-vs-hephaestus-section-45)
+  * [Extending Artifact](#extending-artifact)
 
 # Overview
 
