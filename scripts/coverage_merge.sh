@@ -43,22 +43,23 @@ else
 fi
 
 mkdir -p $target_res/res
+mkdir -p $target_res/results
 
 #groovy-all.exec  groovy-base.exec  groovy-erase.exec  groovy-inject.exec
 #all.csv          base-both.csv    base.csv         base-erase.csv   base-inject.csv  both.csv         erase.csv        inject.csv       res/
 echo "Merge base"
 $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $heph_res/${language}-base.exec $thalia_res/base.exec --destfile $target_res/res/$language-base.exec
 echo "Extract base"
-$JAVA_11 -jar $JACOCO/lib/jacococli.jar report $target_res/res/$language-base.exec --classfiles $SOURCES --csv $target_res/$language-base.csv
+$JAVA_11 -jar $JACOCO/lib/jacococli.jar report $target_res/res/$language-base.exec --classfiles $SOURCES --csv $target_res/results/$language-base.csv
 echo "Merge all"
 $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $heph_res/${language}-all.exec $thalia_res/all.exec --destfile $target_res/res/$language-all.exec
 echo "Extract all"
-$JAVA_11 -jar $JACOCO/lib/jacococli.jar report $target_res/res/$language-all.exec --classfiles $SOURCES --csv $target_res/$language-all.csv
+$JAVA_11 -jar $JACOCO/lib/jacococli.jar report $target_res/res/$language-all.exec --classfiles $SOURCES --csv $target_res/results/$language-all.csv
 echo "Merge erase"
 $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $heph_res/${language}-erase.exec $thalia_res/erase.exec --destfile $target_res/res/$language-erase.exec
 echo "Extract erase"
-$JAVA_11 -jar $JACOCO/lib/jacococli.jar report $target_res/res/$language-erase.exec --classfiles $SOURCES --csv $target_res/$language-erase.csv
+$JAVA_11 -jar $JACOCO/lib/jacococli.jar report $target_res/res/$language-erase.exec --classfiles $SOURCES --csv $target_res/results/$language-erase.csv
 echo "Merge inject"
 $JAVA_11 -jar $JACOCO/lib/jacococli.jar merge $heph_res/${language}-inject.exec $thalia_res/inject.exec --destfile $target_res/res/$language-inject.exec
 echo "Extract inject"
-$JAVA_11 -jar $JACOCO/lib/jacococli.jar report $target_res/res/$language-inject.exec --classfiles $SOURCES --csv $target_res/$language-inject.csv
+$JAVA_11 -jar $JACOCO/lib/jacococli.jar report $target_res/res/$language-inject.exec --classfiles $SOURCES --csv $target_res/results/$language-inject.csv

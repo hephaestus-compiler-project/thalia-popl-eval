@@ -1081,6 +1081,9 @@ we suggest you consult the
 ["Extracting Library APIs in JSON"](#extracting-library-apis-in-json)
 guide on how to fetch a limited number of libraries.
 
+If you don't want to proceed with this section,
+please go to
+[RQ4: Comparison of Thalia vs. Hephaestus](#rq4-comparison-of-thalia-vs-hephaestus-section-45).
 
 ### Step1: Synthesize program using Thalia and measure the code coverage of compilers
 
@@ -1477,3 +1480,261 @@ Groovy, Scala, and Kotlin is 15, 12, and 11 LoC, respectively."_
 * _"Hephaestus generated programs that are one order of magnitude larger,
     with an average size of 304, 262, and 257 LoC for Groovy, Scala,
     and Kotlin respectively."_
+
+## Re-running RQ4 experiment (optional)
+
+**NOTE**: Before proceeding with this step,
+please make sure that you have extracted the API
+specification of some libraries,
+i.e., see [Extracting Library APIs in JSON](#extracting-library-apis-in-json).
+
+**NOTE 2:** To re-run the entire experiment requires
+almost two days per compiler.
+Therefore,
+in this section,
+we provide instructions on how to perform a smaller RQ4 experiment.
+
+
+### Code coverage analysis
+
+First,
+we invoke `hephaestus` and `thalia`
+for a certain amount of time
+(we ran `hephaestus` and `thalia` for 12 hours each in our evaluation).
+Then,
+we measure the code coverage achieved by `thalia`,
+`hephaestus`,
+and their combination
+in every compiler.
+In what following,
+we invoke `hephaestus` and `thalia`
+for 12 seconds per run.
+
+#### groovyc
+
+Generate `hephaestus` programs and measure the code coverage.
+
+```bash
+thalia@bbd24bdb35a8:~$ ./eval-scripts/runner/hephaestus_run.sh groovy 12 heph_groovy
+thalia@bbd24bdb35a8:~$ source eval-scripts/config.sh /home/thalia/coverage/jacoco \
+  /home/thalia/.sdkman
+thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_hephaestus_coverage.sh \
+  heph_groovy/ comparison/hephaestus groovy
+```
+
+Generate `thalia` programs and measure the code coverage.
+
+```bash
+thalia@bbd24bdb35a8:~$ THALIA_TIME=12 ./eval-scripts/runner/thalia_run.sh \
+  stdlib/groovy-stdlib/json-docs/ \
+  package-data groovy-programs "--language groovy"
+thalia@bbd24bdb35a8:~$ source scripts/config.sh /home/thalia/coverage/jacoco /home/thalia/.sdkman
+thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_coverage.sh package-data \
+  groovy-programs results/groovy groovy
+thalia@bbd24bdb35a8:~$ ./eval-scripts/get_thalia_coverage_results.sh \
+  results/groovy/combination/ comparison/thalia groovy
+```
+
+Measure the code coverage when combining `thalia` and `hephaestus` results.
+
+```bash
+thalia@bbd24bdb35a8:~$ ./eval-scripts/coverage_merge.sh \
+  comparison/hephaestus/inter/ results/groovy/combination/res/ \
+  comparison/combination groovy
+```
+
+#### scalac
+
+Generate `hephaestus` programs and measure the code coverage.
+
+```bash
+thalia@bbd24bdb35a8:~$ ./eval-scripts/runner/hephaestus_run.sh scala 12 heph_scala
+thalia@bbd24bdb35a8:~$ source eval-scripts/config.sh /home/thalia/coverage/jacoco \
+  /home/thalia/.sdkman
+thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_hephaestus_coverage.sh \
+  heph_scala comparison/hephaestus scala
+```
+
+Generate `thalia` programs and measure the code coverage.
+
+```bash
+thalia@bbd24bdb35a8:~$ THALIA_TIME=12 ./eval-scripts/runner/thalia_run.sh \
+  stdlib/scala-stdlib/json-docs/ \
+  package-data scala-programs "--language scala"
+thalia@bbd24bdb35a8:~$ source scripts/config.sh /home/thalia/coverage/jacoco /home/thalia/.sdkman
+thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_coverage.sh package-data \
+  scala-programs results/scala scala
+thalia@bbd24bdb35a8:~$ ./eval-scripts/get_thalia_coverage_results.sh \
+  results/scala/combination/ comparison/thalia scala
+```
+
+Measure the code coverage when combining `thalia` and `hephaestus` results.
+
+```bash
+thalia@bbd24bdb35a8:~$ ./eval-scripts/coverage_merge.sh \
+  comparison/hephaestus/inter/ results/scala/combination/res/ \
+  comparison/combination scala
+```
+
+#### kotlinc
+
+Generate `hephaestus` programs and measure the code coverage.
+
+```bash
+thalia@bbd24bdb35a8:~$ ./eval-scripts/runner/hephaestus_run.sh kotlin 12 heph_kotlin
+thalia@bbd24bdb35a8:~$ source eval-scripts/config.sh /home/thalia/coverage/jacoco \
+  /home/thalia/.sdkman
+thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_hephaestus_coverage.sh \
+  heph_kotlin comparison/hephaestus kotlin
+```
+
+Generate `thalia` programs and measure the code coverage.
+
+```bash
+thalia@bbd24bdb35a8:~$ THALIA_TIME=12 ./eval-scripts/runner/thalia_run.sh \
+  stdlib/kotlin-stdlib/json-docs/ \
+  package-data kotlin-programs "--language kotlin"
+thalia@bbd24bdb35a8:~$ source scripts/config.sh /home/thalia/coverage/jacoco /home/thalia/.sdkman
+thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_coverage.sh package-data \
+  kotlin-programs results/kotlin kotlin
+thalia@bbd24bdb35a8:~$ ./eval-scripts/get_thalia_coverage_results.sh \
+  results/kotlin/combination/ comparison/thalia kotlin
+```
+
+Measure the code coverage when combining `thalia` and `hephaestus` results.
+
+```bash
+thalia@bbd24bdb35a8:~$ ./eval-scripts/coverage_merge.sh \
+  comparison/hephaestus/inter/ results/kotlin/combination/res/ \
+  comparison/combination kotlin
+```
+
+#### Visualize code coverage analysis results
+
+After producing the code coverage results for every compiler
+(our new code coverage results are found in the `comparison/`
+directory inside the container),
+we are ready to produce Figure 13.
+To do so run:
+
+```bash
+# groovy
+thalia@65536014baca:~$ python eval-scripts/analysis.py \
+  --coverage-data comparison \
+  --hephaestus --language groovy \
+  --whitelist data/coverage/whitelists/groovy.txt \
+  --output-dir eval-figures/
+
+# scala
+thalia@65536014baca:~$ python eval-scripts/analysis.py \
+  --coverage-data comparison \
+  --hephaestus --language scala \
+  --whitelist data/coverage/whitelists/scala.txt \
+  --output-dir eval-figures/
+
+# kotlin
+thalia@65536014baca:~$ python eval-scripts/analysis.py \
+  --coverage-data comparison \
+  --hephaestus --language kotlin \
+  --whitelist data/coverage/whitelists/kotlin.txt \
+  --output-dir eval-figures/
+```
+
+### Compilation and synthesis time 
+
+```bash
+# Thalia
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input thalia_kotlin --output comparison/time/thalia/generation/kotlin
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input thalia_scala --output comparison/time/thalia/generation/scala
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input thalia_groovy --output comparison/time/thalia/generation/groovy
+
+# Hephaestus
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input heph_groovy/ --output comparison/time/heph/generation/groovy
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input heph_scala/ --output
+comparison/time/heph/generation/scala
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input heph_kotlin/ --output
+ comparison/time/heph/generation/kotlin
+```
+
+```bash
+# Thalia
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py --input thalia_groovy --output comparison/time/heph/compilation/groovy --batch 10
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py --input thalia_scala --output comparison/time/heph/compilation/scala --batch 10
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py --input thalia_kotlin --output comparison/time/heph/compilation/kotlin --batch 10
+
+# Hephaestus
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py --input heph_groovy --output comparison/time/heph/compilation/groovy --batch 10
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py --input heph_scala --output comparison/time/heph/compilation/scala --batch 10
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py --input heph_kotlin --output comparison/time/heph/compilation/kotlin --batch 10
+```
+
+Reproduce Table 5 with the new results:
+
+```bash
+python eval-scripts/time-comparison.py comparison/time/
+```
+
+### Code size
+
+```bash
+# Hephaestus
+thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
+  --input heph_groovy \
+  --output comparison/code-size/hephaestus/groovy-size.csv \
+  --suffix groovy
+
+thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
+  --input heph_scala \
+  --output comparison/code-size/hephaestus/scala-size.csv \
+  --suffix scala
+
+thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
+  --input heph_kotlin \
+  --output comparison/code-size/hephaestus/kotlin-size.csv \
+  --suffix kt
+```
+
+```bash
+# Thalia
+thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
+  --input thalia_groovy/ \
+  --output comparison/code-size/thalia/groovy-size.csv \
+  --suffix groovy
+
+thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
+  --input thalia_scala/ \
+  --output comparison/code-size/thalia/scala-size.csv \
+  --suffix scala
+
+thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
+  --input thalia_kotlin/ \
+  --output comparison/code-size/thalia/kotlin-size.csv \
+  --suffix kt
+```
+
+Finally,
+execute the following two commands to get the statistics
+about the size of programs generated by `thalia` and `hephaestus`.
+
+```bash
+thalia@bbd24bdb35a8:~$ ./eval-scripts/compute-size-statistics.sh comparison/code-size/thalia/
+(groovy) Average size in kB: 2.28
+(groovy) Average size in LoC: 31
+
+(kotlin) Average size in kB: 2.02
+(kotlin) Average size in LoC: 23
+
+(scala) Average size in kB: 2.20
+(scala) Average size in LoC: 12
+
+thalia@bbd24bdb35a8:~$ ./eval-scripts/compute-size-statistics.sh comparison/code-size/hephaestus
+/
+(groovy) Average size in kB: 7.64
+(groovy) Average size in LoC: 295
+
+(kotlin) Average size in kB: 6.33
+(kotlin) Average size in LoC: 213
+
+(scala) Average size in kB: 8.00
+(scala) Average size in LoC: 252
+```

@@ -74,7 +74,7 @@ run_thalia()
     ls $libpath/json-docs | $basedir/create-api-rules.py > $rulespath
   fi
 
-  base_args="--batch 30 -P -L --transformations 0 \
+  base_args="--batch 10 -P -L --transformations 0 \
     --max-depth 2 --generator api -k \
     --library-path "$classpath" --api-doc-path libs --api-rules $rulespath \
     --max-conditional-depth 3 --bugs $bugs $args"

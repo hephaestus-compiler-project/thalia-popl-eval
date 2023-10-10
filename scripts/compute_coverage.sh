@@ -33,12 +33,6 @@ if [ ! -d "$programs" ]; then
     exit 1
 fi
 
-# Check if results path already exists
-if [ -e "$results" ]; then
-    echo "Error: $results path already exists."
-    exit 1
-fi
-
 # List of required environment variables
 required_env_vars=("KOTLIN_JAR" "JACOCO" "JAVA_8" "JAVA_11" "GROOVY_JAR" "SCALA_CP" "SCALA_JAR")
 
@@ -100,6 +94,7 @@ mkdir -p $results
 for mode_path in "$programs"/*; do
     project_name_mode=${mode_path#*//}
     project_name=${project_name_mode%-*}
+    project_name=$(basename $project_name)
     if [ -d "$mode_path" ]; then
         # Extract the mode from the file name
         mode=$(basename "$mode_path" | awk -F'-' '{print $NF}')

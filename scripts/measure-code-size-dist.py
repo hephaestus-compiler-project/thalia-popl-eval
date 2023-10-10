@@ -5,6 +5,7 @@ import argparse
 import csv
 import glob
 import os
+from pathlib import Path
 
 
 def get_args():
@@ -33,6 +34,7 @@ def compute_code_size_dist(args):
 def main():
     args = get_args()
     sizes = compute_code_size_dist(args)
+    os.makedirs(Path(args.output).parent.absolute(), exist_ok=True)
     with open(args.output, mode="w", newline="") as file:
         writer = csv.writer(file)
         writer.writerows(sizes)

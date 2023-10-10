@@ -22,12 +22,6 @@ if [ ! -d "$programs" ]; then
     exit 1
 fi
 
-# Check if results path already exists
-if [ -e "$results" ]; then
-    echo "Error: $results path already exists."
-    exit 1
-fi
-
 # List of required environment variables
 required_env_vars=("KOTLIN_JAR" "JACOCO" "JAVA_8" "JAVA_11" "GROOVY_JAR" "SCALA_CP" "SCALA_JAR")
 
@@ -123,7 +117,7 @@ process_files() {
         eval "$command" 2> /dev/null
     done
     echo "Done Processing: $programs/$mode/generator/"
-    
+
     # Get full paths of all files in the merger directory
     exec_file_paths=$(find $result/inter/$language/${mode} -type f)
     exec_file_paths_single=$(echo $exec_file_paths | tr '\n' ' ')

@@ -16,7 +16,7 @@ fi
 
 lang="$1"
 # seconds
-time="$2" 
+time="$2"
 time=$((time / 3))
 base_erase=$((time + time))
 result="$3"
@@ -32,14 +32,14 @@ case "$lang" in
         ;;
 esac
 
-echo "hephaestus base and erase"
+echo "hephaestus (generator and type erase mutation)"
 $hephaestus --bugs $result \
     --name erase --language $lang \
     --seconds $base_erase --batch 10 --workers 2 --transformations 1 \
-    --keep-all -P
+    --keep-all -P > /dev/null
 
-echo "hephaestus inject"
+echo "hephaestus (generator and type overwriting mutation)"
 $hephaestus --bugs $result \
     --name inject --language $lang \
     --seconds $time --batch 10 --workers 2 --transformations 0 \
-    --keep-all 
+    --keep-all > /dev/null
