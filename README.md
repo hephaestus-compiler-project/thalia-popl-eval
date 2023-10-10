@@ -1445,7 +1445,8 @@ for 12 seconds per run.
 
 #### groovyc
 
-Generate `hephaestus` programs and measure the code coverage.
+Generate `hephaestus` programs and measure the code coverage
+(estimated running time: 5--10 minutes).
 
 ```bash
 thalia@bbd24bdb35a8:~$ ./eval-scripts/runner/hephaestus_run.sh groovy 12 heph_groovy
@@ -1455,13 +1456,14 @@ thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_hephaestus_coverage.sh \
   heph_groovy/ new-results/comparison/hephaestus groovy
 ```
 
-Generate `thalia` programs and measure the code coverage.
+Generate `thalia` programs and measure the code coverage
+(estimated running time: 5--10 minutes).
 
 ```bash
 thalia@bbd24bdb35a8:~$ THALIA_TIME=12 ./eval-scripts/runner/thalia_run.sh \
   stdlib/groovy-stdlib/json-docs/ \
   package-data thalia_groovy "--language groovy"
-thalia@bbd24bdb35a8:~$ source scripts/config.sh /home/thalia/coverage/jacoco /home/thalia/.sdkman
+thalia@bbd24bdb35a8:~$ source eval-scripts/config.sh /home/thalia/coverage/jacoco /home/thalia/.sdkman
 thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_coverage.sh package-data \
   thalia_groovy results/groovy groovy
 thalia@bbd24bdb35a8:~$ ./eval-scripts/get_thalia_coverage_results.sh \
@@ -1478,7 +1480,8 @@ thalia@bbd24bdb35a8:~$ ./eval-scripts/coverage_merge.sh \
 
 #### scalac
 
-Generate `hephaestus` programs and measure the code coverage.
+Generate `hephaestus` programs and measure the code coverage
+(estimated running time: 5--10 minutes).
 
 ```bash
 thalia@bbd24bdb35a8:~$ ./eval-scripts/runner/hephaestus_run.sh scala 12 heph_scala
@@ -1488,13 +1491,14 @@ thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_hephaestus_coverage.sh \
   heph_scala new-results/comparison/hephaestus scala
 ```
 
-Generate `thalia` programs and measure the code coverage.
+Generate `thalia` programs and measure the code coverage
+(estimated running time: 5--10 minutes).
 
 ```bash
 thalia@bbd24bdb35a8:~$ THALIA_TIME=12 ./eval-scripts/runner/thalia_run.sh \
   stdlib/scala-stdlib/json-docs/ \
   package-data thalia_scala "--language scala"
-thalia@bbd24bdb35a8:~$ source scripts/config.sh /home/thalia/coverage/jacoco /home/thalia/.sdkman
+thalia@bbd24bdb35a8:~$ source eval-scripts/config.sh /home/thalia/coverage/jacoco /home/thalia/.sdkman
 thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_coverage.sh package-data \
   thalia_scala results/scala scala
 thalia@bbd24bdb35a8:~$ ./eval-scripts/get_thalia_coverage_results.sh \
@@ -1511,7 +1515,8 @@ thalia@bbd24bdb35a8:~$ ./eval-scripts/coverage_merge.sh \
 
 #### kotlinc
 
-Generate `hephaestus` programs and measure the code coverage.
+Generate `hephaestus` programs and measure the code coverage
+(estimated running time: 5--10 minutes).
 
 ```bash
 thalia@bbd24bdb35a8:~$ ./eval-scripts/runner/hephaestus_run.sh kotlin 12 heph_kotlin
@@ -1521,13 +1526,14 @@ thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_hephaestus_coverage.sh \
   heph_kotlin new-results/comparison/hephaestus kotlin
 ```
 
-Generate `thalia` programs and measure the code coverage.
+Generate `thalia` programs and measure the code coverage
+(estimated running time: 5--10 minutes).
 
 ```bash
 thalia@bbd24bdb35a8:~$ THALIA_TIME=12 ./eval-scripts/runner/thalia_run.sh \
   stdlib/kotlin-stdlib/json-docs/ \
   package-data thalia_kotlin "--language kotlin"
-thalia@bbd24bdb35a8:~$ source scripts/config.sh /home/thalia/coverage/jacoco /home/thalia/.sdkman
+thalia@bbd24bdb35a8:~$ source eval-scripts/config.sh /home/thalia/coverage/jacoco /home/thalia/.sdkman
 thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_coverage.sh package-data \
   thalia_kotlin results/kotlin kotlin
 thalia@bbd24bdb35a8:~$ ./eval-scripts/get_thalia_coverage_results.sh \
