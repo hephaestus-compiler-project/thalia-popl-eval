@@ -4,7 +4,7 @@ This artifact is for the POPL'24 paper titled
 "API-driven Program Synthesis for Testing Static Typing Implementations".
 
 An archived version of the artifact is also available on Zenodo.
-See TODO.
+See https://doi.org/10.5281/zenodo.8425071.
 
 # Table of Contents
 
@@ -31,7 +31,7 @@ described in our paper. The artifact has the following structure:
 
 * `scripts/`: This directory contains the scripts needed to re-run the
 experiments and re-produce the figures and tables presented in our paper.
-* `data/`: This is the directory that contains the pre-computed results of our
+* `data/`: This is the directory that contains the pre=computed results of our
 evaluation.
 * `data/packages.csv`: A CSV file that contains the 95 Maven libraries whose
 APIs have been used in our evaluation.
@@ -40,6 +40,10 @@ discovered by our approach.
 * `database/bugdb.sqlite3`: This is the `sqlite3` database file corresponding to
   our bug database.
 * `database/bugs.json`: Our bug reports in a JSON format.
+* `stdlib/`: API specification of the standard libraries of three languages:
+Java, Scala, Kotlin. This not the complete API specification, but rather
+some common API components (e.g., `java.util.*`)
+that are used frequently in third-party libraries.
 * `thalia/`: Contains the source code of our tool
 (provided as a git submodule) used for testing the compilers of
 Scala, Kotlin, and Groovy using API-driven program synthesis.
@@ -337,7 +341,7 @@ Total faults: 3
 ```
 
 Among other things,
-the `bugs/groovy-session/` directory contains two files:
+the `bugs/java-session/` directory contains two files:
 `stats.json` and `faults.json`.
 
 `stats.json` contains the following details about the testing session.
@@ -356,7 +360,7 @@ the `bugs/groovy-session/` directory contains two files:
     "library_path": null,
     "erase_types": false,
     "inject_type_error": false,
-    "compiler": "Groovy compiler version 4.0.12\nCopyright 2003-2023 The Apache Software Foundation. https://groovy-lang.org/"
+    "compiler": "Groovy compiler version 5.0.0-alpha-1\nCopyright 2003-2023 The Apache Software Foundation. https://groovy-lang.org/"
   },
   "totals": {
     "passed": 27,
@@ -367,7 +371,7 @@ the `bugs/groovy-session/` directory contains two files:
 }
 ```
 
-If we detect some bugs,
+If there were some bugs detected,
 `faults.json` would look like the following JSON file.
 
 ```json
@@ -407,7 +411,7 @@ Finally, the third one is an internal error of
 `groovyc` ([GROOVY-11026](https://issues.apache.org/jira/browse/GROOVY-11026)).
 
 In the above scenario,
-the structure of the testing session directory
+the structure of testing session directory
 (i.e., `bugs/groovy-session/`)
 would be like the following
 
@@ -429,7 +433,7 @@ would be like the following
 ```
 
 Note that the option `--keep-all` allows you to store all the synthesized programs
-on disk. They can be found in the `bugs/java-testing/generator/` directory.
+into disk. They can be found in the `bugs/java-testing/generator/` directory.
 
 ###  Logging
 
@@ -470,7 +474,7 @@ Generated program 2
 ...
 ```
 
-The first lines of the `bugs/groovy-session/logs/api-generator` file dump
+The first lines of the `bugs/groovy-session/logs/api-generator` file dumps
 some statistics regarding the input API and the corresponding
 API graph (e.g., number of methods, number of constructors, etc.).
 Then,
@@ -504,14 +508,14 @@ of type `boolean`.
 Previously,
 we tested `groovyc` using the standard library of Groovy.
 Now, we will show how to test `groovyc` using the API
-of a third-party library,
-in particular the [guava](https://github.com/google/guava) library.
+of a third party library,
+in particular the [guava]() library.
 
 
-### Step 1: Fetch API documentation of a third-party package
+### Step 1: Fetch API documentation of third-party package
 
 First,
-we extract the API documentation of this library.
+we first extract the API documentation of this library.
 To do so,
 run:
 
@@ -519,7 +523,7 @@ run:
 thalia@5b1ba457c8bf:~/thalia$ echo "com.google.guava,guava,32.1.2-jre" | fetch-package-data -i - -o outdir
 ```
 
-This command essentially fetches the `pom.xml` and the Javadoc
+This command essentially fetches the `pom.xml` and the javadoc
 of the guava library. The script stores these retrieved files
 inside the `outdir/` specified by the `-o` option.
 We can use the same command to retrieve an arbitrary package stored
@@ -537,7 +541,7 @@ Next, run the following command to
 convert the API documentation written in HTML format
 into a set of JSON files,
 which are given as input to `thalia`
-(estimated running time 30--60 seconds).
+(estimated running time: 30--60 seconds).
 
 ```bash
 thalia@5b1ba457c8bf:~/thalia$ doc2json-util -d outdir -l com-google-guava-guava -L java
@@ -549,7 +553,7 @@ directory.
 
 ### Step 3: Fetch the JAR files of the third-party package
 
-Since we are going to generate test cases
+Since, we are going to generate test cases
 that invoke components from a third-party package,
 we need to fetch the corresponding JAR files
 so that the compiler is able to locate
@@ -558,7 +562,7 @@ We can automatically fetch all the required
 JAR files,
 using the `mvn` command.
 Maven stores the downloaded packages
-inside your local Maven repository, located
+inside your local Maven repository located
 at `~/.m2/repository/`.
 
 
@@ -570,7 +574,7 @@ thalia@5b1ba457c8bf:~/thalia$ mvn -f outdir/com-google-guava-guava/dependency.xm
 
 ### Step 4: Generate test cases that invoke the guava library
 
-Now, we are ready to invoke `thalia` as follows.
+Now, we are ready to invoke `thalia` as follows
 
 ```bash
 thalia@5b1ba457c8bf:~/thalia$ thalia --language groovy \
@@ -590,7 +594,7 @@ the option `--api-doc-path` points to
 the directory where the API specification of guava resides
 (see **Step 2**).
 Second,
-we use the option `--library-path`, whose value
+we use the option `--library-path` whose value
 is the classpath of the guava library.
 This classpath contains the location of all JAR files
 required to invoke guava.
@@ -626,15 +630,21 @@ docker run -ti --rm \
   -v $(pwd)/scripts:/home/thalia/eval-scripts \
   -v $(pwd)/figures:/home/thalia/eval-figures \
   -v $(pwd)/stdlib:/home/thalia/stdlib \
+  -v $(pwd)/example-results:/home/thalia/new-results \
   thalia-eval
 ```
 
-Note that we mount four _local volumes_ inside the newly created container.
+Note that we mount six _local volumes_ inside the newly-created container.
 The first volume (`database/`) contains the bug database that includes the bugs
-discovered by `thalia`, while the second volume (`data/`) provides the data
+discovered by `thlia`, while the second volume (`data/`) provides the data
 collected during our evaluation. The third volume (`eval-scripts/`) includes
-some scripts to reproduce and validate the results of the paper. Finally, the
+some scripts to reproduce and validate the results of the paper. The
 fourth volume (`eval-figures/`) will be used to save the figures of our paper.
+The fifth volume contaisn the specification of common API components
+stemming from the standard library of the language under test.
+Finally,
+the last volume mounts an empty directory where
+you can store the results if you decide to re-run our experiments.
 
 ## Extracting Library APIs in JSON
 
@@ -645,27 +655,24 @@ we have to extract the APIs of the packages included
 in `data/packages.csv` and use these APIs as inputs to `thalia`.
 This process can take several minutes.
 You can run this process for a limited number of packages
-(e.g., five).
+(e.g., two packages).
 To do so,
 fetch their corresponding API documentation pages (written in HTML)
 by running:
 
 ```bash
-thalia@3195fa0e2240:~$ head -5 data/packages.csv | fetch-package-data -i - -o package-data
+thalia@3195fa0e2240:~$ head -2 data/packages.csv | fetch-package-data -i - -o package-data
 
 Processing org.slf4j slf4j-api 2.0.7
 Processing com.google.guava guava 32.0.0-jre
-Processing org.mockito mockito-core 5.3.1
-Processing com.fasterxml.jackson.core jackson-databind 2.15.1
-Processing org.apache.commons commons-lang3 3.12.0
 ```
 
 The command above stores the API documentation pages of every library
 (e.g., `org.slf4j:slf4j-api`)
-inside the `package-data/` directory.
+insided the `package-data/` directory.
 If you want to download the API documentation pages
-of the entire set of Maven libraries,
-run:
+of the _entire_ set of Maven libraries,
+run (this is **optional**):
 
 ```
 fetch-package-data -i data/packages.csv -o package-data
@@ -673,14 +680,11 @@ fetch-package-data -i data/packages.csv -o package-data
 
 Then,
 convert the API documentation pages into JSON files,
-using the following command (estimated running time: 3--5 minutes):
+using the following command (estimated running time: ~1 minute):
 
 ```bash
 thalia@3195fa0e2240:~$ doc2json-util -d package-data -L java
-Parsing docs of package-data/com-fasterxml-jackson-core-jackson-databind
 Parsing docs of package-data/com-google-guava-guava
-Parsing docs of package-data/org-apache-commons-commons-lang3
-Parsing docs of package-data/org-mockito-mockito-core
 Parsing docs of package-data/org-slf4j-slf4j-api
 ```
 
@@ -691,23 +695,21 @@ The generated JSON files can be found inside
 `package-data/<lib-name>/json-docs/` directory.
 For example,
 the JSON files corresponding to `com.google.guava:guava` library
-is found in `package-data/com-google-guava-guava/json-docs/`.
+are found in `package-data/com-google-guava-guava/json-docs/`.
 
-In what follows,
-we will use the above five libraries as a reference
+In what following,
+we will use the above two libraries as a reference
 for re-running our evaluation.
-
-__NOTE:__ To fully re-compute the results of our paper,
-we could use all `95` packages, but then the total
-time we will require to run everything will exceed 6 weeks in a single
-powerful machine.
+You can use an arbitrary number of libraries,
+but bear in mind that more libraries translates to
+higher evaluation times.
 
 
 ## Bug Database
 
 We provide an SQLite database (see the file `database/bugdb.sqlite3`) that contains
 information about the bugs discovered by `thalia` during the evaluation.
-This database is initialized based on the SQL script stored in
+This database is initialized based on the SQL script stored into
 `database/bug_schema.sql`. The bug database consists of three tables,
 namely `CompilerBug`, `Feature`, and `CompilerBugFeatures`.
 
@@ -892,7 +894,7 @@ bug-triggering test cases contain at least one feature related to parametric pol
 
 ### Size of test cases
 
-This command computes statistics about the size
+This command compute statistics about the size
 of the programs synthesized by `thalia`.
 The script leverages the CSV files located 
 at `data/size`,
@@ -949,20 +951,19 @@ Well-typed Groovy    5940.542105  4604.434885  3.0  1584.00  6186.5   8428.00  2
            Scala     7821.115789  5986.895969  4.0  2017.00  7989.5  12022.75  30115.0
 ```
 
-The script prints some statistics about the distribution.
+The script prints some statitics about the distribution.
 For example,
 by examining these statistics we can infer
 that each library produced 1,937 ill-typed Groovy programs, on average.
 Beyond these statistics,
-the script generates Figure 11 and stores it in `figures/files-boxplot.pdf`
+the script generates Figure 11 and stores in `figures/files-boxplot.pdf`
 in your host machine.
 
 
 ### Code coverage analysis
 
 Now we measure the impact of every library
-and synthesis mode testing the compilers
-using code coverage (i.e., line coverage):
+and synthesis mode on line code coverage:
 we reproduce Figure 10 and Table 4.
 To do so,
 we examine the
@@ -1075,13 +1076,13 @@ mentioned in the **Synthesis time** paragraph of Section 4.3.
 
 ## Re-running RQ3 experiment (optional)
 
-**NOTE**: Before proceeding with this step,
+**NOTE**: Before continuing with this Section,
 please make sure that you have extracted the API
 specification of some libraries,
 i.e., see [Extracting Library APIs in JSON](#extracting-library-apis-in-json).
 
 **NOTE 2:** To re-run the entire experiment that uses
-all the 95 packages require approximately two weeks per compiler.
+all the 95 packages requires approximately two weeks per compiler.
 Therefore,
 we suggest you consult the
 ["Extracting Library APIs in JSON"](#extracting-library-apis-in-json)
@@ -1091,13 +1092,15 @@ If you don't want to proceed with this section,
 please go to
 [RQ4: Comparison of Thalia vs. Hephaestus](#rq4-comparison-of-thalia-vs-hephaestus-section-45).
 
-### Step1: Synthesize programs using Thalia and measure the code coverage of compilers
+### Step1: Synthesize program using Thalia and measure the code coverage of compilers
 
 In this step,
 we use `thalia` to generate test programs
 using the API of each library included
-in `package-data/` directory.
-For each API,
+in the `package-data/` directory.
+This directory is created after running the instructions included in
+["Extracting Library APIs in JSON"](#extracting-library-apis-in-json).
+In our minimal example,
 `thalia` produces ten test programs 
 (we can change that by setting the global variable `THALIA_ITERS`, 
 e.g., `THALIA_ITERS=100`).
@@ -1113,56 +1116,33 @@ for properly configuring a third-party library via `mvn`.
 
 #### groovyc
 
+Generate Groovy programs:
+
 ```bash
-# Generate programs
 thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
   stdlib/groovy-stdlib/json-docs/ \
   package-data/ \
   groovy-programs \
   "--language groovy --dry-run"
-
-Testing library com-fasterxml-jackson-core-jackson-databind
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
-Testing library com-google-guava-guava
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
-Testing library org-apache-commons-commons-lang3
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
-Testing library org-mockito-mockito-core
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
-Testing library org-slf4j-slf4j-api
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
 ```
 
-Then, we compute compilers' coverage (estimated running time 10--15 minutes):
+Then, compute code coverage (estimated running time 10--15 minutes):
 
 ```bash
 thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
   /home/thalia/coverage/jacoco /home/thalia/.sdkman
 # Compute code coverage
 thalia@ee62e29b4f90:~$ ./eval-scripts/compute_coverage.sh \
-  package-data groovy-programs results/groovy groovy
+  package-data groovy-programs new-results/groovy groovy
 ```
 
-The code coverage analysis results are stored inside the `results/groovy`
+The code coverage analysis results are stored inside the `new-results/groovy`
 directory.
 
 
 #### scalac
+
+Generate Scala programs:
 
 ```bash
 # Generate programs
@@ -1171,119 +1151,68 @@ thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
   package-data \
   scala-programs \
   "--language scala --dry-run"
-
-Testing library com-fasterxml-jackson-core-jackson-databind
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
-Testing library com-google-guava-guava
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
-Testing library org-apache-commons-commons-lang3
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
-Testing library org-mockito-mockito-core
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
-Testing library org-slf4j-slf4j-api
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
 ```
 
-Then, compute coverage (estimated running time 10--15 minutes):
+Then, compute code coverage (estimated running time 10--15 minutes):
 
 ```bash
 thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
   /home/thalia/coverage/jacoco /home/thalia/.sdkman
 # Compute code coverage
 thalia@ee62e29b4f90:~$ ./eval-scripts/compute_coverage.sh \
-  package-data scala-programs results/scala scala
+  package-data scala-programs new-results/scala scala
 ```
 
-The code coverage analysis results are stored inside the `results/scala`
+The code coverage analysis results are stored inside the `new-results/scala`
 directory.
 
 #### kotlinc
 
+Generate Kotlin programs:
+
 ```bash
-# Generate programs
 thalia@ee62e29b4f90:~$ ./eval-scripts/runner/thalia_run.sh \
   stdlib/kotlin-stdlib/json-docs/ \
   package-data \
   kotlin-programs \
   "--language kotlin --dry-run"
-
-Testing library com-fasterxml-jackson-core-jackson-databind
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
-Testing library com-google-guava-guava
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
-Testing library org-apache-commons-commons-lang3
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
-Testing library org-mockito-mockito-core
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
-Testing library org-slf4j-slf4j-api
- - base mode...
- - type erasure mode (well-typed)...
- - ill-typed mode...
- - type erasure mode (ill-typed)...
 ```
 
-Then, compute coverage (estimated running times 10--15 minutes):
+Then, compute code coverage (estimated running times 10--15 minutes):
 
 ```bash
 thalia@ee62e29b4f90:~$ source eval-scripts/config.sh \
   /home/thalia/coverage/jacoco /home/thalia/.sdkman
 # Compute code coverage
 thalia@ee62e29b4f90:~$ ./eval-scripts/compute_coverage.sh \
-  package-data kotlin-programs results/kotlin kotlin
+  package-data kotlin-programs new-results/kotlin kotlin
 ```
 
-The code coverage analysis results are stored inside the `results/kotlin`
+The code coverage analysis results are stored inside the `new-results/kotlin`
 directory.
 
-Using the newly generated code coverage results,
+Using the newly-generated code coverage results,
 we are now ready to produce Figure 12 and Table 5.
 Run the following commands:
 
 ```bash
 # groovyc results
 thalia@ee62e29b4f90:~$ python eval-scripts/analysis.py \
-  --coverage-data results/ \
+  --coverage-data new-results/ \
   --whitelist data/coverage/whitelists/groovy.txt \
   --language groovy \
   --output-dir eval-figures/
 
 # scalac results
 thalia@ee62e29b4f90:~$ python eval-scripts/analysis.py \
-  --coverage-data results/ \
+  --coverage-data new-results/ \
   --whitelist data/coverage/whitelists/scala.txt \
   --language scala \
   --output-dir eval-figures/
 
 # kotlinc results
 thalia@ee62e29b4f90:~$ python eval-scripts/analysis.py \
-  --coverage-data results/ \
+  --coverage-data new-results/ \
   --whitelist data/coverage/whitelists/kotlin.txt \
   --language kotlin \
   --output-dir eval-figures/
@@ -1295,16 +1224,16 @@ The commands below measure how many programs were synthesized
 per library and mode.
 
 ```
-thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh groovy-programs/ file-results/groovy.csv
-thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh scala-programs/ file-results/scala.csv
-thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh kotlin-programs/ file-results/kotlin.csv
+thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh groovy-programs/ new-results/file-results/groovy.csv
+thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh scala-programs/ new-results/file-results/scala.csv
+thalia@ee62e29b4f90:~$ ./eval-scripts/file-dist.sh kotlin-programs/ new-results/file-results/kotlin.csv
 ```
 
 The results above can be used to generate a figure that is similar to Figure 11
 by running:
 
 ```
-thalia@6bfd90f897d7:~$ python eval-scripts/files.py  files-results/ eval-figures/files-boxplot.pdf
+thalia@6bfd90f897d7:~$ python eval-scripts/files.py  new-results/file-results/ eval-figures/files-boxplot.pdf
 ```
 
 ### Step3: Compute the code size characteristics of the synthesized programs
@@ -1314,26 +1243,25 @@ for the programs previously synthesized by `thalia`,
 we compute their size characteristics.
 To do so,
 we use an auxiliary script that produces a CSV file per compiler.
-This CSV file contains the file size distribution similar to
-the files included [here](https://github.com/hephaestus-compiler-project/thalia-popl-eval/tree/main/data/size).
+This CSV file contains the size distribution similar to
+those files included [here](https://github.com/hephaestus-compiler-project/thalia-popl-eval/tree/main/data/size).
 
 ```bash
-thalia@65536014baca:~$ mkdir code-size
 thalia@65536014baca:~$ python eval-scripts/measure-code-size-dist.py \
-  --input groovy-programs --output code-size/groovy-size.csv \
+  --input groovy-programs --output new-results/code-size/groovy-size.csv \
   --suffix groovy
 thalia@65536014baca:~$ python eval-scripts/measure-code-size-dist.py \
-  --input scala-programs --output code-size/scala-size.csv \
+  --input scala-programs --output new-results/code-size/scala-size.csv \
   --suffix scala
 thalia@65536014baca:~$ python eval-scripts/measure-code-size-dist.py \
-  --input kotlin-programs --output code-size/kotlin-size.csv \
+  --input kotlin-programs --output new-results/code-size/kotlin-size.csv \
   --suffix kt
 ```
 
 Now, we run:
 
 ```
-thalia@65536014baca:~$ ./eval-scripts/compute-size-statistics.sh code-size
+thalia@65536014baca:~$ ./eval-scripts/compute-size-statistics.sh new-results/code-size
 (groovy) Average size in kB: 1.60
 (groovy) Average size in LoC: 13
 
@@ -1349,28 +1277,27 @@ thalia@65536014baca:~$ ./eval-scripts/compute-size-statistics.sh code-size
 Now,
 we measure the average synthesis time per library.
 To do so,
-we use the following commands that examine the `stats.json`
+we use the following commands that examines the `stats.json`
 of every `thalia`'s run.
 
 
 ```bash
-mkdir synthesis-time
-thalia@65536014baca:~$ ./eval-scripts/measure-synthesis-time-dist.py \ 
-  --input groovy_programs --output code-size/groovy-time.csv 
-thalia@65536014baca:~$ ./eval-scripts/measure-synthesis-time-dist.py \
-  --input scala_programs --output code-size/scala-time.csv 
-thalia@65536014baca:~$ ./eval-scripts/measure-synthesis-time-dist.py \
-  --input kotlin_programs --output code-size/kotlin-time.csv 
+thalia@65536014baca:~$ python eval-scripts/measure-synthesis-time-dist.py \
+  --input groovy-programs --output new-results/time/groovy-time.csv 
+thalia@65536014baca:~$ python eval-scripts/measure-synthesis-time-dist.py \
+  --input scala-programs --output new-results/time/scala-time.csv 
+thalia@65536014baca:~$ python eval-scripts/measure-synthesis-time-dist.py \
+  --input kotlin-programs --output new-results/time/kotlin-time.csv 
 ```
 
 The output is a set of CSV files that are similar to
 our pre-baked results,
 see [here](https://github.com/hephaestus-compiler-project/thalia-popl-eval/tree/main/data/time).
 
-Now, we are ready to produce a figure similar to Figure 12 by running:
+Now, we ready to produce a figure similar to Figure 12 by running:
 
 ```
-thalia@65536014baca:~$ python eval-scripts/time-plot.py synthesis-time eval-figures/
+thalia@65536014baca:~$ python eval-scripts/time-plot.py new-results/time eval-figures/
 (groovy) Average synthesis time: 256ms
 (scala) Average synthesis time: 161ms
 (kotlin) Average synthesis time: 178ms
@@ -1422,7 +1349,7 @@ thalia@65536014baca:~$ python eval-scripts/analysis.py \
   --output-dir eval-figures/
 ```
 
-The output of the above commands is three figures
+The output of the above commands are three figures
 that reside in the following paths on your host machine:
 `figures/groovy-cov-comparison.pdf`,
 `figures/scala-cov-comparison.pdf`,
@@ -1494,7 +1421,7 @@ please make sure that you have extracted the API
 specification of some libraries,
 i.e., see [Extracting Library APIs in JSON](#extracting-library-apis-in-json).
 
-**NOTE 2:** To re-run the entire experiment requires
+**NOTE 2:** To re-run the entire RQ4 experiment requires
 almost two days per compiler.
 Therefore,
 in this section,
@@ -1525,7 +1452,7 @@ thalia@bbd24bdb35a8:~$ ./eval-scripts/runner/hephaestus_run.sh groovy 12 heph_gr
 thalia@bbd24bdb35a8:~$ source eval-scripts/config.sh /home/thalia/coverage/jacoco \
   /home/thalia/.sdkman
 thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_hephaestus_coverage.sh \
-  heph_groovy/ comparison/hephaestus groovy
+  heph_groovy/ new-results/comparison/hephaestus groovy
 ```
 
 Generate `thalia` programs and measure the code coverage.
@@ -1533,20 +1460,20 @@ Generate `thalia` programs and measure the code coverage.
 ```bash
 thalia@bbd24bdb35a8:~$ THALIA_TIME=12 ./eval-scripts/runner/thalia_run.sh \
   stdlib/groovy-stdlib/json-docs/ \
-  package-data groovy-programs "--language groovy"
+  package-data thalia_groovy "--language groovy"
 thalia@bbd24bdb35a8:~$ source scripts/config.sh /home/thalia/coverage/jacoco /home/thalia/.sdkman
 thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_coverage.sh package-data \
-  groovy-programs results/groovy groovy
+  thalia_groovy results/groovy groovy
 thalia@bbd24bdb35a8:~$ ./eval-scripts/get_thalia_coverage_results.sh \
-  results/groovy/combination/ comparison/thalia groovy
+  results/groovy/combination/ new-results/comparison/thalia groovy
 ```
 
 Measure the code coverage when combining `thalia` and `hephaestus` results.
 
 ```bash
 thalia@bbd24bdb35a8:~$ ./eval-scripts/coverage_merge.sh \
-  comparison/hephaestus/inter/ results/groovy/combination/res/ \
-  comparison/combination groovy
+  new-results/comparison/hephaestus/inter/ results/groovy/combination/res/ \
+  new-results/comparison/combination groovy
 ```
 
 #### scalac
@@ -1558,7 +1485,7 @@ thalia@bbd24bdb35a8:~$ ./eval-scripts/runner/hephaestus_run.sh scala 12 heph_sca
 thalia@bbd24bdb35a8:~$ source eval-scripts/config.sh /home/thalia/coverage/jacoco \
   /home/thalia/.sdkman
 thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_hephaestus_coverage.sh \
-  heph_scala comparison/hephaestus scala
+  heph_scala new-results/comparison/hephaestus scala
 ```
 
 Generate `thalia` programs and measure the code coverage.
@@ -1566,20 +1493,20 @@ Generate `thalia` programs and measure the code coverage.
 ```bash
 thalia@bbd24bdb35a8:~$ THALIA_TIME=12 ./eval-scripts/runner/thalia_run.sh \
   stdlib/scala-stdlib/json-docs/ \
-  package-data scala-programs "--language scala"
+  package-data thalia_scala "--language scala"
 thalia@bbd24bdb35a8:~$ source scripts/config.sh /home/thalia/coverage/jacoco /home/thalia/.sdkman
 thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_coverage.sh package-data \
-  scala-programs results/scala scala
+  thalia_scala results/scala scala
 thalia@bbd24bdb35a8:~$ ./eval-scripts/get_thalia_coverage_results.sh \
-  results/scala/combination/ comparison/thalia scala
+  results/scala/combination/ new-results/comparison/thalia scala
 ```
 
 Measure the code coverage when combining `thalia` and `hephaestus` results.
 
 ```bash
 thalia@bbd24bdb35a8:~$ ./eval-scripts/coverage_merge.sh \
-  comparison/hephaestus/inter/ results/scala/combination/res/ \
-  comparison/combination scala
+  new-results/comparison/hephaestus/inter/ results/scala/combination/res/ \
+  new-results/comparison/combination scala
 ```
 
 #### kotlinc
@@ -1591,7 +1518,7 @@ thalia@bbd24bdb35a8:~$ ./eval-scripts/runner/hephaestus_run.sh kotlin 12 heph_ko
 thalia@bbd24bdb35a8:~$ source eval-scripts/config.sh /home/thalia/coverage/jacoco \
   /home/thalia/.sdkman
 thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_hephaestus_coverage.sh \
-  heph_kotlin comparison/hephaestus kotlin
+  heph_kotlin new-results/comparison/hephaestus kotlin
 ```
 
 Generate `thalia` programs and measure the code coverage.
@@ -1599,20 +1526,20 @@ Generate `thalia` programs and measure the code coverage.
 ```bash
 thalia@bbd24bdb35a8:~$ THALIA_TIME=12 ./eval-scripts/runner/thalia_run.sh \
   stdlib/kotlin-stdlib/json-docs/ \
-  package-data kotlin-programs "--language kotlin"
+  package-data thalia_kotlin "--language kotlin"
 thalia@bbd24bdb35a8:~$ source scripts/config.sh /home/thalia/coverage/jacoco /home/thalia/.sdkman
 thalia@bbd24bdb35a8:~$ ./eval-scripts/compute_coverage.sh package-data \
-  kotlin-programs results/kotlin kotlin
+  thalia_kotlin results/kotlin kotlin
 thalia@bbd24bdb35a8:~$ ./eval-scripts/get_thalia_coverage_results.sh \
-  results/kotlin/combination/ comparison/thalia kotlin
+  results/kotlin/combination/ new-results/comparison/thalia kotlin
 ```
 
 Measure the code coverage when combining `thalia` and `hephaestus` results.
 
 ```bash
 thalia@bbd24bdb35a8:~$ ./eval-scripts/coverage_merge.sh \
-  comparison/hephaestus/inter/ results/kotlin/combination/res/ \
-  comparison/combination kotlin
+  new-results/comparison/hephaestus/inter/ results/kotlin/combination/res/ \
+  new-results/comparison/combination kotlin
 ```
 
 #### Visualize code coverage analysis results
@@ -1626,21 +1553,21 @@ To do so run:
 ```bash
 # groovy
 thalia@65536014baca:~$ python eval-scripts/analysis.py \
-  --coverage-data comparison \
+  --coverage-data new-results/comparison \
   --hephaestus --language groovy \
   --whitelist data/coverage/whitelists/groovy.txt \
   --output-dir eval-figures/
 
 # scala
 thalia@65536014baca:~$ python eval-scripts/analysis.py \
-  --coverage-data comparison \
+  --coverage-data new-results/comparison \
   --hephaestus --language scala \
   --whitelist data/coverage/whitelists/scala.txt \
   --output-dir eval-figures/
 
 # kotlin
 thalia@65536014baca:~$ python eval-scripts/analysis.py \
-  --coverage-data comparison \
+  --coverage-data new-results/comparison \
   --hephaestus --language kotlin \
   --whitelist data/coverage/whitelists/kotlin.txt \
   --output-dir eval-figures/
@@ -1648,36 +1575,69 @@ thalia@65536014baca:~$ python eval-scripts/analysis.py \
 
 ### Compilation and synthesis time 
 
-```bash
-# Thalia
-thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input thalia_kotlin --output comparison/time/thalia/generation/kotlin
-thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input thalia_scala --output comparison/time/thalia/generation/scala
-thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input thalia_groovy --output comparison/time/thalia/generation/groovy
+We examine the programs synthesized by `thalia` and `hephaestus`
+and aggregate the statistics about (1) synthesis time,
+and (2) compilation time,
+per mode.
 
-# Hephaestus
-thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input heph_groovy/ --output comparison/time/heph/generation/groovy
-thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input heph_scala/ --output
-comparison/time/heph/generation/scala
-thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input heph_kotlin/ --output
- comparison/time/heph/generation/kotlin
-```
+For aggregating the results about synthesis time,
+run the following commands:
+
 
 ```bash
 # Thalia
-thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py --input thalia_groovy --output comparison/time/heph/compilation/groovy --batch 10
-thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py --input thalia_scala --output comparison/time/heph/compilation/scala --batch 10
-thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py --input thalia_kotlin --output comparison/time/heph/compilation/kotlin --batch 10
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input thalia_kotlin --output new-results/comparison/time/thalia/generation/kotlin
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input thalia_scala --output new-results/comparison/time/thalia/generation/scala
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input thalia_groovy --output new-results/comparison/time/thalia/generation/groovy
 
 # Hephaestus
-thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py --input heph_groovy --output comparison/time/heph/compilation/groovy --batch 10
-thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py --input heph_scala --output comparison/time/heph/compilation/scala --batch 10
-thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py --input heph_kotlin --output comparison/time/heph/compilation/kotlin --batch 10
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input heph_groovy/ --output new-results/comparison/time/heph/generation/groovy
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input heph_scala/ --output new-results/comparison/time/heph/generation/scala
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-synthesis-time.py --input heph_kotlin/ --output new-results/comparison/time/heph/generation/kotlin
 ```
 
-Reproduce Table 5 with the new results:
+For compilation times,
+run the following commands:
 
 ```bash
-python eval-scripts/time-comparison.py comparison/time/
+# Thalia
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py \
+  --input thalia_groovy \
+  --output new-results/comparison/time/heph/compilation/groovy \
+  --batch 10
+
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py \
+  --input thalia_scala \
+  --output new-results/comparison/time/heph/compilation/scala \
+  --batch 10
+
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py \
+  --input thalia_kotlin \
+  --output new-results/comparison/time/heph/compilation/kotlin \
+  --batch 10
+
+# Hephaestus
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py \
+  --input heph_groovy \
+  --output new-results/comparison/time/heph/compilation/groovy \
+  --batch 10
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py \
+  --input heph_scala \
+  --output new-results/comparison/time/heph/compilation/scala \
+  --batch 10
+thalia@bbd24bdb35a8:~$ python eval-scripts/merge-compilation-time.py \
+  --input heph_kotlin \
+  --output new-results/comparison/time/heph/compilation/kotlin \
+  --batch 10
+```
+
+Now, our results follow the same structure as the pre-baked
+`data/comparison/time` results.
+Reproduce Table 5 with based on the new results
+by running:
+
+```bash
+python eval-scripts/time-comparison.py new-results/comparison/time/
 ```
 
 ### Code size
@@ -1686,17 +1646,17 @@ python eval-scripts/time-comparison.py comparison/time/
 # Hephaestus
 thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
   --input heph_groovy \
-  --output comparison/code-size/hephaestus/groovy-size.csv \
+  --output new-results/comparison/code-size/hephaestus/groovy-size.csv \
   --suffix groovy
 
 thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
   --input heph_scala \
-  --output comparison/code-size/hephaestus/scala-size.csv \
+  --output new-results/comparison/code-size/hephaestus/scala-size.csv \
   --suffix scala
 
 thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
   --input heph_kotlin \
-  --output comparison/code-size/hephaestus/kotlin-size.csv \
+  --output new-results/comparison/code-size/hephaestus/kotlin-size.csv \
   --suffix kt
 ```
 
@@ -1704,26 +1664,30 @@ thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
 # Thalia
 thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
   --input thalia_groovy/ \
-  --output comparison/code-size/thalia/groovy-size.csv \
+  --output new-results/comparison/code-size/thalia/groovy-size.csv \
   --suffix groovy
 
 thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
   --input thalia_scala/ \
-  --output comparison/code-size/thalia/scala-size.csv \
+  --output new-results/comparison/code-size/thalia/scala-size.csv \
   --suffix scala
 
 thalia@bbd24bdb35a8:~$ python eval-scripts/measure-code-size-dist.py \
   --input thalia_kotlin/ \
-  --output comparison/code-size/thalia/kotlin-size.csv \
+  --output new-results/comparison/code-size/thalia/kotlin-size.csv \
   --suffix kt
 ```
 
+Now, our results follow the same structure as the pre-baked
+`data/comparison/code-size` results.
+Reproduce Table 5 with based on the new results
+by running:
 Finally,
 execute the following two commands to get the statistics
 about the size of programs generated by `thalia` and `hephaestus`.
 
 ```bash
-thalia@bbd24bdb35a8:~$ ./eval-scripts/compute-size-statistics.sh comparison/code-size/thalia/
+thalia@bbd24bdb35a8:~$ ./eval-scripts/compute-size-statistics.sh new-results/comparison/code-size/thalia/
 (groovy) Average size in kB: 2.28
 (groovy) Average size in LoC: 31
 
@@ -1733,7 +1697,7 @@ thalia@bbd24bdb35a8:~$ ./eval-scripts/compute-size-statistics.sh comparison/code
 (scala) Average size in kB: 2.20
 (scala) Average size in LoC: 12
 
-thalia@bbd24bdb35a8:~$ ./eval-scripts/compute-size-statistics.sh comparison/code-size/hephaestus
+thalia@bbd24bdb35a8:~$ ./eval-scripts/compute-size-statistics.sh new-results/comparison/code-size/hephaestus
 /
 (groovy) Average size in kB: 7.64
 (groovy) Average size in LoC: 295
@@ -1744,3 +1708,53 @@ thalia@bbd24bdb35a8:~$ ./eval-scripts/compute-size-statistics.sh comparison/code
 (scala) Average size in kB: 8.00
 (scala) Average size in LoC: 252
 ```
+
+
+# Extending artifact
+
+We have shown in [Example: Testing the Groovy compiler using the API of a third-party library](#example-testing-the-groovy-compiler-using-the-api-of-a-third-party-library)
+how to extract APIs from third-party libraries and pass these
+APIs as input to `thalia`.
+In summary,
+to extract an API,
+you need to provide (1) the group ID of the third-party package,
+(2) the artifact ID of the third-party package,
+and (3) its version.
+Example:
+
+```bash
+thalia@5b1ba457c8bf:~/thalia$ echo "com.google.guava,guava,32.1.2-jre" | fetch-package-data -i - -o outdir
+```
+
+Then, convert the downloaded API documentation pages into a format
+supported by `thalia` via:
+
+```bash
+thalia@5b1ba457c8bf:~/thalia$ doc2json-util -d outdir -l com-google-guava-guava -L java
+```
+
+
+## Supported Languages
+
+Currently, `thalia` generates programs written in
+four popular programming languages, namely,
+Java, Scala, Kotlin, and Groovy. Use the
+option `--language` to specify the target language.
+
+To support a new language,
+you need to implement the following:
+
+* A translator that converts a program written in the
+IR into a program written in the target language.
+To to so, you have to extend the
+[src.translators.base.BaseTranslator](https://github.com/hephaestus-compiler-project/thalia/blob/main/src/translators/base.py)
+class.
+
+* A class that reads compiler messages and distinguishes
+compiler crashes from compiler diagnostic error messages.
+To do so, you must extend the 
+[src.compilers.base.BaseCompiler](https://github.com/hephaestus-compiler-project/thalia/blob/main/src/compilers/base.py)
+class.
+
+* (Optionally) Any built-in types supported by the language, e.g., see
+[Java types](https://github.com/hephaestus-compiler-project/thalia/blob/main/src/ir/java_types.py) for guidance.

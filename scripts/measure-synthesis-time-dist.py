@@ -7,6 +7,7 @@ import glob
 import json
 import linecache
 import os
+from pathlib import Path
 
 
 def get_args():
@@ -52,6 +53,7 @@ def process_stats(args):
 def main():
     args = get_args()
     data = process_stats(args)
+    os.makedirs(Path(args.output).parent.absolute(), exist_ok=True)
     with open(args.output, mode="w", newline="") as file:
         writer = csv.writer(file)
         writer.writerows(data)

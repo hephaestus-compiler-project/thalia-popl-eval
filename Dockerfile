@@ -105,35 +105,7 @@ RUN sudo chown -R thalia:thalia ${HOME}/doc2json
 # Install doc2json
 RUN cd ${HOME}/doc2json/ && pip install .
 
-# Create directory for helper scripts
-RUN mkdir ${HOME}/scripts
-ADD ./scripts/compute_coverage.sh ${HOME}/scripts
-ADD ./scripts/compute_hephaestus_coverage.sh ${HOME}/scripts
-ADD ./scripts/config.sh ${HOME}/scripts
-ADD ./scripts/get_thalia_coverage_results.sh ${HOME}/scripts
-ADD ./scripts/coverage_merge.sh ${HOME}/scripts
-RUN sudo chown -R thalia:thalia ${HOME}/scripts/compute_coverage.sh
-RUN sudo chown -R thalia:thalia ${HOME}/scripts/compute_hephaestus_coverage.sh
-RUN sudo chown -R thalia:thalia ${HOME}/scripts/config.sh
-RUN sudo chown -R thalia:thalia ${HOME}/scripts/get_thalia_coverage_results.sh
-RUN sudo chown -R thalia:thalia ${HOME}/scripts/coverage_merge.sh
-
-# Create directory for runner scripts
-RUN mkdir ${HOME}/runner_scripts
-ADD ./scripts/runner/create-api-rules.py ${HOME}/runner_scripts
-ADD ./scripts/runner/thalia_run.sh ${HOME}/runner_scripts
-ADD ./scripts/runner/hephaestus_run.sh ${HOME}/runner_scripts
-RUN sudo chown -R thalia:thalia ${HOME}/runner_scripts/create-api-rules.py
-RUN sudo chown -R thalia:thalia ${HOME}/runner_scripts/thalia_run.sh
-RUN sudo chown -R thalia:thalia ${HOME}/runner_scripts/hephaestus_run.sh
-
 # Add stdlibs 
 ADD ./stdlib/ ${HOME}/stdlib
-
-# Add example files
-# TODO: we should attach that as a volume
-RUN mkdir ${HOME}/example-libraries
-ADD ./example-libraries ${HOME}/example-libraries
-RUN sudo chown -R thalia:thalia ${HOME}/example-libraries
 
 WORKDIR ${HOME}
