@@ -38,7 +38,7 @@ run_thalia()
     if grep -q -oP "\-\-language scala" <<< "$args"; then
       language=scala
     fi
-    doc2json.sh -d "$(dirname $libpath)" -l $libname -L "$language"
+    doc2json-util -d "$(dirname $libpath)" -l $libname -L "$language"
     if [ $? -ne 0 ]; then
       return 1
     fi
