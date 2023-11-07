@@ -4,7 +4,7 @@ This artifact is for the POPL'24 paper titled
 "API-driven Program Synthesis for Testing Static Typing Implementations".
 
 An archived version of the artifact is also available on Zenodo.
-See https://doi.org/10.5281/zenodo.8425071.
+See https://doi.org/10.5281/zenodo.10077754.
 
 # Table of Contents
 
